@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="665" viewBox="0 0 1120 665"><rect width="100%" height="100%" fill="#f8fafc"/><style>text{font-family:Arial,'DejaVu Sans',sans-serif;fill:#172238}.h{font-size:25px;font-weight:bold}.t{font-size:19px}.s{font-size:16px}.red{fill:none;stroke:#dc2626;stroke-width:5}.card{fill:white;stroke:#cbd5e1;stroke-width:2}</style>
+<text x="560" y="45" class="h" text-anchor="middle">2. Complete Profile + Location</text>
+<rect x="25" y="75" width="1070" height="525" rx="18" class="card"/>
+<rect x="25" y="75" width="1070" height="56" rx="15" fill="#e8f2fb"/><text x="60" y="112" class="h">My Account / Account Profile Dashboard</text>
+<rect x="55" y="160" width="440" height="110" rx="9" fill="#fff" stroke="#cbd5e1"/><text x="82" y="205" class="t">Personal Information</text><text x="82" y="245" class="h">Complete Profile</text><rect x="49" y="153" width="452" height="124" rx="12" class="red"/>
+<rect x="540" y="160" width="500" height="110" rx="9" fill="#fff" stroke="#cbd5e1"/><text x="568" y="204" class="t">Access &gt; Locations</text><text x="568" y="244" class="h">Add Location</text><rect x="532" y="152" width="517" height="126" rx="12" class="red"/>
+<text x="65" y="328" class="t">Search for your university or employer</text>
+<rect x="55" y="350" width="985" height="75" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="2"/><text x="83" y="397" class="h">King Saud University</text><rect x="47" y="342" width="1000" height="90" rx="10" class="red"/>
+<rect x="770" y="475" width="260" height="69" rx="10" fill="#e8f2fb" stroke="#0a4e82"/><text x="900" y="519" class="h" text-anchor="middle">Submit / Add</text><rect x="763" y="468" width="274" height="83" rx="12" class="red"/>
+<text x="560" y="645" class="s" text-anchor="middle">ILLUSTRATION — field names/placement may differ; use your real institutional affiliation</text></svg>
