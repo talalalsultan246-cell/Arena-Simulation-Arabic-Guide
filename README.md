@@ -3,6 +3,15 @@
 > **آخر مراجعة للمصادر: 25 أكتوبر 2026**  
 > دليل مستقل باللغة العربية، موجّه لطلاب المحاكاة ومستخدمي **Arena 17** والإصدارات الأخرى. يعتمد على تعليمات الشركة المصنّعة ومراجع Microsoft، ولا يُعدّ وثيقة رسمية من Rockwell Automation.
 
+
+## الإصدار المستهدف: Arena 17
+
+- يستهدف هذا الدليل **Arena 17**، وبالأخص التحديث **17.00.01**.
+- يعرض [مركز تنزيل Rockwell الرسمي](https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&mode=3&refSoft=1&versions=65330) الإصدار **17.00.01** مع إصدارات سابقة.
+- توصي [نشرة Rockwell الأمنية](https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html) باستخدام **17.00.01** لمعالجة ثغرات في **17.00.00 وما قبله**. تحقق من رقم التصحيح قبل التحميل.
+- يظهر في تسجيل الشاشة المرفق مسار الملفات `C:\RA\17.00.01.10_x64\17.00.01.10_x64\MediaImage`، بينما تحمل شاشة المثبت اسم **Arena 2026**. يشير ذلك إلى اختلاف الاسم التسويقي للمثبت عن رقم فرع البرنامج؛ لا تخلط بينهما.
+- **تنبيه:** تظل صفحة متطلبات النظام العامة لدى Rockwell تعرض الإصدار **16.20.02**؛ راجع وثائق الإصدار 17 المطلوبة على مركز التنزيل عند وجود اختلاف.
+
 ## المحتويات
 1. [قبل البدء](#1-قبل-البدء)
 2. [الحد الأدنى للمواصفات](#2-الحد-الأدنى-للمواصفات)
@@ -68,11 +77,29 @@
 winver
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+[تفتح نافذة About Windows في واجهة النظام]
+Windows 11
+Version: 23H2 (مثال فقط)
+```
+
+**كيف تقرأ النتيجة؟** هذا الأمر يفتح نافذة رسومية؛ لا يطبع تقريرًا داخل CMD. الرقم المعروض على جهازك قد يختلف.
+
 أو:
 
 ```cmd
 ver
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+Microsoft Windows [Version 10.0.22631.XXXX]
+```
+
+**كيف تقرأ النتيجة؟** يعرض إصدار نظام Windows في نافذة CMD؛ قيمة XXXX موضعية وليست نتيجة فعلية.
 
 لمعلومات أوسع: اضغط `Win + R`، واكتب `msinfo32`. ستجد `OS Name` و`System Type` و`Installed Physical Memory`.
 
@@ -82,11 +109,31 @@ ver
 powershell -NoProfile -Command "Get-CimInstance Win32_ComputerSystem | Select-Object @{N='RAM_GB';E={[math]::Round($_.TotalPhysicalMemory/1GB,2)}}"
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+RAM_GB
+------
+ 16.00
+```
+
+**كيف تقرأ النتيجة؟** 16.00 تعني سعة ذاكرة RAM قدرها 16 جيجابايت في هذا المثال فقط.
+
 ### قياس المساحة الحرة على القرص C:
 
 ```cmd
 powershell -NoProfile -Command "Get-PSDrive C | Select-Object Name,@{N='Free_GB';E={[math]::Round($_.Free/1GB,2)}}"
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+Name Free_GB
+---- -------
+C      125.50
+```
+
+**كيف تقرأ النتيجة؟** Free_GB هي المساحة الحرة المتبقية على محرك C، وليست المساحة الإجمالية.
 
 **التفسير:** إذا أظهر الحاسوب 8GB RAM ومساحة كافية، فهذا اجتياز أولي للمواصفات المذكورة، لكنه لا يثبت صلاحية الترخيص أو التوافق الكامل لإصدار Arena 17.
 
@@ -98,11 +145,28 @@ powershell -NoProfile -Command "Get-PSDrive C | Select-Object Name,@{N='Free_GB'
 reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" /v Release
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
+    Release    REG_DWORD    0x80ea8
+```
+
+**كيف تقرأ النتيجة؟** القيمة السداسية 0x80ea8 تساوي 528040 بالنظام العشري، وتمثل .NET Framework 4.8 في إحدى بيئات Windows.
+
 ### الأمر البديل (PowerShell)
 
 ```powershell
 (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+528040
+```
+
+**كيف تقرأ النتيجة؟** يعرض PowerShell القيمة نفسها بالأرقام العشرية؛ 528040 قيمة نموذجية لـ .NET Framework 4.8.
 
 ### تفسير أشهر قيم Release
 
@@ -133,6 +197,15 @@ reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" /v Release
 wmic product where "name like '%%Visual C++%%'" get name,version
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+'wmic' is not recognized as an internal or external command,
+operable program or batch file.
+```
+
+**كيف تقرأ النتيجة؟** هذه رسالة فشل محتملة على Windows 11 الحديث؛ عند ظهورها استخدم الطريقة الثانية بدل إعادة تثبيت WMIC.
+
 **مهم:** هذه الصيغة من دليل GitHub الأصلي، وهي **قديمة وغير موصى بها**؛ وقد تفشل برسالة `'wmic' is not recognized` على Windows 11 الحديث. أعلنت Microsoft إزالة أداة WMIC من Windows 11 المدعوم في 2026. كذلك فحص `Win32_Product` قد يكون بطيئًا ويُسبّب عمليات فحص اتساق لحزم MSI، ولا يضمن إظهار جميع الحزم.
 
 **إذا لم يعمل الأمر الأول، انتقل مباشرةً إلى الطريقة الثانية؛ لا تحتاج إلى إعادة تثبيت WMIC.**
@@ -144,6 +217,18 @@ wmic product where "name like '%%Visual C++%%'" get name,version
 ```cmd
 powershell -NoProfile -Command "Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like '*Microsoft Visual C++*' } | Sort-Object DisplayName,DisplayVersion | Select-Object DisplayName,DisplayVersion | Format-Table -AutoSize"
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+DisplayName                                                  DisplayVersion
+-----------                                                  --------------
+Microsoft Visual C++ 2013 x86 Minimum Runtime                12.0.40664
+Microsoft Visual C++ 2015-2022 Redistributable (x64)          14.40.33816
+Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
+```
+
+**كيف تقرأ النتيجة؟** يعرض العمود الأول أسماء الحزم ومعماريتها، والثاني الإصدارات المثبتة. الصفوف هنا أمثلة وليست بيانات جهازك.
 
 **هذا هو البديل الموصى به في الدليل.** يقرأ بيانات البرامج المسجلة في مساري Uninstall ذوي المعماريتين. سيعرض عمودين:
 
@@ -163,6 +248,17 @@ Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','
   Select-Object DisplayName, DisplayVersion |
   Format-Table -AutoSize
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+DisplayName                                                  DisplayVersion
+-----------                                                  --------------
+Microsoft Visual C++ 2015-2022 Redistributable (x64)          14.40.33816
+Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
+```
+
+**كيف تقرأ النتيجة؟** نفس المبدأ عند استخدام PowerShell مباشرة. قد تختلف القائمة والإصدارات، وقد تظهر صفوف إضافية.
 
 ### الطريقة الرابعة: واجهة Windows
 
@@ -191,11 +287,28 @@ Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','
 reg query "HKLM\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0" /v Version
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0
+    Version    REG_SZ    4.0.8876.1
+```
+
+**كيف تقرأ النتيجة؟** هذه نتيجة افتراضية عند وجود مفتاح Version في هذا المسار. قد يعرض جهازك قيمة أخرى أو عدم وجود المفتاح.
+
 ### فحص مسار السجل الثاني عند استخدام Windows 64-bit
 
 ```cmd
 reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Compact Edition\v4.0" /v Version
 ```
+
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+ERROR: The system was unable to find the specified registry key or value.
+```
+
+**كيف تقرأ النتيجة؟** مثال عند عدم العثور على المفتاح في مسار WOW6432Node تحديدًا؛ لا يثبت هذا غياب المكوّن كليًا.
 
 إذا ظهرت `ERROR: The system was unable to find the specified registry key or value.`، فالمعنى أن المفتاح غير موجود في **المسار المحدد**؛ وليس بالضرورة أن المكوّن غير موجود بأي صورة.
 
@@ -216,11 +329,61 @@ reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Compact Edit
 reg query "HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" /v Platform
 ```
 
+**Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
+    Platform    REG_SZ    x64
+```
+
+**كيف تقرأ النتيجة؟** x64 تعني أن إصدار Office Click-to-Run مسجّل بمعمارية 64-bit؛ أما x86 فيشير إلى 32-bit.
+
 القيمتان المحتملتان: `x86` و`x64`. إذا لم يظهر المفتاح، قد يكون Office مثبتًا بطريقة أخرى؛ هذا الأمر وحده لا يكفي للحكم.
 
 **تصحيح مهم للدليل الأصلي:** Office **ليس ملزمًا بأن يكون 64-bit في جميع تثبيتات Arena**. راجع متطلبات Rockwell والإصدار المستهدف. لا تُزِل Office أو تغيّر معماريته دون سبب محدد.
 
 ## 8. تحميل Arena وتثبيته رسميًا
+
+
+### دليل مصور: الحساب الجامعي وتفعيل أهلية التنزيل
+
+> **نوع الصور:** الرسومات التالية **توضيحية مرسومة وليست لقطات فعلية** من صفحات Rockwell. المربعات الحمراء تحدد ما ينبغي البحث عنه في الواجهة؛ قد تختلف مواقع الأزرار. أما مسار مجلد التثبيت وتسميات ملفاته فقد تمت مطابقتها مع تسجيل الشاشة المرفق بتاريخ 25 أكتوبر 2026.
+
+**المرحلة 1 — الدخول أو إنشاء حساب:**
+
+![رسم توضيحي لصفحة Sign In والبريد الجامعي](images/01-sign-in-account.svg)
+
+1. ادخل [صفحة تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)، ثم اختر **Sign In** إذا كان لديك حساب أو [Create Account](https://www.rockwellautomation.com/account/create-account) عند إنشاء حساب جديد.
+2. **يفضّل استخدام البريد الجامعي** المرتبط بجامعة الملك سعود؛ موقع Rockwell يوصي ببريد الجامعة أو جهة العمل، لكنه **لا يضع البريد الجامعي شرطًا مطلقًا**. قد يتأخر التحقق من الحساب الشخصي.
+3. أكمل التسجيل وتحقق من بريدك إذا طُلب.
+
+**المرحلة 2 — الشرطان اللازمان قبل ظهور رابط تنزيل Arena:**
+
+![رسم توضيحي لإكمال ملف الحساب وإضافة موقع الجامعة](images/02-profile-location.svg)
+
+1. بعد الدخول، افتح **My Account / Account Profile Dashboard** وأكمل **Personal Information / Complete Profile**.
+2. في قسم **Access** افتح **Locations**، أو استخدم رابط طلب الموقع المعروض في لوحة حسابك.
+3. ابحث عن **King Saud University**، واختر السجل المطابق لجهتك التعليمية الحقيقية، ثم أضفه إلى الحساب وقدّم الطلب عبر زر الموافقة/الإضافة المعروض. قد تخضع الإضافة للتحقق أو الموافقة بحسب الحساب.
+4. ارجع إلى لوحة الحساب وتأكد من ظهور شرطَي **Completed Profile** و**Location Added** أو ما يقابلهما وقد تحققا. **إنشاء حساب جديد فقط لا يضيف الجامعة تلقائيًا.**
+5. إذا تعذر العثور على الجامعة في قائمة المواقع، تواصل مع دعم Rockwell لإضافتها؛ لا تختَر جهة أخرى لمجرد تجاوز التحقق.
+
+المصدر الرسمي الذي يوضح الشرطين: [Rockwell — Create and Complete Your Rockwell Automation Account](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
+
+**المرحلة 3 — تنزيل Arena 17 والتثبيت من مجلد C:**
+
+![رسم توضيحي لمسار التثبيت وملف autorun والخيار Install Arena](images/03-c-ra-arena-install.svg)
+
+1. بعد استكمال بيانات الحساب والموقع، اختر [Arena Download](https://download.rockwellautomation.com/) أو استخدم [مركز Product Compatibility and Download Center](https://compatibility.rockwellautomation.com/) للبحث عن **Arena 17.00.01**.
+2. نفّذ ملف **Download Manager** عند الحاجة. بحسب Rockwell غالبًا تُحفَظ ملفات التثبيت في **`C:\RA`**، وقد يختلف المجلد إن اخترت مكانًا آخر.
+3. في مثال تسجيل الشاشة المرفق افتح **`C:\RA\17.00.01.10_x64`** ثم المجلد الداخلي **`17.00.01.10_x64`**. هذه تسمية **مثال فعلي من التسجيل**؛ الاسم قد يختلف بعد التحديث.
+4. ستجد **Dependencies** و**MediaImage**؛ افتح **MediaImage**.
+5. ستجد مجلدات **Help / Install / Redist / Support** وعدة ملفات، بينها ملفان ظاهران باسم **autorun**. اختر ملف **autorun** الذي نوعه **Application** (‏`autorun.exe`)، وليس الملف من نوع **Setup Information** (‏`autorun.inf`).
+6. انقر بزر الفأرة الأيمن على ملف التطبيق، واختر **Run as administrator**، ثم من نافذة **Arena 2026** اختر **Install Arena** واتبع معالج التثبيت.
+7. اترك ملفات **Dependencies** والمكونات التابعة كما وفّرها المثبّت؛ لا تشغّل حزمًا إضافية غير لازمة.
+8. بعد التثبيت افحص التفعيل وجرّب نموذج Create → Process → Dispose.
+
+**رابط الفيديو الذي أرسله المستخدم لخطوات التحميل:** [شرح Arena على YouTube](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q). لا تمثّل الرسومات أعلاه لقطات من YouTube؛ هي توضيحات منفصلة تعتمد على تسلسل التعليمات.
+
 
 ### أ. التحميل من الشركة المصنّعة
 
@@ -332,5 +495,7 @@ reg query "HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" /v Platform
 استُلهم نطاق الفحص الأولي من مستودع [M02lsayed/Arena](https://github.com/M02lsayed/Arena/blob/main/README.md)، لكن **هذه صياغة عربية مستقلة** أُعيدت كتابتها مع روابط رسمية وملاحظات تصحيحية. المستودع المرجعي تابع لطرف ثالث وليس موردًا رسميًا من Rockwell Automation.
 
 ---
+
+**ملاحظة عن نواتج الأوامر:** كل قسم **Output** في هذا الدليل مثال تعليمي على الشكل المحتمل للنتيجة، ولا يعتمد على فحص تلقائي لجهاز القارئ. لا تنشر بيانات حساسة من سجل النظام أو الحساب عند طلب المساعدة.
 
 **ملاحظة المسؤولية:** الأوامر هنا للفحص، ولا تعدّل سجل Windows أو تزيل البرامج. تثبيت أي مكوّن قرار منفصل بعد مطابقة المتطلبات والمصدر الرسمي.
