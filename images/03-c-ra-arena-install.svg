@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750"><rect width="100%" height="100%" fill="#f8fafc"/><style>text{font-family:Arial,'DejaVu Sans',sans-serif;fill:#172238}.h{font-size:25px;font-weight:bold}.t{font-size:19px}.s{font-size:16px}.red{fill:none;stroke:#dc2626;stroke-width:5}.card{fill:white;stroke:#cbd5e1;stroke-width:2}</style>
+<text x="600" y="45" class="h" text-anchor="middle">3. Arena 17.00.01 — C:\RA to Install Arena</text>
+<rect x="25" y="72" width="540" height="550" rx="16" class="card"/>
+<rect x="40" y="90" width="510" height="56" rx="10" fill="#e2e8f0"/><text x="55" y="126" class="t">C:\RA\17.00.01.10_x64\...</text>
+<rect x="55" y="170" width="470" height="120" rx="9" fill="#fff" stroke="#94a3b8"/><text x="80" y="210" class="t">Dependencies</text><text x="80" y="255" class="h">MediaImage</text><rect x="66" y="225" width="400" height="48" rx="6" class="red"/>
+<rect x="55" y="312" width="470" height="245" rx="9" fill="#fff" stroke="#94a3b8"/><text x="80" y="352" class="s">MediaImage</text><text x="85" y="393" class="t">Help / Install / Redist / Support</text><text x="85" y="450" class="h">autorun.exe  (Application)</text><rect x="76" y="421" width="434" height="53" rx="7" class="red"/><text x="85" y="512" class="s">Do not select autorun.inf (Setup Information)</text>
+<path d="M578 368 L638 368" stroke="#b91c1c" stroke-width="6"/><polygon points="642,368 621,353 621,383" fill="#b91c1c"/>
+<rect x="655" y="72" width="520" height="550" rx="16" class="card"/>
+<rect x="675" y="95" width="480" height="65" rx="9" fill="#eff6ff"/><text x="915" y="138" class="h" text-anchor="middle">Arena 2026</text>
+<text x="700" y="215" class="t">Welcome to Arena</text>
+<rect x="705" y="256" width="420" height="78" rx="9" fill="#e8f2fb"/><text x="735" y="308" class="h">Install Arena</text><rect x="693" y="245" width="445" height="100" rx="10" class="red"/>
+<text x="735" y="400" class="t">Release Notes</text><text x="735" y="452" class="t">Install FactoryTalk Activation Manager</text>
+<text x="600" y="684" class="t" text-anchor="middle">Folder path and labels confirmed from the submitted recording</text>
+<text x="600" y="718" class="s" text-anchor="middle">ILLUSTRATION — not a literal captured frame</text></svg>
