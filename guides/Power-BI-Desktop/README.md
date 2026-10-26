@@ -14,9 +14,9 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 ## 2. تحميل البرنامج وتثبيته
 
-<p align="center"><img src="images/01-desktop-download.svg" alt="رسم إرشادي داخل المستودع لخيارات تنزيل Power BI Desktop الرسمية" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="واجهة Power BI Desktop الحقيقية وتبويبات البرنامج ومساحة التقرير" width="92%"/></p>
 
-*الرسم إرشادي، وليس لقطة شاشة حرفية من موقع Microsoft.*
+*هذه لقطة فعلية لواجهة Power BI Desktop من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-tutorial-connect-to-the-samples)، وليست رسماً افتراضياً. تبعاً للإصدار قد تختلف القوائم.*
 
 يمكنك تثبيت البرنامج بإحدى الطريقتين. اختر طريقة واحدة فقط:
 
@@ -39,9 +39,9 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 ## 3. إنشاء أول تقرير خطوة بخطوة
 
-<p align="center"><img src="images/02-power-query.svg" alt="رسم إرشادي داخل المستودع لاستيراد بيانات Excel وتنظيفها في Power Query" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="واجهة تقرير حقيقي في Power BI Desktop يضم الرسوم ولوحة المرشحات" width="92%"/></p>
 
-*يساعدك الرسم على تحديد تسلسل الخطوات داخل Power BI Desktop.*
+*الصورة من واجهة البرنامج الحقيقية؛ لعرض شاشة Get Data بالتفصيل راجع [دليل Microsoft](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-sources).*
 
 للتجربة، جهّز ملف Excel بسيطًا يحتوي على أعمدة مثل `Region` و`Amount` و`Date`. ثم نفذ الخطوات التالية بالترتيب:
 
@@ -70,9 +70,9 @@ Total Sales = SUM(Sales[Amount])
 
 ## 4. أين أجد الأدوات الأساسية؟
 
-<p align="center"><img src="images/03-report-design.svg" alt="رسم إرشادي داخل المستودع لمكونات Report View وبناء الرسم في Power BI Desktop" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="Power BI Desktop Report view - screenshot from Microsoft Learn" width="92%"/></p>
 
-*الرسم توضيحي، وتختلف التفاصيل البصرية بين إصدارات Desktop.*
+*لقطة شاشة من Microsoft Learn توضّح مساحة التقرير والمرشحات.*
 
 | الأداة | متى أستخدمها؟ |
 | :---: | :---: |
