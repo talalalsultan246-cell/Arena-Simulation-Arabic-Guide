@@ -941,13 +941,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-### أصل الفكرة
+#### مرجع إضافي
 
-</div>
+اطلعت أثناء إعداد الدليل على [شرح سابق لتجهيز Arena](https://github.com/M02lsayed/Arena/blob/main/README.md)،
+واستفدت منه في تحديد بعض فحوصات Windows.
 
-<div align="right" dir="rtl">
-
-استفدت في ترتيب قائمة الفحوصات من [هذا المستودع](https://github.com/M02lsayed/Arena/blob/main/README.md)، ثم أضفت الأوامر البديلة والروابط الرسمية وخطوات التسجيل والتنزيل بالصور.
+أما خطوات التسجيل والتثبيت والصور والأوامر البديلة، فوضعتها هنا بالتفصيل مع روابط الشركات الرسمية.
 
 </div>
 
@@ -972,7 +971,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 ### إعداد الدليل
 
 **Talal Alsultan**  
-*Information Systems • Data Science • Decision Sciences*  
+*Applied Information System • Data Science • Decision Sciences*  
 King Saud University
 
 [GitHub Profile](https://github.com/talalalsultan246-cell)
