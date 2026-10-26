@@ -691,81 +691,81 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 > ⚠️ **التنزيل:** قد تتطلب الصفحة تسجيل الدخول. ولا تفترض أن ملف **Arena 17.00.01 Patch** يساوي مثبتًا كاملًا؛ تحقق من نوع الحزمة أولًا.
 
-<h4 align="center" dir="rtl">01 | فتح قائمة الحساب</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/01-open-account.svg"><strong>01 | فتح قائمة الحساب</strong></a></h3>
 
-<p align="center" dir="rtl">افتح موقع Rockwell Automation باستخدام Microsoft Edge، ثم اختر <strong>Sign In</strong> أو <strong>Create an Account</strong> لإنشاء حساب جديد.</p>
+<p align="center" dir="rtl">افتح موقع Rockwell Automation باستخدام Microsoft Edge، ثم اختر Sign In أو Create an Account لإنشاء حساب جديد.</p>
 
 <p align="center"><img src="images/steps/01-open-account.svg" alt="01 | فتح قائمة الحساب" width="95%"/></p>
 
-<h4 align="center" dir="rtl">02 | تسجيل الدخول بالبريد الجامعي</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/02-university-email.svg"><strong>02 | تسجيل الدخول بالبريد الجامعي</strong></a></h3>
 
-<p align="center" dir="rtl">أدخل بريدك الجامعي ثم اضغط <strong>Continue</strong>. توصي Rockwell باستخدام البريد الجامعي لتسهيل التحقق، لكنه <strong>توصية وليس شرطًا مطلقًا</strong>.</p>
+<p align="center" dir="rtl">أدخل بريدك الجامعي ثم اضغط Continue. توصي Rockwell باستخدام البريد الجامعي لتسهيل التحقق، لكنه توصية وليس شرطًا مطلقًا.</p>
 
 <p align="center"><img src="images/steps/02-university-email.svg" alt="02 | تسجيل الدخول بالبريد الجامعي" width="95%"/></p>
 
-<h4 align="center" dir="rtl">03 | فتح My Account</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/03-my-account.svg"><strong>03 | فتح My Account</strong></a></h3>
 
-<p align="center" dir="rtl">بعد تسجيل الدخول، افتح <strong>My Account</strong> ثم <strong>Account Profile Dashboard</strong>.</p>
+<p align="center" dir="rtl">بعد تسجيل الدخول، افتح My Account ثم Account Profile Dashboard.</p>
 
 <p align="center"><img src="images/steps/03-my-account.svg" alt="03 | فتح My Account" width="95%"/></p>
 
-<h4 align="center" dir="rtl">04 | إكمال بيانات الحساب</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/04-complete-profile.svg"><strong>04 | إكمال بيانات الحساب</strong></a></h3>
 
-<p align="center" dir="rtl">من <strong>Profile → Personal Information</strong>، أكمل بيانات الملف الشخصي واحفظها. هذا هو <strong>الشرط الأول</strong>.</p>
+<p align="center" dir="rtl">من Profile → Personal Information، أكمل بيانات الملف الشخصي واحفظها. هذا هو الشرط الأول.</p>
 
 <p align="center"><img src="images/steps/04-complete-profile.svg" alt="04 | إكمال بيانات الحساب" width="95%"/></p>
 
-<h4 align="center" dir="rtl">05 | إضافة الجهة التعليمية</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/05-approved-location.svg"><strong>05 | إضافة الجهة التعليمية</strong></a></h3>
 
-<p align="center" dir="rtl">من <strong>Access → Locations</strong>، اختر <strong>King Saud University</strong> إذا كانت جامعتك، وقدّم <strong>Request Locations</strong> إذا لزم. تأكد من ظهور الاسم والحالة <strong>Approved</strong>. هذا هو <strong>الشرط الثاني</strong>.</p>
+<p align="center" dir="rtl">من Access → Locations، اختر King Saud University إذا كانت جامعتك، وقدّم Request Locations إذا لزم. تأكد من ظهور الاسم والحالة Approved. هذا هو الشرط الثاني.</p>
 
 <p align="center"><img src="images/steps/05-approved-location.svg" alt="05 | إضافة الجهة التعليمية" width="95%"/></p>
 
-<h4 align="center" dir="rtl">06 | البحث عن Arena</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/06-arena-search.svg"><strong>06 | البحث عن Arena</strong></a></h3>
 
-<p align="center" dir="rtl">ابحث عن <strong>Arena</strong> في موقع الشركة، أو استخدم رابط التحميل المباشر أعلاه.</p>
+<p align="center" dir="rtl">ابحث عن Arena في موقع الشركة، أو استخدم رابط التحميل المباشر أعلاه.</p>
 
 <p align="center"><img src="images/steps/06-arena-search.svg" alt="06 | البحث عن Arena" width="95%"/></p>
 
-<h4 align="center" dir="rtl">07 | تحديد إصدار Arena 17.00.01</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/07-arena-17-download.svg"><strong>07 | تحديد إصدار Arena 17.00.01</strong></a></h3>
 
-<p align="center" dir="rtl">حدد الإصدار الصحيح وملف التنزيل ثم <strong>Download Selections</strong>. ملف <strong>Patch</strong> قد يتطلب نسخة أساسية سابقة.</p>
+<p align="center" dir="rtl">حدد الإصدار الصحيح وملف التنزيل ثم Download Selections. ملف Patch قد يتطلب نسخة أساسية سابقة.</p>
 
 <p align="center"><img src="images/steps/07-arena-17-download.svg" alt="07 | تحديد إصدار Arena 17.00.01" width="95%"/></p>
 
-<h4 align="center" dir="rtl">08 | الموافقة على اتفاقية الترخيص</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/08-accept-license.svg"><strong>08 | الموافقة على اتفاقية الترخيص</strong></a></h3>
 
-<p align="center" dir="rtl">اقرأ الاتفاقية ثم اختر <strong>Accept and Download</strong> إذا كنت موافقًا على شروطها.</p>
+<p align="center" dir="rtl">اقرأ الاتفاقية ثم اختر Accept and Download إذا كنت موافقًا على شروطها.</p>
 
 <p align="center"><img src="images/steps/08-accept-license.svg" alt="08 | الموافقة على اتفاقية الترخيص" width="95%"/></p>
 
-<h4 align="center" dir="rtl">09 | حفظ مدير التنزيل</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/09-save-download.svg"><strong>09 | حفظ مدير التنزيل</strong></a></h3>
 
-<p align="center" dir="rtl">اختر مكان الحفظ ثم اضغط <strong>Save</strong>، وشغّل مدير التنزيل الرسمي.</p>
+<p align="center" dir="rtl">اختر مكان الحفظ ثم اضغط Save، وشغّل مدير التنزيل الرسمي.</p>
 
 <p align="center"><img src="images/steps/09-save-download.svg" alt="09 | حفظ مدير التنزيل" width="95%"/></p>
 
-<h4 align="center" dir="rtl">10 | الوصول إلى C:\RA</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/10-drive-ra.svg"><strong>10 | الوصول إلى C:\RA</strong></a></h3>
 
-<p align="center" dir="rtl">افتح <strong>C:\RA</strong> بعد اكتمال التنزيل، وافتح مجلد الإصدار المناسب. فك الضغط عن ZIP إذا كان الملف مضغوطًا.</p>
+<p align="center" dir="rtl">افتح C:\RA بعد اكتمال التنزيل، وافتح مجلد الإصدار المناسب. فك الضغط عن ZIP إذا كان الملف مضغوطًا.</p>
 
 <p align="center"><img src="images/steps/10-drive-ra.svg" alt="10 | الوصول إلى C:\RA" width="95%"/></p>
 
-<h4 align="center" dir="rtl">11 | فتح MediaImage</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/11-mediaimage.svg"><strong>11 | فتح MediaImage</strong></a></h3>
 
-<p align="center" dir="rtl">افتح مجلد <strong>MediaImage</strong> داخل الملفات المستخرجة.</p>
+<p align="center" dir="rtl">افتح مجلد MediaImage داخل الملفات المستخرجة.</p>
 
 <p align="center"><img src="images/steps/11-mediaimage.svg" alt="11 | فتح MediaImage" width="95%"/></p>
 
-<h4 align="center" dir="rtl">12 | تشغيل autorun.exe</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/12-autorun.svg"><strong>12 | تشغيل autorun.exe</strong></a></h3>
 
-<p align="center" dir="rtl">اختر <strong>autorun</strong> من نوع <strong>Application</strong> وليس <strong>Setup Information</strong>، ثم <strong>Run as administrator</strong>.</p>
+<p align="center" dir="rtl">اختر autorun من نوع Application وليس Setup Information، ثم Run as administrator.</p>
 
 <p align="center"><img src="images/steps/12-autorun.svg" alt="12 | تشغيل autorun.exe" width="95%"/></p>
 
-<h4 align="center" dir="rtl">13 | تثبيت Arena</h4>
+<h3 align="center" dir="rtl"><a href="images/steps/13-install-arena.svg"><strong>13 | تثبيت Arena</strong></a></h3>
 
-<p align="center" dir="rtl">من نافذة <strong>Arena 2026</strong> اختر <strong>Install Arena</strong> واتبع التعليمات، ثم اختبر النموذج.</p>
+<p align="center" dir="rtl">من نافذة Arena 2026 اختر Install Arena واتبع التعليمات، ثم اختبر النموذج.</p>
 
 <p align="center"><img src="images/steps/13-install-arena.svg" alt="13 | تثبيت Arena" width="95%"/></p>
 
