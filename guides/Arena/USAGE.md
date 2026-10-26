@@ -104,6 +104,10 @@
 <a id="arena-use-06"></a>
 ## 6. Run — تشغيل المحاكاة
 
+<div align="center"><img src="images/04_Run_Arena17.jpg" alt="Run: تشغيل النموذج، والتحقق منه، وتحديد فترة المحاكاة" width="96%"/></div>
+
+**الصورة الأصلية:** Run: تشغيل النموذج، والتحقق منه، وتحديد فترة المحاكاة.
+
 1. افتح **Run → Check Model**.
 2. افتح **Run → Setup**.
 3. حدد وحدات الزمن و**Replication Length** و**Number of Replications**.
@@ -116,12 +120,20 @@
 <a id="arena-use-07"></a>
 ## 7. View — التحكم في العرض
 
+<div align="center"><img src="images/05_View_Arena17.jpg" alt="View: التكبير والتصغير وإظهار اللوحات" width="96%"/></div>
+
+**الصورة الأصلية:** View: التكبير والتصغير وإظهار اللوحات.
+
 **Zoom / Fit / Pan** لتغيير حجم واتجاه رؤية النموذج؛ ويمكن إظهار أو إخفاء مناطق الواجهة وفق إعدادات النسخة. إذا اختفى **Spreadsheet View** فتأكد من الفاصل السفلي القابل للسحب.
 
 ---
 
 <a id="arena-use-08"></a>
 ## 8. Tools — التحليل والمساعدة
+
+<div align="center"><img src="images/06_Tools_Arena17.jpg" alt="Tools: التحليل والإعدادات والأدوات المساعدة" width="96%"/></div>
+
+**الصورة الأصلية:** Tools: التحليل والإعدادات والأدوات المساعدة.
 
 توجد أدوات مثل **Input Analyzer** لملاءمة توزيعات البيانات، وأدوات مقارنة المخرجات و**OptQuest** بحسب الترخيص. لا تفترض أن كل إضافة موجودة لدى المستخدم.
 
@@ -131,6 +143,10 @@
 
 <a id="arena-use-10"></a>
 ## 9. Project Bar → Discrete Processing
+
+<div align="center"><img src="images/07_Discrete_Processing_Arena17.jpg" alt="Discrete Processing: وحدات Create وProcess وDispose المستخدمة في نموذج مركز الاتصالات" width="96%"/></div>
+
+**الصورة الأصلية:** Discrete Processing: وحدات Create وProcess وDispose المستخدمة في نموذج مركز الاتصالات.
 
 | الوحدة | وظيفتها في مركز الاتصالات |
 |---|---|
@@ -316,8 +332,8 @@ Create: Caller Arrivals  →  Process: Handle Call  →  Dispose: Call Completed
 **مصادر البرنامج والصورة الحديثة:**
 - [Rockwell Automation — صفحة تنزيل Arena Professional Edition](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
 - [Rockwell Automation — خيارات Arena Professional Edition وDemo/Academic](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options.html).
-- [Coyosu — لقطة حقيقية لواجهة Arena الحديثة](https://coyosu.com/vi/arena-can-ban-nang-cao)، مادة تعليمية خارجية، وليست توثيقًا رسميًا من Rockwell.
+- صور واجهة Arena 17 الأصلية التي أرسلها الطالب، محفوظة في مجلد `guides/Arena/images` بالمستودع.
 
-**ملاحظة تخص الصور الأصلية:** لقطات Arena 17 التي شاركها الطالب في المحادثة السابقة هي المصدر المرئي المعتمد لتحديد مواضع الأدوات. لا تُضاف إلى GitHub صور من مسارات محلية لا يستطيع الزائر فتحها؛ يجب رفع ملفاتها الفعلية إلى المستودع قبل إضافتها في هذه الصفحة.
+**ملاحظة الصور:** جميع اللقطات السبع أصلية من جهاز الطالب، وقد رُفعت كملفات صور فعلية داخل المستودع، ووُضعت كل لقطة في القسم الذي يشرحها.
 
 </div>
