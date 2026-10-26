@@ -1,14 +1,30 @@
 <div dir="rtl" align="right">
 
-# **دليل إعداد واستخدام Power BI Report Server**
+# **دليل Power BI Report Server**
 
 **إعداد:** Talal bin Ibrahim Alsultan  
-**آخر تحديث:** 26 أكتوبر 2026
+**آخر تحديث:** 27 أكتوبر 2026
 
 إذا كنت تعمل على تقارير Power BI وتحتاج إلى نشرها داخل شبكة الجهة بدلًا من رفعها إلى الخدمة السحابية، فهذا الدليل يوضح طريقة استخدام **Power BI Report Server (PBIRS)**. سنبدأ بالفرق بينه وبين Power BI Desktop، ثم متطلبات التثبيت، وكيفية إعداد تقرير ونشره وتحديث بياناته.
 
 **ملاحظة قبل البدء:** تثبيت الخادم وإدارته مهمة مسؤول الأنظمة الذي يملك الصلاحيات المناسبة. إذا كنت محلل بيانات، فغالبًا يكفيك البدء من قسم تنزيل Desktop المتوافق مع الخادم ونشر التقرير.
 
+> **دليل عملي لفهم Power BI Report Server وتثبيته، وإعداد البوابة الداخلية، ونشر تقرير ومتابعة تحديث بياناته.**
+
+<a name="pbirs-toc"></a>
+## المحتويات
+
+1. [ما الفرق بين Desktop وReport Server؟](#pbirs-section-01)
+2. [كيف تنتقل البيانات من Excel إلى لوحة التقارير؟](#pbirs-section-02)
+3. [تحميل الخادم وتثبيته](#pbirs-section-03)
+4. [تنزيل Power BI Desktop المناسب للخادم](#pbirs-section-04)
+5. [نشر أول تقرير على بوابة الخادم](#pbirs-section-05)
+6. [ضبط تحديث البيانات Scheduled Refresh](#pbirs-section-06)
+7. [أهم المشكلات والحلول](#pbirs-section-07)
+8. [روابط Microsoft الرسمية](#pbirs-section-08)
+
+---
+<a name="pbirs-section-01"></a>
 ## 1. ما الفرق بين Desktop وReport Server؟
 
 | Power BI Desktop | Power BI Report Server |
@@ -20,6 +36,7 @@
 
 **النقطة المهمة:** إذا كان النشر على PBIRS، فلا تفترض أن أي نسخة من Power BI Desktop ستعمل معه. استخدم **Power BI Desktop for Report Server** المتوافق مع إصدار الخادم.
 
+<a name="pbirs-section-02"></a>
 ## 2. كيف تنتقل البيانات من Excel إلى لوحة التقارير؟
 
 <p align="center"><img src="https://learn.microsoft.com/vi-vn/power-bi/report-server/media/get-started/power-bi-report-server-overview.png" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 1" width="92%"/></p>
@@ -41,6 +58,7 @@ flowchart LR
 
 <div dir="rtl" align="right">
 
+<a name="pbirs-section-03"></a>
 ## 3. تحميل الخادم وتثبيته
 
 <p align="center"><img src="https://community.fabric.microsoft.com/t5/image/serverpage/image-id/85502i1375C13D05CD4D3E/image-size/large?px=999&amp;v=v2" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 2" width="92%"/></p>
@@ -59,6 +77,7 @@ flowchart LR
 
 لمزيد من التفصيل راجع [دليل تثبيت Report Server من Microsoft](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server).
 
+<a name="pbirs-section-04"></a>
 ## 4. تنزيل Power BI Desktop المناسب للخادم
 
 إذا كان الخادم مثبتًا أصلًا، فاتبع هذه الخطوات لإنشاء تقارير متوافقة معه:
@@ -71,6 +90,7 @@ flowchart LR
 
 قد توجد على الجهاز نسخة Power BI Desktop عادية ونسخة مخصصة لـ Report Server. انتبه إلى اسم النسخة المفتوحة، خاصة عند النقر المزدوج على ملفات PBIX.
 
+<a name="pbirs-section-05"></a>
 ## 5. نشر أول تقرير على بوابة الخادم
 
 بعد تجهيز البيانات والرسوم، اتبع الخطوات التالية:
@@ -83,6 +103,7 @@ flowchart LR
 
 إذا لم يظهر زر النشر، فافحص الصلاحية أولًا؛ ليس بالضرورة أن تكون مشكلة في البرنامج نفسه.
 
+<a name="pbirs-section-06"></a>
 ## 6. ضبط تحديث البيانات Scheduled Refresh
 
 <p align="center"><img src="https://learn.microsoft.com/fr-fr/power-bi/report-server/media/configure-scheduled-refresh/manage-power-bi-report.png" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 3" width="92%"/></p>
@@ -101,6 +122,7 @@ flowchart LR
 
 راجع [Microsoft — Scheduled Refresh](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh) للتأكد من أنواع البيانات المدعومة والإعدادات المناسبة لإصدارك.
 
+<a name="pbirs-section-07"></a>
 ## 7. أهم المشكلات والحلول
 
 | المشكلة | ماذا تفحص أولًا؟ |
@@ -113,6 +135,7 @@ flowchart LR
 | رابط البوابة لا يعمل | إعداد Web Portal URL والخدمة والشبكة والجدار الناري |
 | التقارير تستغرق وقتًا طويلًا | حجم النموذج والعلاقات والاستعلامات وموارد الخادم |
 
+<a name="pbirs-section-08"></a>
 ## 8. روابط Microsoft الرسمية
 
 - [Power BI Report Server — Get Started](https://learn.microsoft.com/en-us/power-bi/report-server/get-started)
@@ -124,5 +147,13 @@ flowchart LR
 **ملاحظة:** قد تتغير أسماء الأزرار وترتيب الإعدادات بين الإصدارات. ابدأ دائمًا من النسخة التي يستخدمها خادم جهتك قبل تطبيق الخطوات.
 
 [العودة إلى الصفحة الرئيسية للأدلة](../../README.md)
+
+---
+
+### إعداد الدليل
+
+**Talal bin Ibrahim Alsultan**  
+*Applied Information System • Data Science • Decision Sciences*  
+King Saud University
 
 </div>
