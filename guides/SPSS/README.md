@@ -46,6 +46,16 @@
 
 **ملاحظة:** التجربة الرسمية لدى IBM مدتها **14 يومًا** وفق صفحة الموارد الحالية، وتبدأ بعد التسجيل. قد تختلف شروط عروض الجامعات.
 
+### صورة توضيحية لصفحة التحميل لدى IBM
+
+<div align="center">
+
+<img src="https://higherlogicdownload.s3.amazonaws.com/IMWUC/UploadedImages/c2ed9634d64e4992898e122be2a65df8_Step-3.png" alt="صورة فعلية قديمة من IBM Community تعرض خيارات تنزيل SPSS لنظام Windows وmacOS" width="78%"/>
+
+<sub>لقطة منشورة في <a href="https://community.ibm.com/community/user/blogs/douglas-stauber/2017/10/19/how-to-change-machines-with-spss-statistics-subscription">IBM Community</a> لصفحة التنزيل. **الصورة قديمة ومرجعية فقط**؛ استخدم روابط IBM الرسمية أعلاه للحصول على الشاشة الحالية والنسخة الصحيحة.</sub>
+
+</div>
+
 ### كيف أفعّل SPSS بطريقة صحيحة؟
 
 | نوع الترخيص | طريقة التفعيل |
