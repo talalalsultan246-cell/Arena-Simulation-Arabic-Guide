@@ -2,7 +2,7 @@
 
 # **دليل IBM SPSS Statistics: التحميل والتثبيت والتحليل الإحصائي**
 
-**إعداد:** Talal Alsultan  
+**إعداد:** Talal bin Ibrahim Alsultan  
 **آخر تحديث:** 26 أكتوبر 2026
 
 إذا كنت تريد استخدام **SPSS** في واجب أو مشروع جامعي، فهذا الدليل يبدأ معك من تحميل البرنامج وتفعيله، ثم يعرّفك على أهم القوائم، وبعد ذلك يوضح طريقة تنفيذ التحليل الوصفي والارتباط والانحدار وANOVA. حاولت ترتيب الخطوات بالطريقة التي يحتاجها الطالب وهو يعمل على جهازه، بدل الاكتفاء بسرد أسماء الأدوات.
@@ -46,13 +46,13 @@
 
 **ملاحظة:** التجربة الرسمية لدى IBM مدتها **14 يومًا** وفق صفحة الموارد الحالية، وتبدأ بعد التسجيل. قد تختلف شروط عروض الجامعات.
 
-### صورة توضيحية لصفحة التحميل لدى IBM
+### صورة إرشادية لتنزيل SPSS من IBM
 
 <div align="center">
 
-<img src="https://higherlogicdownload.s3.amazonaws.com/IMWUC/UploadedImages/c2ed9634d64e4992898e122be2a65df8_Step-3.png" alt="صورة فعلية قديمة من IBM Community تعرض خيارات تنزيل SPSS لنظام Windows وmacOS" width="78%"/>
+<img src="images/01-download-ibm.svg" alt="صورة فعلية قديمة من IBM Community تعرض خيارات تنزيل SPSS لنظام Windows وmacOS" width="78%"/>
 
-<sub>لقطة منشورة في <a href="https://community.ibm.com/community/user/blogs/douglas-stauber/2017/10/19/how-to-change-machines-with-spss-statistics-subscription">IBM Community</a> لصفحة التنزيل. **الصورة قديمة ومرجعية فقط**؛ استخدم روابط IBM الرسمية أعلاه للحصول على الشاشة الحالية والنسخة الصحيحة.</sub>
+<sub>رسم إرشادي أعددته لتوضيح الفكرة، وليس لقطة شاشة فعلية من إصدار IBM الحالي. استخدم رابط الشركة الموجود أعلاه.</sub>
 
 </div>
 
@@ -86,9 +86,9 @@
 
 <div align="center">
 
-<img src="https://s3.amazonaws.com/libapps/accounts/2515/images/spss_creating-variables_insert-variables-2.png" alt="لقطة فعلية لواجهة Data View في IBM SPSS Statistics" width="80%"/>
+<img src="images/02-data-view.svg" alt="لقطة فعلية لواجهة Data View في IBM SPSS Statistics" width="80%"/>
 
-<sub>لقطة تعليمية من <a href="https://libguides.library.kent.edu/SPSS/CreateData">مكتبة جامعة Kent State</a>. قد يختلف تصميم الواجهة باختلاف الإصدار.</sub>
+<sub>رسم إرشادي محفوظ داخل المستودع؛ توزيع عناصر النافذة قد يختلف حسب إصدار SPSS.</sub>
 
 </div>
 
@@ -98,9 +98,9 @@
 
 <div align="center">
 
-<img src="https://cdn.chass.ncsu.edu/sites/it.chass.ncsu.edu/training/spss/spssimages/2/spss%202-3.png" alt="لقطة فعلية لتعريف متغيرات SPSS في Variable View" width="80%"/>
+<img src="images/03-variable-view.svg" alt="لقطة فعلية لتعريف متغيرات SPSS في Variable View" width="80%"/>
 
-<sub>لقطة تعليمية من <a href="https://it.chass.ncsu.edu/tutorials/spss/section2.php">North Carolina State University</a>.</sub>
+<sub>رسم إرشادي محفوظ داخل المستودع يشرح أنواع المتغيرات؛ ليس لقطة أصلية من البرنامج.</sub>
 
 </div>
 
@@ -169,13 +169,13 @@ Y = b0 + b1 X + error
 4. من **Statistics** اختر تقديرات المعاملات و**Model fit**؛ ويمكن تفعيل **Confidence intervals** عند الحاجة.
 5. اضغط **Continue** ثم **OK**.
 
-### صورة فعلية لواجهة Linear Regression
+### رسم توضيحي لواجهة Linear Regression
 
 <div align="center">
 
-<img src="https://trainme.erau.edu/spss/images/linreg-ok.jpg" alt="نافذة SPSS Linear Regression لاختيار المتغير التابع والمستقل" width="78%"/>
+<img src="images/04-linear-regression.svg" alt="نافذة SPSS Linear Regression لاختيار المتغير التابع والمستقل" width="78%"/>
 
-<sub>المصدر: <a href="https://trainme.erau.edu/spss/using_spss/">Embry-Riddle Aeronautical University — Using SPSS</a>.</sub>
+<sub>رسم إرشادي محفوظ داخل المستودع يوضح موضع المتغير التابع والمستقل.</sub>
 
 </div>
 
@@ -264,13 +264,13 @@ Y = b0 + b1 X1 + b2 X2 + ... + bk Xk + error
 5. اضغط **OK** لعرض جدول ANOVA.
 6. إذا ظهرت فروق دالة وكانت المقارنات مطلوبة، اختر اختبار **Post Hoc** مناسبًا للبيانات وتجانس التباين.
 
-### صورة من برنامج SPSS لتحليل التباين
+### رسم توضيحي لتحليل التباين
 
 <div align="center">
 
-<img src="https://www.ibm.com/content/adobe-cms/mx/es/products/spss-statistics/supply-chain/jcr%3Acontent/root/table_of_contents/body/content_section_styled/content-section-body/tabs_container/tabs-item/item_1623336295815/image.coreimg.png/1762870714873/supplychain-anova.png" alt="واجهة IBM SPSS Statistics مع قوائم Analysis وANOVA" width="78%"/>
+<img src="images/05-one-way-anova.svg" alt="واجهة IBM SPSS Statistics مع قوائم Analysis وANOVA" width="78%"/>
 
-<sub>صورة منشورة على <a href="https://www.ibm.com/mx-es/products/spss-statistics/supply-chain">موقع IBM</a> توضح إحدى واجهات تحليل التباين؛ قد تختلف شاشة One-Way ANOVA عن هذه اللقطة.</sub>
+<sub>رسم إرشادي محفوظ داخل المستودع لمسار One-Way ANOVA؛ التفاصيل الدقيقة قد تختلف حسب الإصدار.</sub>
 
 </div>
 
@@ -316,13 +316,13 @@ Y = b0 + b1 X1 + b2 X2 + ... + bk Xk + error
 - [University of Illinois — SPSS Statistical Tests](https://guides.library.illinois.edu/spss/statistics_tests)
 - [Kent State University — Creating Data in SPSS](https://libguides.library.kent.edu/SPSS/CreateData)
 
-الصور المضمنة لقطات تعليمية من المصادر الموضحة أسفلها، وليست صورًا من جهاز صاحب الدليل. عند تغيّر روابط الصور الخارجية يمكنك الوصول إليها من المصدر المكتوب تحت كل صورة.
+الصور المضمنة في هذا الدليل رسومات إرشادية توضح الخطوات المطلوبة، وليست لقطات شاشة حرفية. جميع ملفات الصور محفوظة داخل المستودع لتعمل مع الدليل دون الاعتماد على روابط صور خارجية.
 
 [العودة إلى الصفحة الرئيسية لجميع الأدلة](../../README.md)
 
 ---
 
-**Talal Alsultan**  
+**Talal bin Ibrahim Alsultan**  
 Applied Information System · Data Science · Decision Sciences
 
 </div>
