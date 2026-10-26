@@ -675,90 +675,182 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="center" dir="rtl">
 
-### دليل مصور: الحساب الجامعي وتفعيل أهلية التنزيل
+### دليل تثبيت Arena 17 بالصور: من تسجيل الحساب إلى تشغيل المثبّت
+
+<div align="center" dir="rtl">
+
+**هذا الدليل خاص بمستخدمي Arena 17، ويشرح مرحلة إعداد حساب Rockwell ثم تنزيل Arena وتشغيل ملفات التثبيت.**
+
+> 🔴 **مهم قبل التحميل:** يجب إكمال بيانات الحساب (**Complete Profile**) وإضافة الجهة (**Location**). للمستخدم المنتمي إلى جامعة الملك سعود، ابحث عن **King Saud University** ثم تحقق من حالة الطلب. استعمل بريدك الجامعي لتسهيل التحقق.
+
+**المتصفح المفضّل:** Microsoft Edge بأحدث إصدار. هذا اختيار عملي وليس شرطًا تقنيًا إلزاميًا من Rockwell.
+
+**نوع الصور:** الصور التالية **رسومات إرشادية مبنية على الشاشات التي أرسلتها، وليست لقطات أصلية حرفية من موقع Rockwell**. الإطارات الحمراء توضّح مواضع الضغط، وقد تتغيّر هيئة الموقع مستقبلًا.
+
+</div>
+
+<div align="center">
+
+<a href="https://compatibility.rockwellautomation.com/Pages/Downloads.aspx?c=118&pid=50026">
+  <img src="images/arena-download-banner.svg" alt="اضغط هنا لفتح صفحة تنزيل Arena الرسمية مباشرة" width="100%"/>
+</a>
+
+**[صفحة تحميل Arena الرسمية مباشرةً](https://compatibility.rockwellautomation.com/Pages/Downloads.aspx?c=118&pid=50026)**
+
+</div>
+
+> 🔴 **تحذير:** صفحة التحميل قد تطلب تسجيل الدخول أو إكمال شروط حسابك أولًا. حزمة **Arena 17.00.01 Patch** تحديث وليست بالضرورة مثبتًا كاملًا؛ راجع وصف التنزيل قبل استخدامه على جهاز جديد.
+
+
+<div align="center" dir="rtl">
+
+#### 1. افتح قائمة الحساب واضغط Sign In
+
+افتح موقع Rockwell Automation باستخدام Microsoft Edge، ثم اختر **Sign In**، أو **Create an Account** إذا لم يكن لديك حساب.
+
+<img src="images/steps/01-open-account.svg" alt="1. افتح قائمة الحساب واضغط Sign In" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 2. أدخل البريد الجامعي
+
+اكتب بريدك الجامعي الصحيح، واضغط **Continue**. **توصي Rockwell باستخدام البريد الجامعي، لكنه ليس شرطًا مطلقًا معلنًا**؛ استخدام البريد الشخصي قد يؤخر التحقق.
+
+<img src="images/steps/02-university-email.svg" alt="2. أدخل البريد الجامعي" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 3. انتقل إلى My Account
+
+بعد تسجيل الدخول، افتح **My Account** ثم **Account Profile Dashboard** للتحقق من حالة الحساب قبل تنزيل Arena.
+
+<img src="images/steps/03-my-account.svg" alt="3. انتقل إلى My Account" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 4. أكمل الملف الشخصي Complete Profile
+
+افتح **Profile → Personal Information**، وأدخل البيانات المطلوبة واحفظ التحديثات. هذا هو **الشرط الأول**: اكتمال معلومات الملف الشخصي.
+
+<img src="images/steps/04-complete-profile.svg" alt="4. أكمل الملف الشخصي Complete Profile" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 5. أضف جهة الجامعة وتحقق من اعتمادها
+
+افتح **Access → Locations**. ابحث عن **King Saud University** إذا كانت جامعتك، أو اضغط **Request Locations** وقدم طلب ربط الجهة عند الحاجة. تحقّق من ظهور اسم الجامعة و**Approved** عند اعتماد الطلب. هذا هو **الشرط الثاني**: إضافة Location.
+
+<img src="images/steps/05-approved-location.svg" alt="5. أضف جهة الجامعة وتحقق من اعتمادها" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 6. ابحث عن Arena
+
+يمكنك البحث عن **Arena** في موقع Rockwell ثم فتح **Arena Downloads**؛ لتجنب البحث، استخدم زر التنزيل المباشر أدناه.
+
+<img src="images/steps/06-arena-search.svg" alt="6. ابحث عن Arena" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 7. اختر Arena 17.00.01 وملف التنزيل المناسب
+
+راجع إصدار **17.00.01** في مركز التنزيل، ثم حدّد الحزمة المناسبة واضغط **Download Selections**. إذا كان الملف يحمل اسم **Patch** فهو تحديث؛ تحقق من ضرورة وجود النسخة الأساسية قبل تثبيته.
+
+<img src="images/steps/07-arena-17-download.svg" alt="7. اختر Arena 17.00.01 وملف التنزيل المناسب" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 8. راجع اتفاقية الترخيص
+
+اقرأ اتفاقية ترخيص البرنامج، وإذا وافقت عليها اختر **Accept and Download**. لا تتجاوز الشروط القانونية.
+
+<img src="images/steps/08-accept-license.svg" alt="8. راجع اتفاقية الترخيص" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 9. احفظ مدير التنزيل
+
+عند ظهور نافذة الحفظ اختر موقعًا معروفًا، مثل Downloads، واضغط **Save** ثم شغّل مدير التنزيل الرسمي.
+
+<img src="images/steps/09-save-download.svg" alt="9. احفظ مدير التنزيل" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 10. افتح القرص C والمجلد RA
+
+غالبًا ينزّل مدير Rockwell ملفات Arena إلى **`C:\RA`**. ابحث عن المجلد **`17.00.01.10_x64`** أو المجلد الذي يحمل إصدار التنزيل عندك، وفك ضغط الحزمة إن كانت ZIP.
+
+<img src="images/steps/10-drive-ra.svg" alt="10. افتح القرص C والمجلد RA" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 11. افتح MediaImage
+
+داخل المجلد المستخرج ستجد **Dependencies** و**MediaImage**؛ افتح **MediaImage** وليس Dependencies لتشغيل واجهة المثبّت.
+
+<img src="images/steps/11-mediaimage.svg" alt="11. افتح MediaImage" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 12. شغّل autorun.exe بصلاحية المدير
+
+في **MediaImage** حدد **autorun** من نوع **Application**؛ لا تخلطه بملف **autorun** من نوع **Setup Information**. اختر **Run as administrator**.
+
+<img src="images/steps/12-autorun.svg" alt="12. شغّل autorun.exe بصلاحية المدير" width="100%"/>
+
+</div>
+
+
+<div align="center" dir="rtl">
+
+#### 13. اختر Install Arena
+
+عند فتح شاشة التثبيت اختر **Install Arena**، وأكمل التعليمات، ثم تحقق من الترخيص وجرّب نموذج **Create → Process → Dispose**.
+
+<img src="images/steps/13-install-arena.svg" alt="13. اختر Install Arena" width="100%"/>
 
 </div>
 
 <div align="center" dir="rtl">
 
-> **توصية بشأن المتصفح:** يُفضّل استخدام **Microsoft Edge** (بأحدث إصدار) عند إنشاء حساب Rockwell Automation، وتسجيل الدخول، وإكمال الملف الشخصي، وإضافة **Location**، وتنزيل **Arena 17**. افتح الموقع مباشرةً من Edge بدلًا من المتصفح المدمج داخل التطبيقات. إذا واجهت مشكلة في تسجيل الدخول أو ظهور خيارات التحميل، جرّب تحديث Edge والسماح بملفات تعريف الارتباط والنوافذ المنبثقة اللازمة للموقع، ثم أعد المحاولة. **هذه توصية عملية وليست شرطًا رسميًا أو حصريًا من Rockwell Automation**؛ قد تعمل متصفحات حديثة أخرى أيضًا.
+**تنويه خصوصية:** لا تنشر بريدك الجامعي الكامل، أو رقم الترخيص، أو معرف المؤسسة (BPID)، أو رقم الهاتف في صور منشورة في مستودع عام.
+
+**المصدر:** [Rockwell — خطوات إنشاء الحساب والتنزيل](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)، ومشاهد التثبيت التي زود بها صاحب المستودع. [الفيديو المرجعي على YouTube](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q).
 
 </div>
-
-<div align="center" dir="rtl">
-
-> **نوع الصور:** الرسومات التالية **توضيحية مرسومة وليست لقطات فعلية** من صفحات Rockwell. المربعات الحمراء تحدد ما ينبغي البحث عنه في الواجهة؛ قد تختلف مواقع الأزرار. أما مسار مجلد التثبيت وتسميات ملفاته فقد تمت مطابقتها مع تسجيل الشاشة المرفق بتاريخ 25 أكتوبر 2026.
-
-</div>
-
-<div align="center" dir="rtl">
-
-**المرحلة 1 — الدخول أو إنشاء حساب:**
-
-</div>
-
-<div align="center" dir="rtl">
-
-![رسم توضيحي لصفحة Sign In والبريد الجامعي](images/01-sign-in-account.svg)
-
-</div>
-
-1. ادخل [صفحة تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)، ثم اختر **Sign In** إذا كان لديك حساب أو [Create Account](https://www.rockwellautomation.com/account/create-account) عند إنشاء حساب جديد.
-2. **يفضّل استخدام البريد الجامعي** المرتبط بجامعة الملك سعود؛ موقع Rockwell يوصي ببريد الجامعة أو جهة العمل، لكنه **لا يضع البريد الجامعي شرطًا مطلقًا**. قد يتأخر التحقق من الحساب الشخصي.
-3. أكمل التسجيل وتحقق من بريدك إذا طُلب.
-
-<div align="center" dir="rtl">
-
-**المرحلة 2 — الشرطان اللازمان قبل ظهور رابط تنزيل Arena:**
-
-</div>
-
-<div align="center" dir="rtl">
-
-![رسم توضيحي لإكمال ملف الحساب وإضافة موقع الجامعة](images/02-profile-location.svg)
-
-</div>
-
-1. بعد الدخول، افتح **My Account / Account Profile Dashboard** وأكمل **Personal Information / Complete Profile**.
-2. في قسم **Access** افتح **Locations**، أو استخدم رابط طلب الموقع المعروض في لوحة حسابك.
-3. ابحث عن **King Saud University**، واختر السجل المطابق لجهتك التعليمية الحقيقية، ثم أضفه إلى الحساب وقدّم الطلب عبر زر الموافقة/الإضافة المعروض. قد تخضع الإضافة للتحقق أو الموافقة بحسب الحساب.
-4. ارجع إلى لوحة الحساب وتأكد من ظهور شرطَي **Completed Profile** و**Location Added** أو ما يقابلهما وقد تحققا. **إنشاء حساب جديد فقط لا يضيف الجامعة تلقائيًا.**
-5. إذا تعذر العثور على الجامعة في قائمة المواقع، تواصل مع دعم Rockwell لإضافتها؛ لا تختَر جهة أخرى لمجرد تجاوز التحقق.
-
-<div align="center" dir="rtl">
-
-المصدر الرسمي الذي يوضح الشرطين: [Rockwell — Create and Complete Your Rockwell Automation Account](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
-
-</div>
-
-<div align="center" dir="rtl">
-
-**المرحلة 3 — تنزيل Arena 17 والتثبيت من مجلد C:**
-
-</div>
-
-<div align="center" dir="rtl">
-
-![رسم توضيحي لمسار التثبيت وملف autorun والخيار Install Arena](images/03-c-ra-arena-install.svg)
-
-</div>
-
-1. بعد استكمال بيانات الحساب والموقع، اختر [Arena Download](https://download.rockwellautomation.com/) أو استخدم [مركز Product Compatibility and Download Center](https://compatibility.rockwellautomation.com/) للبحث عن **Arena 17.00.01**.
-2. نفّذ ملف **Download Manager** عند الحاجة. بحسب Rockwell غالبًا تُحفَظ ملفات التثبيت في **`C:\RA`**، وقد يختلف المجلد إن اخترت مكانًا آخر.
-3. في مثال تسجيل الشاشة المرفق افتح **`C:\RA\17.00.01.10_x64`** ثم المجلد الداخلي **`17.00.01.10_x64`**. هذه تسمية **مثال فعلي من التسجيل**؛ الاسم قد يختلف بعد التحديث.
-4. ستجد **Dependencies** و**MediaImage**؛ افتح **MediaImage**.
-5. ستجد مجلدات **Help / Install / Redist / Support** وعدة ملفات، بينها ملفان ظاهران باسم **autorun**. اختر ملف **autorun** الذي نوعه **Application** (‏`autorun.exe`)، وليس الملف من نوع **Setup Information** (‏`autorun.inf`).
-6. انقر بزر الفأرة الأيمن على ملف التطبيق، واختر **Run as administrator**، ثم من نافذة **Arena 2026** اختر **Install Arena** واتبع معالج التثبيت.
-7. اترك ملفات **Dependencies** والمكونات التابعة كما وفّرها المثبّت؛ لا تشغّل حزمًا إضافية غير لازمة.
-8. بعد التثبيت افحص التفعيل وجرّب نموذج Create → Process → Dispose.
-
-<div align="center" dir="rtl">
-
-**رابط الفيديو الذي أرسله المستخدم لخطوات التحميل:** [شرح Arena على YouTube](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q). لا تمثّل الرسومات أعلاه لقطات من YouTube؛ هي توضيحات منفصلة تعتمد على تسلسل التعليمات.
-
-</div>
-
-<div align="center" dir="rtl">
 
 ### أ. التحميل من الشركة المصنّعة
 
