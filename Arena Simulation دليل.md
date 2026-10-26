@@ -1,8 +1,16 @@
 <div align="right" dir="rtl">
 
+### النسخة الأساسية ضمن الأدلة
+
+هذا هو رابط دليل Arena القديم الذي تمت مشاركته سابقًا في واتساب، **وسيظل يعرض الدليل كاملًا**. وأصبح للدليل أيضًا مكان منظم داخل مجلد الأدلة: **[فتح دليل Arena من Guides](guides/Arena/README.md)**.
+
+</div>
+
+<div align="right" dir="rtl">
+
 # **برنامج Arena Simulation**
 
-**إعداد:** Talal Alsultan  
+**إعداد:** Talal bin Ibrahim Alsultan  
 **آخر تحديث:** 26 أكتوبر 2026
 
 </div>
@@ -970,7 +978,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 ### إعداد الدليل
 
-**Talal Alsultan**  
+**Talal bin Ibrahim Alsultan**  
 *Applied Information System • Data Science • Decision Sciences*  
 King Saud University
 
