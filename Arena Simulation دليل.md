@@ -1,11 +1,15 @@
 <div align="right" dir="rtl">
 
-# برنامج Arena Simulation
+# **برنامج Arena Simulation**
+
+**إعداد:** Talal Alsultan  
+**آخر تحديث:** 26 أكتوبر 2026
+
 </div>
 
 <div align="right" dir="rtl">
 
-> **آخر تحديث: 26 أكتوبر 2026**
+> **دليل عملي لتنزيل Arena 17 وتثبيته وتشخيص مشكلات التشغيل**
 >
 > جمعت هنا خطوات تنزيل **Arena 17** وتثبيته بالطريقة التي أحتاجها في المادة، من تجهيز حساب Rockwell إلى تشغيل البرنامج. أضفت أيضًا أوامر بسيطة لفحص متطلبات Windows، خاصة لمن يفتح عنده Arena لكن بعض الأدوات لا تعمل. وضعت الروابط الأصلية وصورًا توضح أين نضغط في كل مرحلة.
 
@@ -967,8 +971,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 ### إعداد الدليل
 
-**Talal bin Ibrahim Alsultan**  
-*Applied Information System • Data Science • Decision Sciences*  
+**Talal Alsultan**  
+*Information Systems • Data Science • Decision Sciences*  
 King Saud University
 
 [GitHub Profile](https://github.com/talalalsultan246-cell)
