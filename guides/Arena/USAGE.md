@@ -33,10 +33,10 @@
 ## 1. النافذة الرئيسية: أين أجد الأدوات؟
 
 <div align="center">
-<img src="https://coyosu.com/cys_all_master_course_detail_page/static/src/arena_software/all_arena_module.png" width="94%" alt="صورة من واجهة Arena الحديثة تعرض شريط Home وProject Bar ومساحة النموذج"/>
+<img src="images/01_Home_Arena17.jpg" width="96%" alt="لقطة أصلية توضح الصفحة الرئيسية Home ومساحة بناء النموذج في Arena 17"/>
 </div>
 
-**مصدر الصورة:** [موقع Coyosu، صفحة دورة Arena](https://coyosu.com/vi/arena-can-ban-nang-cao)، صورة توضيحية **حقيقية لواجهة حديثة** وليست صورة من جهاز الطالب أو وثيقة رسمية من Rockwell.
+**مصدر الصورة:** لقطة أصلية من واجهة **Arena 17 – Training & Evaluation Mode (Student)** على جهاز الطالب، مع ترقيم مواضع الأدوات.
 
 | الموضع | وظيفته |
 |---|---|
@@ -61,6 +61,10 @@
 <a id="arena-use-03"></a>
 ## 3. Home — بناء النموذج
 
+<div align="center"><img src="images/01_Home_Arena17.jpg" alt="Home: (1) شريط الأدوات، (2) Project Bar، (3) مساحة النموذج، (4) جدول الخصائص، (5) Animate Bar، (6) Connect" width="96%"/></div>
+
+**الصورة الأصلية:** Home: (1) شريط الأدوات، (2) Project Bar، (3) مساحة النموذج، (4) جدول الخصائص، (5) Animate Bar، (6) Connect.
+
 **ما الذي تبحث عنه في صورة Home؟**
 
 - **Attach/Detach:** إظهار اللوحات داخل Project Bar.
@@ -76,6 +80,10 @@
 <a id="arena-use-04"></a>
 ## 4. Animate — الحركة أثناء التشغيل
 
+<div align="center"><img src="images/02_Animate_Arena17.jpg" alt="Animate: متابعة الحركة والعدادات وحالة الموارد" width="96%"/></div>
+
+**الصورة الأصلية:** Animate: متابعة الحركة والعدادات وحالة الموارد.
+
 تُستخدم أدوات **Animate** لتمثيل حركة الكيانات وحالة الموظفين والطوابير والعدادات أثناء المحاكاة. في المثال: **المكالمة** كيان، و**Aly / Bander** موارد.
 
 **ملاحظة:** حركة النموذج تساعد في التحقق بصريًا، لكن متوسط زمن الانتظار يُستخرج من نتائج التشغيل.
@@ -84,6 +92,10 @@
 
 <a id="arena-use-05"></a>
 ## 5. Draw — إضافة الرسم والعناوين
+
+<div align="center"><img src="images/03_Draw_Arena17.jpg" alt="Draw: كتابة النصوص ورسم الأشكال التوضيحية" width="96%"/></div>
+
+**الصورة الأصلية:** Draw: كتابة النصوص ورسم الأشكال التوضيحية.
 
 استخدم **Text** لعنوان النموذج، و**Line / Rectangle / Ellipse** لتوضيح الأقسام. **Draw Line ليس Connect**؛ الأول للرسم، والثاني لمسار الكيانات الفعلي.
 
