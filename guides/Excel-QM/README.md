@@ -24,6 +24,7 @@
 3. [الاستخدامات والنماذج المتاحة](#qm-section-03)
    - [روابط موثوقة للتثبيت والتعلّم](#qm-section-03-01)
 4. [مثال تطبيقي واحد — Economic Order Quantity](#qm-section-04)
+   - [صور المخزون ومخرجات المثال](#qm-eoq-screenshot)
    - [المطلوب](#qm-section-04-01)
    - [الحل يدويًا للمقارنة](#qm-section-04-02)
    - [كيف أطبق المثال في Excel QM؟](#qm-section-04-03)
@@ -125,6 +126,34 @@
 
 <small>واجهة حقيقية من [شرح POM-QM for Windows](https://caraindustri.blogspot.com/2020/05/cara-melakukan-forecasting-metode.html)، وليست رسمًا افتراضيًا. يمكنك فتح صفحة المصدر إذا تعذر عرض الصورة.</small>
 
+### صور إضافية من واجهات البرامج الحقيقية
+
+توضح الصور التالية كيف تظهر القوائم والحلول في **POM-QM for Windows**. بعض الصور مأخوذ من إصدارات قديمة، لذلك قد يتغير شكل الأزرار أو أسماء الخيارات مع بقاء طريقة العمل الأساسية متقاربة.
+
+**صورة: شاشة إدخال البيانات داخل برنامج POM-QM for Windows**
+
+<div align="center">
+<img src="https://image3.slideserve.com/5595709/slide19-l.jpg" alt="صورة فعلية لواجهة Data Table في POM-QM for Windows عند تحليل مواقع الخدمة" width="85%"/>
+</div>
+
+<small>مصدر الصورة: [POM-QM Location Analysis](https://www.slideserve.com/rehan/pom-qm-location-analysis). لاحظ جدول **Data Table** وشريط الأدوات في أعلى النافذة؛ هذا المثال مستقل عن مثال المخزون الموجود لاحقًا.</small>
+
+**صورة: جدول النتائج Decision Table Results في QM for Windows**
+
+<div align="center">
+<img src="https://image2.slideserve.com/4092131/slide11-l.jpg" alt="لقطة فعلية لجدول Decision Table Results في QM for Windows، ويتضمن Maximax وMaximin وHurwicz" width="85%"/>
+</div>
+
+<small>مصدر الصورة: [Decision Analysis with QM for Windows](https://www.slideserve.com/drew/chapter-12-decision-analysis). يوضح الجدول كيف يقارن البرنامج البدائل عند اختلاف معايير اتخاذ القرار.</small>
+
+**صورة: مخرجات Forecasting داخل POM-QM for Windows**
+
+<div align="center">
+<img src="https://1.bp.blogspot.com/-WhhT7YD1kKU/XrI2HCsVsxI/AAAAAAAABQE/twMiwU07qxolVCYXAdV50nVjdJ5vFdOIACPcBGAYYCw/s1600/regresi%2Blinier%2B7.jpg" alt="واجهة POM-QM for Windows الحقيقية وتظهر أعمدة التنبؤ والخطأ وMAD وTracking Signal" width="85%"/>
+</div>
+
+<small>مصدر الصورة: [Forecasting with POM-QM for Windows](https://caraindustri.blogspot.com/2020/05/cara-melakukan-forecasting-metode.html). عند اختيار نموذج التنبؤ تظهر أعمدة المقارنة بين القيم الفعلية والمتوقعة ومقاييس الأخطاء.</small>
+
 <a name="qm-section-03"></a>
 ## 3. الاستخدامات والنماذج المتاحة
 
@@ -205,6 +234,29 @@ Total relevant annual cost = $100
 4. طابق قيمة **Optimal order quantity = 200** وعدد الطلبيات السنوية **5** والتكلفة ذات الصلة **100 دولار**.
 
 يفترض المثال شروط **EOQ القياسي**: الطلب معروف وثابت، ولا توجد خصومات كمية أو نقص مخزون، وتكلفة الاحتفاظ والطلب ثابتتان. **لا تضف سعر الوحدة ضمن الـ100 دولار**؛ فهذا مجموع تكلفتَي الطلب والاحتفاظ فقط، دون تكلفة شراء الوحدات.
+
+<a name="qm-eoq-screenshot"></a>
+### صور حقيقية لنتائج المخزون وكيف أقرأها
+
+**صورة: نافذة Inventory Results في QM for Windows**
+
+<div align="center">
+<img src="https://present5.com/presentation/e1587729f8435254d6ec9057a31d550c/image-38.jpg" alt="صورة من برنامج QM for Windows تعرض Inventory Results وجدول كمية الطلب والتكاليف" width="86%"/>
+</div>
+
+<small>المصدر: [شرح EOQ Analysis with QM for Windows](https://present5.com/inventory-management-chapter-16-copyright-2010-pearson/). **قيم هذه الصورة من مسألة مختلفة**؛ لا تخلط بينها وبين قيم مثال الدليل.</small>
+
+في النتائج ابحث عن هذه الخانات: **Optimal Order Quantity** لمعرفة كمية الطلب المقترحة، و**Orders per Period** لمعرفة عدد الطلبات، و**Annual Setup Cost** و**Annual Holding Cost** لمعرفة التكاليف. ثم قارنها بالحساب اليدوي السابق.
+
+**صورة: رسم التكلفة مقابل كمية الطلب في ورقة Excel**
+
+<div align="center">
+<img src="https://4.bp.blogspot.com/_UziquUjPt7Y/S41OLOzMyMI/AAAAAAAAAvI/GdmfZOVHijQ/s1600/EOQ.JPG" alt="لقطة فعلية من Microsoft Excel تعرض حساب EOQ ومنحنيات تكاليف الطلب والتخزين والإجمالي" width="85%"/>
+</div>
+
+<small>المصدر: [Economic Order Quantity — Excel Illustration](https://www.svtuition.org/2010/08/economic-order-quantity.html). **هذا نموذج Excel عادي وليس بالضرورة إضافة Excel QM**؛ يعرض شكل الناتج والرسم البياني للمقارنة.</small>
+
+**مراجعة نتائج المثال الحالي:** في مثالنا `D = 1000` و`S = 10` و`H = 0.50`، والناتج الصحيح **EOQ = 200 وحدة**، و**5 طلبيات سنويًا**، و**100 دولار** للتكاليف السنوية ذات الصلة (الطلب والتخزين معًا)، وفق افتراضات EOQ القياسي.
 
 <a name="qm-section-05"></a>
 ## 5. الأخطاء الشائعة وحلولها
