@@ -14,9 +14,9 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 ## 2. تحميل البرنامج وتثبيته
 
-<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="واجهة Power BI Desktop الحقيقية وتبويبات البرنامج ومساحة التقرير" width="92%"/></p>
+<p align="center"><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/2.1-Product-Overview-800x471-PBD?fit=constrain&amp;hei=1188&amp;op_usm=1.5%2C0.65%2C15%2C0&amp;qlt=100&amp;resMode=sharp2&amp;wid=2000" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 1" width="92%"/></p>
 
-*هذه لقطة فعلية لواجهة Power BI Desktop من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-tutorial-connect-to-the-samples)، وليست رسماً افتراضياً. تبعاً للإصدار قد تختلف القوائم.*
+*هذه لقطة شاشة لواجهة **Get Data** من [موقع Microsoft الرسمي](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)، وتوضح اختيار مصدر البيانات.*
 
 يمكنك تثبيت البرنامج بإحدى الطريقتين. اختر طريقة واحدة فقط:
 
@@ -39,9 +39,9 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 ## 3. إنشاء أول تقرير خطوة بخطوة
 
-<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="واجهة تقرير حقيقي في Power BI Desktop يضم الرسوم ولوحة المرشحات" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/es-es/power-bi/fundamentals/media/desktop-getting-started/mergedcolumn.png" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 2" width="92%"/></p>
 
-*الصورة من واجهة البرنامج الحقيقية؛ لعرض شاشة Get Data بالتفصيل راجع [دليل Microsoft](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-sources).*
+*الصورة الثانية من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started)، وتعرض واجهة **Power Query Editor** الفعلية أثناء معالجة البيانات.*
 
 للتجربة، جهّز ملف Excel بسيطًا يحتوي على أعمدة مثل `Region` و`Amount` و`Date`. ثم نفذ الخطوات التالية بالترتيب:
 
@@ -70,9 +70,9 @@ Total Sales = SUM(Sales[Amount])
 
 ## 4. أين أجد الأدوات الأساسية؟
 
-<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="Power BI Desktop Report view - screenshot from Microsoft Learn" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 3" width="92%"/></p>
 
-*لقطة شاشة من Microsoft Learn توضّح مساحة التقرير والمرشحات.*
+*تُظهر الصورة الثالثة مساحة **Report View** والرسوم والمرشحات من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-tutorial-connect-to-the-samples).*
 
 | الأداة | متى أستخدمها؟ |
 | :---: | :---: |
