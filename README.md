@@ -769,8 +769,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <p align="center"><img src="images/steps/13-install-arena.svg" alt="13 | تثبيت Arena" width="95%"/></p>
 
-> 🔴 **حماية البيانات:** لا تنشر البريد الجامعي الكامل أو رقم الترخيص أو رقم الهاتف أو معرف الحساب/المنشأة في صور مستودع عام.
-
 **المصادر:** [Rockwell: شروط الحساب والتنزيل](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html) | [فيديو الشرح المرجعي](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q).
 
 ### أ. التحميل من الشركة المصنّعة
@@ -880,8 +878,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="center" dir="rtl">
 
-**الخصوصية:** لا تنشر رقم الترخيص أو معلومات حسابك أو لقطات تحتوي على بيانات شخصية في Issue عام.
-
 </div>
 
 <div align="center" dir="rtl">
@@ -989,5 +985,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 <div align="center" dir="rtl">
 
 **ملاحظة المسؤولية:** الأوامر هنا للفحص، ولا تعدّل سجل Windows أو تزيل البرامج. تثبيت أي مكوّن قرار منفصل بعد مطابقة المتطلبات والمصدر الرسمي.
+
+</div>
+
+<div align="center" dir="rtl">
+
+---
+
+### إعداد الدليل
+
+**Talal Ibrahim Al-Sultan | طلال إبراهيم السلطان**  
+*Information Technology • Data Analytics • Decision Sciences*  
+King Saud University
+
+[GitHub Profile](https://github.com/talalalsultan246-cell)
 
 </div>
