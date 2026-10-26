@@ -323,6 +323,6 @@ Y = b0 + b1 X1 + b2 X2 + ... + bk Xk + error
 ---
 
 **Talal Alsultan**  
-Information Systems · Data Science · Decision Sciences
+Applied Information System · Data Science · Decision Sciences
 
 </div>
