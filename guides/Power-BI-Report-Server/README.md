@@ -1,107 +1,116 @@
 <div dir="rtl" align="right">
 
-# دليل Power BI Report Server
-**الفكرة العامة، تنزيل الخادم، نشر التقارير والتحديث المجدول**
+# **دليل إعداد واستخدام Power BI Report Server**
 
-إعداد: **Talal Alsultan** | تحديث: أكتوبر 2026
+**إعداد:** Talal Alsultan  
+**آخر تحديث:** 26 أكتوبر 2026
 
-**Power BI Report Server (PBIRS)** خادم تقارير داخل مقر الجهة (On-premises). يستخدم لعرض ملفات Power BI والتقارير المقسمة إلى صفحات ومؤشرات الأداء من خلال بوابة داخلية، ويمكن تشغيله في بيئة لا تعتمد على نشر التقارير في خدمة Power BI السحابية.
+إذا كنت تعمل على تقارير Power BI وتحتاج إلى نشرها داخل شبكة الجهة بدلًا من رفعها إلى الخدمة السحابية، فهذا الدليل يوضح طريقة استخدام **Power BI Report Server (PBIRS)**. سنبدأ بالفرق بينه وبين Power BI Desktop، ثم متطلبات التثبيت، وكيفية إعداد تقرير ونشره وتحديث بياناته.
 
-**هذا دليل للإعداد التقني، وليس تعليمات لتنصيب خادم إنتاج دون تنسيق مع مسؤول الأنظمة.** تشغيل PBIRS يحتاج ترخيصًا ومتطلبات خادم وقاعدة بيانات وصلاحيات مناسبة.
+**ملاحظة قبل البدء:** تثبيت الخادم وإدارته مهمة مسؤول الأنظمة الذي يملك الصلاحيات المناسبة. إذا كنت محلل بيانات، فغالبًا يكفيك البدء من قسم تنزيل Desktop المتوافق مع الخادم ونشر التقرير.
 
-## 1. الروابط الرسمية
-
-- [Microsoft — تنزيل Power BI Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/download-powerbi-report-server)
-- [Microsoft — تنزيل Power BI Report Server (September 2026)](https://www.microsoft.com/en-us/download/details.aspx?id=105945)
-- [Microsoft — خطوات تثبيت الخادم](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server)
-- [Microsoft — تنزيل Desktop الخاص بالخادم](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop)
-- [Microsoft — إدارة التحديث المجدول](https://learn.microsoft.com/en-us/power-bi/report-server/configure-scheduled-refresh)
-
-تعرض Microsoft حزمة **September 2026**، المنشورة في 1 أكتوبر 2026. قد تتغير الإصدارات لاحقًا؛ استخدم النسخة المناسبة للخادم الحالي.
-
-## 2. الفرق بين Desktop وReport Server
+## 1. ما الفرق بين Desktop وReport Server؟
 
 | Power BI Desktop | Power BI Report Server |
 | :---: | :---: |
-| بناء البيانات والرسوم والنماذج | استضافة وعرض التقارير وإدارة الوصول |
+| تستخدمه لإنشاء نماذج البيانات والرسوم | يستضيف التقارير ويتيح عرضها للمستخدمين |
 | يعمل على جهاز المحلل | يعمل على خادم الجهة |
-| يحفظ تقرير `.pbix` | يستقبل تقارير PBIX المتوافقة |
-| لا يحتاج خادمًا لإنشاء تقرير محلي | يحتاج تثبيتًا وإعدادًا وقاعدة بيانات |
+| يحفظ التقارير عادةً بصيغة `.pbix` | يستقبل ملفات PBIX المتوافقة مع إصداره |
+| يتيح تصميم التقرير دون خادم | يحتاج إلى إعداد الخدمات وقاعدة البيانات والصلاحيات |
 
-### مخطط مبسط للعمل
+**النقطة المهمة:** إذا كان النشر على PBIRS، فلا تفترض أن أي نسخة من Power BI Desktop ستعمل معه. استخدم **Power BI Desktop for Report Server** المتوافق مع إصدار الخادم.
+
+## 2. كيف تنتقل البيانات من Excel إلى لوحة التقارير؟
+
+لنفترض أن القسم يحدّث ملف Excel محفوظًا في مجلد مشترك داخل الشبكة. يمكنك قراءة البيانات من الملف باستخدام Desktop، وبناء الرسوم والمؤشرات، ثم نشر تقرير متوافق على الخادم ليشاهده المستخدمون المصرح لهم. وإذا كانت طريقة الاتصال مدعومة، يمكن جدولة تحديث البيانات.
+
+</div>
 
 ```mermaid
 flowchart LR
-    A["ملفات Excel أو قواعد بيانات"] --> B["Power BI Desktop for Report Server"]
+    A["Excel / Database"] --> B["Desktop for Report Server"]
     B --> C["PBIX"]
     C --> D["Power BI Report Server"]
-    D --> E["بوابة داخلية للمستخدمين"]
-    A -.-> F["Scheduled Refresh"]
-    F --> D
+    D --> E["Internal Web Portal"]
+    A -. "Scheduled refresh if supported" .-> D
 ```
 
-## 3. تثبيت Power BI Report Server — لمسؤول الأنظمة
+<div dir="rtl" align="right">
 
-1. اقرأ [متطلبات الإصدار](https://learn.microsoft.com/en-us/power-bi/report-server/download-powerbi-report-server) وتأكد من توفر ترخيص مناسب وبيئة Windows مدعومة.
-2. حدد SQL Server Database Engine الذي سيستضيف قاعدة بيانات Report Server.
-3. نزّل `PowerBIReportServer.exe` من صفحة Microsoft الرسمية.
-4. شغّل المثبت، ثم اختر **Install Power BI Report Server**، وحدد الإصدار/الترخيص الذي تملكه.
-5. وافق على شروط الترخيص واختر مسار التثبيت.
-6. بعد الانتهاء افتح **Report Server Configuration Manager**.
-7. اضبط **Service Account**، واتصال قاعدة البيانات (**Database**)، و**Web Service URL** و**Web Portal URL**، وأي إعدادات اتصال وأمان مطلوبة.
-8. احفظ مفاتيح التشفير بحسب إرشادات Microsoft واختبر فتح بوابة التقارير من الشبكة المصرح لها.
+## 3. تحميل الخادم وتثبيته
 
-> لا يكفي تشغيل ملف التثبيت وحده؛ يجب إكمال الإعداد في Configuration Manager والتأكد من قاعدة البيانات والشبكة.
+**هذا القسم مخصص لمسؤول الأنظمة.**
 
-## 4. تنزيل النسخة المناسبة من Power BI Desktop
+1. ابدأ من [تعليمات Microsoft لتنزيل Power BI Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/download-powerbi-report-server)، وحدد الإصدار المراد تثبيته.
+2. راجع متطلبات Windows Server والترخيص والصلاحيات، ثم جهّز قاعدة بيانات Report Server على محرك SQL Server مناسب.
+3. نزّل ملف تثبيت PBIRS من Microsoft وشغّله بالصلاحيات المخوّلة.
+4. اختر **Install Power BI Report Server** واتبع تعليمات المثبّت وخيار الترخيص الصحيح.
+5. بعد التثبيت افتح **Report Server Configuration Manager**. لا تعتبر التثبيت مكتملًا قبل إعداد الخدمة.
+6. اضبط **Service Account** و**Database** و**Web Service URL** و**Web Portal URL** وفق إعدادات الشبكة والجهة.
+7. احفظ مفاتيح التشفير بحسب سياسة النسخ الاحتياطي لدى الجهة، ثم اختبر البوابة من متصفح داخل الشبكة.
 
-لإنشاء تقرير يعمل على PBIRS، **لا تعتمد تلقائيًا على Power BI Desktop العادي**:
+لمزيد من التفصيل راجع [دليل تثبيت Report Server من Microsoft](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server).
 
-1. افتح بوابة الخادم ثم اختر **Download → Power BI Desktop** إذا كانت هذه الميزة متاحة.
-2. أو افتح [دليل Microsoft لتحميل نسخة Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop).
-3. حمّل النسخة المتوافقة مع إصدار خادمك؛ مثال: الإصدار المرافق لحزمة September 2026.
-4. بعد التثبيت راجع اسم النسخة وتاريخها في شريط عنوان Power BI Desktop.
-5. افتح تقرير PBIX باستخدام Desktop المناسب ثم انشره للخادم.
+## 4. تنزيل Power BI Desktop المناسب للخادم
 
-تسمح Microsoft بتثبيت نسختَي Desktop العادية وDesktop الخاصة بـ Report Server على الجهاز نفسه، لكن فتح ملف PBIX بالنقر المزدوج قد يعتمد على آخر نسخة ثبتّها.
+إذا كان الخادم مثبتًا أصلًا، فاتبع هذه الخطوات لإنشاء تقارير متوافقة معه:
 
-## 5. نشر تقرير داخل الجهة
+1. افتح بوابة Report Server التي أعطاك إياها مسؤول الخادم.
+2. إذا ظهر خيار **Download → Power BI Desktop** في البوابة، استخدمه للحصول على النسخة المرتبطة بالخادم.
+3. يمكنك كذلك مراجعة [تعليمات Microsoft لتنزيل Desktop for Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop).
+4. تأكد من توافق **إصدار Desktop** مع إصدار **Report Server** المثبت في الجهة.
+5. بعد التثبيت افتح Desktop المناسب، ثم أنشئ ملف PBIX أو افتح تقريرًا موجودًا وقابلًا للتشغيل عليه.
 
-1. افتح **Power BI Desktop for Report Server**.
-2. جهز البيانات والمرئيات واحفظ `.pbix`.
-3. من **File → Save as** أو من بوابة الخادم ارفع التقرير حسب الخيارات المدعومة بإصدارك.
-4. اختر مجلدًا في بوابة الخادم تملك صلاحية النشر فيه.
-5. افتح التقرير من المتصفح وتأكد من وجود الرسوم والمرشحات.
-6. اختبره بحساب قارئ للتأكد من أن الصلاحيات لا تزيد عن الحاجة.
+قد توجد على الجهاز نسخة Power BI Desktop عادية ونسخة مخصصة لـ Report Server. انتبه إلى اسم النسخة المفتوحة، خاصة عند النقر المزدوج على ملفات PBIX.
 
-## 6. التحديث المجدول Scheduled Refresh
+## 5. نشر أول تقرير على بوابة الخادم
 
-للتقارير التي تستورد البيانات داخل PBIX، يمكن إعداد Refresh حسب مصادر البيانات المدعومة:
+بعد تجهيز البيانات والرسوم، اتبع الخطوات التالية:
 
-1. في بوابة التقارير، افتح قائمة التقرير واختر **Manage**.
-2. انتقل إلى **Data Sources** واضبط بيانات اعتماد الاتصال المصرح بها.
-3. افتح **Scheduled Refresh** ثم **New Scheduled Refresh Plan**.
-4. اختر أوقات التحديث وراقب سجل نجاحه أو فشله.
+1. افتح التقرير في **Power BI Desktop for Report Server** واحفظه بصيغة `.pbix`.
+2. افتح مجلدك في بوابة الخادم وتأكد من امتلاك صلاحية إضافة التقارير.
+3. ارفع ملف PBIX من بوابة الخادم، أو استخدم خيار الحفظ إلى Report Server المتاح في نسختك.
+4. افتح التقرير من المتصفح، وجرّب الرسوم والمرشحات.
+5. اختبر الحساب الذي يملك دور **Browser** فقط للتأكد من قدرة القارئ على العرض دون صلاحيات تعديل.
 
-**مشكلة شائعة:** إذا كان التقرير يستورد Excel من مسار على كمبيوتر المحلل مثل `C:\Users\...\Desktop\sales.xlsx`، قد لا يستطيع خادم PBIRS الوصول للملف، وبالتالي لن يعمل التحديث المجدول. استخدم مشاركة شبكية مسموحًا للخادم بالوصول إليها، مثل `\\fileserver\department\sales.xlsx`، مع صلاحيات القراءة المناسبة. <https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh>
+إذا لم يظهر زر النشر، فافحص الصلاحية أولًا؛ ليس بالضرورة أن تكون مشكلة في البرنامج نفسه.
 
-## 7. أخطاء تتكرر
+## 6. ضبط تحديث البيانات Scheduled Refresh
 
-| المشكلة | الخطوة الأولى |
+إذا كان التقرير يستورد البيانات من مصدر تدعمه ميزة التحديث المجدول، يمكن إعداد خطة تحديث من بوابة الخادم:
+
+1. افتح التقرير المنشور ثم **Manage**.
+2. راجع إعدادات **Data Sources** وحدد بيانات الاعتماد المناسبة للوصول إلى المصدر.
+3. افتح **Scheduled Refresh** إن كانت الميزة متاحة لهذا النوع من التقارير، ثم اختر **New Scheduled Refresh Plan**.
+4. حدد أوقات التحديث وفق احتياج العمل واحفظ الإعدادات.
+5. راقب حالة التحديث والسجل لمعرفة نجاح العملية أو أسباب الفشل.
+
+**مثال مهم:** إذا كان تقريرك يقرأ ملف Excel من مجلد شخصي على جهازك، فقد يعجز خادم PBIRS عن الوصول إليه أثناء التحديث. غالبًا ستحتاج إلى نقل المصدر إلى مسار شبكي يمكن للخادم قراءته مع ضبط صلاحيات الحساب الذي ينفذ التحديث، وتعديل مصدر التقرير تبعًا لذلك.
+
+راجع [Microsoft — Scheduled Refresh](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh) للتأكد من أنواع البيانات المدعومة والإعدادات المناسبة لإصدارك.
+
+## 7. أهم المشكلات والحلول
+
+| المشكلة | ماذا تفحص أولًا؟ |
 | :---: | :---: |
-| تقرير PBIX لا يفتح | افحص توافق نسخة Desktop مع الخادم |
-| لا أستطيع رؤية المجلد | تحقق من دور المستخدم وصلاحية Browser |
-| زر رفع التقرير غير متاح | تحقق من صلاحيات النشر وإدارة المحتوى |
-| Refresh يفشل | افحص مصدر البيانات ومساره وبيانات الاعتماد |
-| البوابة لا تُفتح | راجع Web Portal URL والخدمة والجدار الناري |
-| تقرير Excel لا يتحدث | تحقق من تحديث الملف الأصلي وجدولة تحديث البيانات |
-| الأداء ضعيف | افحص الذاكرة وحجم النموذج والاستعلامات |
+| ملف PBIX لا يفتح على الخادم | مدى توافق إصدار Desktop مع إصدار PBIRS |
+| لا تظهر مجلدات البوابة | صلاحيات المستخدم والدور الممنوح له |
+| لا يوجد خيار رفع التقرير | صلاحية النشر وإدارة المحتوى |
+| التحديث المجدول يفشل | مسار مصدر البيانات وبيانات الاعتماد واتصال الخادم |
+| يظهر تقرير قديم | هل حدث المصدر الأصلي؟ وهل اكتمل Refresh بنجاح؟ |
+| رابط البوابة لا يعمل | إعداد Web Portal URL والخدمة والشبكة والجدار الناري |
+| التقارير تستغرق وقتًا طويلًا | حجم النموذج والعلاقات والاستعلامات وموارد الخادم |
 
-## 8. مراجع Microsoft
+## 8. روابط Microsoft الرسمية
 
-- [Get started with Power BI Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/get-started)
-- [Install Power BI Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server)
-- [Power BI Report Server scheduled refresh](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh)
-- [Power BI Desktop optimized for Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop)
+- [Power BI Report Server — Get Started](https://learn.microsoft.com/en-us/power-bi/report-server/get-started)
+- [تنزيل Power BI Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/download-powerbi-report-server)
+- [تثبيت Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server)
+- [Power BI Desktop for Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop)
+- [Scheduled Refresh](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh)
+
+**ملاحظة:** قد تتغير أسماء الأزرار وترتيب الإعدادات بين الإصدارات. ابدأ دائمًا من النسخة التي يستخدمها خادم جهتك قبل تطبيق الخطوات.
+
+[العودة إلى الصفحة الرئيسية للأدلة](../../README.md)
 
 </div>
