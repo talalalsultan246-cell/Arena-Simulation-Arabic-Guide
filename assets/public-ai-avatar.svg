@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" viewBox="0 0 430 430" role="img" aria-label="Artificial intelligence neural network avatar icon">
+<defs><radialGradient id="bg"><stop stop-color="#145694"/><stop offset="1" stop-color="#071328"/></radialGradient><linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#38d5ec"/><stop offset="1" stop-color="#78aaff"/></linearGradient></defs>
+<circle cx="215" cy="215" r="208" fill="url(#bg)" stroke="#70caff" stroke-width="8"/>
+<circle cx="215" cy="215" r="176" fill="none" stroke="#78c9ff" stroke-opacity=".29" stroke-width="2"/>
+<g stroke="#75dbfd" stroke-opacity=".7" stroke-width="5" fill="none" stroke-linecap="round">
+<path d="M213 110v210M190 146c-44-42-100 7-88 53-30 44-10 79 34 90 0 50 49 64 77 31"/>
+<path d="M236 146c44-42 100 7 88 53 30 44 10 79-34 90 0 50-49 64-77 31"/>
+<path d="M126 207l58 20-27 53M299 206l-54 20 23 55M151 164l39 28M279 166l-40 27M157 280l42-16M268 280l-41-16"/>
+</g>
+<g stroke="url(#cyan)" stroke-width="6" fill="none"><path d="M215 65v52M69 215h55M306 215h55M215 313v54M118 118l37 37M311 118l-35 35M113 315l34-35M314 315l-32-34"/></g>
+<g fill="#62e3f8"><circle cx="215" cy="62" r="11"/><circle cx="69" cy="215" r="11"/><circle cx="361" cy="215" r="11"/><circle cx="215" cy="368" r="11"/><circle cx="115" cy="115" r="11"/><circle cx="314" cy="115" r="11"/><circle cx="113" cy="315" r="11"/><circle cx="315" cy="315" r="11"/><circle cx="213" cy="110" r="10"/><circle cx="213" cy="320" r="10"/></g>
+</svg>
