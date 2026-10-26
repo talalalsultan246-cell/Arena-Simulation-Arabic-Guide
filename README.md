@@ -1,6 +1,6 @@
 <div align="center" dir="rtl">
 
-# دليل تثبيت وتشخيص Arena Simulation بالعربية
+# دليل تثبيت Arena Simulation 
 
 </div>
 
