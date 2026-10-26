@@ -5,22 +5,23 @@
 
 <div align="right" dir="rtl">
 
-> **آخر مراجعة للمصادر: 25 أكتوبر 2026**  
-> دليل مستقل باللغة العربية، موجّه لطلاب المحاكاة ومستخدمي **Arena 17** والإصدارات الأخرى. يعتمد على تعليمات الشركة المصنّعة ومراجع Microsoft، ولا يُعدّ وثيقة رسمية من Rockwell Automation.
+> **آخر تحديث: 26 أكتوبر 2026**
+>
+> جمعت هنا خطوات تنزيل **Arena 17** وتثبيته بالطريقة التي أحتاجها في المادة، من تجهيز حساب Rockwell إلى تشغيل البرنامج. أضفت أيضًا أوامر بسيطة لفحص متطلبات Windows، خاصة لمن يفتح عنده Arena لكن بعض الأدوات لا تعمل. وضعت الروابط الأصلية وصورًا توضح أين نضغط في كل مرحلة.
 
 </div>
 
 <div align="right" dir="rtl">
 
-## الإصدار المستهدف: Arena 17
+## إصدار Arena المستخدم في الشرح
 
 </div>
 
-- ‏يستهدف هذا الدليل **Arena 17**، وبالأخص التحديث **17.00.01**.
-- ‏يعرض [مركز تنزيل Rockwell الرسمي](https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&mode=3&refSoft=1&versions=65330) الإصدار **17.00.01** مع إصدارات سابقة.
-- ‏توصي [نشرة Rockwell الأمنية](https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html) باستخدام **17.00.01** لمعالجة ثغرات في **17.00.00 وما قبله**. تحقق من رقم التصحيح قبل التحميل.
-- ‏يظهر في تسجيل الشاشة المرفق مسار الملفات `C:\RA\17.00.01.10_x64\17.00.01.10_x64\MediaImage`، بينما تحمل شاشة المثبت اسم **Arena 2026**. يشير ذلك إلى اختلاف الاسم التسويقي للمثبت عن رقم فرع البرنامج؛ لا تخلط بينهما.
-- ‏**تنبيه:** تظل صفحة متطلبات النظام العامة لدى Rockwell تعرض الإصدار **16.20.02**؛ راجع وثائق الإصدار 17 المطلوبة على مركز التنزيل عند وجود اختلاف.
+الشرح هنا على **Arena 17**، وتحديدًا **17.00.01**. ستجد هذا الإصدار في [صفحة تنزيل Rockwell](https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&mode=3&refSoft=1&versions=65330). تأكد من رقم الإصدار قبل البدء، فهناك نسخ وتحديثات أخرى في القائمة.
+
+في التسجيل الذي اعتمدت عليه، تظهر الملفات داخل `C:\RA\17.00.01.10_x64\17.00.01.10_x64\MediaImage`. ستلاحظ أن شاشة المثبّت تحمل اسم **Arena 2026**، رغم أن رقم حزمة التنزيل يبدأ بـ17. وبحسب [تنبيهات Rockwell الأمنية](https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html)، توجد تحديثات أمنية للإصدارات السابقة، لذلك من الأفضل مراجعة التحديث المتاح وعدم الاكتفاء بإصدار أقدم.
+
+**ملاحظة:** بعض صفحات متطلبات Rockwell لا تزال تعرض الإصدار **16.20.02**؛ عند اختلاف المتطلبات، ارجع إلى وثائق الحزمة التي حمّلتها.
 
 <div align="right" dir="rtl">
 
@@ -49,16 +50,15 @@
 
 <div align="right" dir="rtl">
 
-الغرض من هذا الدليل **التحقق أولًا، ثم تنزيل وتثبيت الناقص فقط**. إذا كان Arena يفتح ولكن أدوات Create وProcess وDispose أو القوائم تظهر باللون الرمادي (Disabled)، **لا تبدأ بإلغاء تثبيته**؛ فالمشكلة قد تكون في عدم فتح نموذج أو وضع التشغيل أو الترخيص أو مكوّنات النظام.
+إذا كان Arena مثبتًا عندك ويفتح بشكل طبيعي، لكن أدوات **Create** أو **Process** أو **Dispose** غير مفعّلة، فلا تحذفه مباشرة. جرّب فتح نموذج جديد أولًا، ثم افحص الترخيص والمتطلبات. الهدف هنا أن تعرف ما ينقص جهازك بدل إعادة تثبيت كل شيء من البداية.
 
 </div>
 
-- ‏احفظ نسخًا احتياطية من نماذجك (`.doe` وأي ملفات مشروع مرتبطة بها).
-- ‏استخدم روابط Microsoft وRockwell الرسمية؛ لا تشغّل ملفات `.exe` مجهولة المصدر من مستودعات خارجية.
-- ‏افتح نافذة الأوامر عبر **Start > CMD > Run as administrator** عند الحاجة إلى الصلاحيات، لكن أوامر القراءة أدناه لا تحتاج غالبًا إلى تشغيل المدير.
-- ‏أوامر `cmd` توضع في Command Prompt، وأوامر `powershell` توضع في Windows PowerShell. يمكن أيضًا تنفيذ الأمر البديل المحدد من نافذة CMD.
-- ‏وجود حزمة مثبتة **لا يثبت وحده** أنها سبب العطل أو أن إصدارها مناسب لكل نسخة Arena.
-- ‏افحص معمارية برنامج Arena نفسه (`x86` أو `x64`)، فهي ليست بالضرورة مطابقة لمعمارية Office أو Windows.
+- ‏احفظ نماذجك وملفات المشروع قبل إجراء أي تعديل.
+- ‏حمّل البرامج من **Microsoft** و**Rockwell** مباشرة.
+- ‏لفتح نافذة الأوامر، اكتب **CMD** في قائمة Start. معظم أوامر الفحص لا تحتاج إلى صلاحيات المدير.
+- ‏إذا ظهر فوق الأمر `cmd` فشغّله في **Command Prompt**، وإذا ظهر `powershell` فشغّله في **Windows PowerShell**.
+- ‏انتبه لمعمارية الحزمة المطلوبة (**x86** أو **x64**)؛ ليس بالضرورة أن تكون جميع البرامج على جهازك بنفس المعمارية.
 
 <div align="right" dir="rtl">
 
@@ -68,7 +68,7 @@
 
 <div align="right" dir="rtl">
 
-> **الروابط الخارجية:** روابط التحميل والمراجع تنقلك مباشرةً إلى المواقع الرسمية المعنية. إذا أردت فتح الرابط في تبويب منفصل دون مغادرة هذا الدليل، استخدم **Ctrl + Click** على Windows أو **فتح في علامة تبويب جديدة** من قائمة المتصفح على الهاتف. لا يمكن فرض فتح تبويب جديد تلقائيًا داخل GitHub README.
+الروابط في الجدول تنقلك إلى صفحات الشركات مباشرة. افتح ما تحتاجه فقط، ولا تثبّت حزمة موجودة أصلًا ما لم تكن بحاجة إلى إصلاحها.
 
 </div>
 
@@ -84,7 +84,7 @@
 
 <div align="right" dir="rtl">
 
-> **تنبيه دقة:** تعرض [صفحة متطلبات Rockwell الرسمية](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/support/system-requirements.html) بيانات لإصدار **16.20.02**. لا يُفترض تلقائيًا أن تفاصيل الصفحة تنطبق بالكامل على **Arena 17**. راجع ملف المتطلبات المرفق مع نسختك إذا اختلفت الأرقام.
+**للتوضيح:** [متطلبات النظام المنشورة لدى Rockwell](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/support/system-requirements.html) تشير إلى **16.20.02**. استخدمها كمرجع مبدئي، ثم راجع متطلبات إصدار Arena 17 في ملفات التنزيل.
 
 </div>
 
@@ -96,7 +96,7 @@
 
 <div align="right" dir="rtl">
 
-بحسب صفحة Rockwell المتاحة لإصدار 16.20.02:
+هذه المواصفات مأخوذة من صفحة Rockwell للإصدار **16.20.02**، وأضعها هنا للمقارنة قبل التثبيت:
 
 </div>
 
@@ -111,7 +111,7 @@
 
 <div align="right" dir="rtl">
 
-**لا تعتمد رقم 4GB RAM الموجود في الدليل القديم كحد أدنى موثّق حاليًا من Rockwell.** ولا تَعُدّ الدعم الرسمي لنظام Windows أو Arena 17 مؤكدًا إلا بعد مراجعة وثائق نسختك.
+إذا وجدت في شرح قديم أن **4GB RAM** تكفي، فلا تعتمدها وحدها. صفحة المتطلبات أعلاه تذكر **8GB** كحد أدنى لذلك الإصدار، وقد تختلف متطلبات Arena 17.
 
 </div>
 
@@ -139,7 +139,7 @@ winver
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -151,7 +151,7 @@ Version: 23H2 (مثال فقط)
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** هذا الأمر يفتح نافذة رسومية؛ لا يطبع تقريرًا داخل CMD. الرقم المعروض على جهازك قد يختلف.
+**ماذا تعني؟** هذا الأمر يفتح نافذة رسومية؛ لا يطبع تقريرًا داخل CMD. الرقم المعروض على جهازك قد يختلف.
 
 </div>
 
@@ -167,7 +167,7 @@ ver
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -177,7 +177,7 @@ Microsoft Windows [Version 10.0.22631.XXXX]
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** يعرض إصدار نظام Windows في نافذة CMD؛ قيمة XXXX موضعية وليست نتيجة فعلية.
+**ماذا تعني؟** يعرض إصدار نظام Windows في نافذة CMD؛ قيمة XXXX موضعية وليست نتيجة فعلية.
 
 </div>
 
@@ -199,7 +199,7 @@ powershell -NoProfile -Command "Get-CimInstance Win32_ComputerSystem | Select-Ob
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -211,7 +211,7 @@ RAM_GB
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** 16.00 تعني سعة ذاكرة RAM قدرها 16 جيجابايت في هذا المثال فقط.
+**ماذا تعني؟** 16.00 تعني سعة ذاكرة RAM قدرها 16 جيجابايت في هذا المثال فقط.
 
 </div>
 
@@ -227,7 +227,7 @@ powershell -NoProfile -Command "Get-PSDrive C | Select-Object Name,@{N='Free_GB'
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -239,13 +239,13 @@ C      125.50
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** Free_GB هي المساحة الحرة المتبقية على محرك C، وليست المساحة الإجمالية.
+**ماذا تعني؟** Free_GB هي المساحة الحرة المتبقية على محرك C، وليست المساحة الإجمالية.
 
 </div>
 
 <div align="right" dir="rtl">
 
-**التفسير:** إذا أظهر الحاسوب 8GB RAM ومساحة كافية، فهذا اجتياز أولي للمواصفات المذكورة، لكنه لا يثبت صلاحية الترخيص أو التوافق الكامل لإصدار Arena 17.
+إذا كانت الذاكرة والمساحة مناسبة، انتقل لفحص بقية المكونات. هذه الأرقام وحدها لا تعني أن الترخيص أو جميع إعدادات Arena سليمة.
 
 </div>
 
@@ -267,7 +267,7 @@ reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" /v Release
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -278,7 +278,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** القيمة السداسية 0x80ea8 تساوي 528040 بالنظام العشري، وتمثل .NET Framework 4.8 في إحدى بيئات Windows.
+**ماذا تعني؟** القيمة السداسية 0x80ea8 تساوي 528040 بالنظام العشري، وتمثل .NET Framework 4.8 في إحدى بيئات Windows.
 
 </div>
 
@@ -294,7 +294,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -304,7 +304,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** يعرض PowerShell القيمة نفسها بالأرقام العشرية؛ 528040 قيمة نموذجية لـ .NET Framework 4.8.
+**ماذا تعني؟** يعرض PowerShell القيمة نفسها بالأرقام العشرية؛ 528040 قيمة نموذجية لـ .NET Framework 4.8.
 
 </div>
 
@@ -351,7 +351,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 
 <div align="right" dir="rtl">
 
-هذه أكثر خطوة احتاجت إلى تحديث في المستودع المرجعي.
+هنا أضع أمرين لفحص حزم **Visual C++**: الأمر القديم الموجود في بعض الشروحات، ثم بديله الذي يعرض أسماء الحزم وإصداراتها على Windows الحديث.
 
 </div>
 
@@ -367,7 +367,7 @@ wmic product where "name like '%%Visual C++%%'" get name,version
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -378,19 +378,19 @@ operable program or batch file.
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** هذه رسالة فشل محتملة على Windows 11 الحديث؛ عند ظهورها استخدم الطريقة الثانية بدل إعادة تثبيت WMIC.
+**ماذا تعني؟** هذه رسالة فشل محتملة على Windows 11 الحديث؛ عند ظهورها استخدم الطريقة الثانية بدل إعادة تثبيت WMIC.
 
 </div>
 
 <div align="right" dir="rtl">
 
-**مهم:** هذه الصيغة من دليل GitHub الأصلي، وهي **قديمة وغير موصى بها**؛ وقد تفشل برسالة `'wmic' is not recognized` على Windows 11 الحديث. أعلنت Microsoft إزالة أداة WMIC من Windows 11 المدعوم في 2026. كذلك فحص `Win32_Product` قد يكون بطيئًا ويُسبّب عمليات فحص اتساق لحزم MSI، ولا يضمن إظهار جميع الحزم.
+الأمر الأول يستخدم **WMIC**، وهي أداة قديمة لم تعد متاحة في كثير من إصدارات Windows 11. وقد يكون الفحص بها بطيئًا أو لا يعرض كل الحزم. أدرجته حتى تعرف لماذا قد يفشل إذا وجدته في شرح آخر.
 
 </div>
 
 <div align="right" dir="rtl">
 
-**إذا لم يعمل الأمر الأول، انتقل مباشرةً إلى الطريقة الثانية؛ لا تحتاج إلى إعادة تثبيت WMIC.**
+**إذا ظهر خطأ WMIC، استخدم الأمر التالي مباشرة.** لا تحتاج إلى إعادة تثبيت الأداة القديمة.
 
 </div>
 
@@ -412,7 +412,7 @@ powershell -NoProfile -Command "Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windo
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -426,7 +426,7 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 
 <div align="right" dir="rtl">
 
-**شرط التحقق المهم: التأكد من وجود Microsoft Visual C++ 2022**
+**بعد ظهور القائمة، ابحث عن Visual C++ 2022 أو حزمة v14 متوافقة.**
 
 بعد تنفيذ الأمر، ابحث في عمود `DisplayName` عن **Microsoft Visual C++ 2015–2022 Redistributable**، أو حزمة **Visual C++ v14 أحدث متوافقة مع Visual Studio 2022**. تأكد من المعمارية المناسبة: `(x64)` لبرامج 64-bit و`(x86)` لبرامج 32-bit. ويُفضّل فحص وجود النسختين على Windows بنظام 64-bit عند استخدام برامج مختلفة المعمارية.
 
@@ -438,13 +438,13 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** يعرض العمود الأول أسماء الحزم ومعماريتها، والثاني الإصدارات المثبتة. الصفوف هنا أمثلة وليست بيانات جهازك.
+**ماذا تعني؟** يعرض العمود الأول أسماء الحزم ومعماريتها، والثاني الإصدارات المثبتة. الصفوف هنا أمثلة وليست بيانات جهازك.
 
 </div>
 
 <div align="right" dir="rtl">
 
-**هذا هو البديل الموصى به في الدليل.** يقرأ بيانات البرامج المسجلة في مساري Uninstall ذوي المعماريتين. سيعرض عمودين:
+أفضل استخدام هذا الأمر عند فحص الحزم؛ فهو يقرأ أسماء البرامج المسجلة في Windows ويعرض عمودين:
 
 </div>
 
@@ -453,7 +453,7 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 
 <div align="right" dir="rtl">
 
-ملاحظة: قد توجد حزم غير مسجلة في هذه المفاتيح، لذا لا يُعدّ الأمر فحصًا جنائيًا شاملًا لكل ملف DLL في النظام.
+قد لا تظهر بعض الحزم غير المسجلة في هذه القائمة، لذلك استخدم النتيجة لفحص البرامج المثبتة، لا لفحص جميع ملفات DLL.
 
 </div>
 
@@ -479,7 +479,7 @@ Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -492,7 +492,7 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** نفس المبدأ عند استخدام PowerShell مباشرة. قد تختلف القائمة والإصدارات، وقد تظهر صفوف إضافية.
+**ماذا تعني؟** نفس المبدأ عند استخدام PowerShell مباشرة. قد تختلف القائمة والإصدارات، وقد تظهر صفوف إضافية.
 
 </div>
 
@@ -541,7 +541,7 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 
 <div align="right" dir="rtl">
 
-ورد هذا المكوّن في الدليل الأصلي، **لكن لم يثبت أنه متطلب لازم لجميع تثبيتات Arena 17**.
+ذكرت بعض شروحات Arena مكوّن **SQL Server Compact 4.0**. أضع طريقة فحصه هنا، لكن لا تثبّته لمجرد أنه مذكور؛ لم أجد ما يثبت أنه مطلوب لكل نسخ Arena 17.
 
 </div>
 
@@ -557,7 +557,7 @@ reg query "HKLM\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0" /v
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -568,7 +568,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** هذه نتيجة افتراضية عند وجود مفتاح Version في هذا المسار. قد يعرض جهازك قيمة أخرى أو عدم وجود المفتاح.
+**ماذا تعني؟** هذه نتيجة افتراضية عند وجود مفتاح Version في هذا المسار. قد يعرض جهازك قيمة أخرى أو عدم وجود المفتاح.
 
 </div>
 
@@ -584,7 +584,7 @@ reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Compact Edit
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -594,7 +594,7 @@ ERROR: The system was unable to find the specified registry key or value.
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** مثال عند عدم العثور على المفتاح في مسار WOW6432Node تحديدًا؛ لا يثبت هذا غياب المكوّن كليًا.
+**ماذا تعني؟** مثال عند عدم العثور على المفتاح في مسار WOW6432Node تحديدًا؛ لا يثبت هذا غياب المكوّن كليًا.
 
 </div>
 
@@ -639,7 +639,7 @@ reg query "HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" /v Platform
 
 <div align="right" dir="rtl">
 
-**Output (مثال توضيحي، وليس نتيجة جهازك):**
+**شكل النتيجة المتوقع (مثال):**
 
 </div>
 
@@ -650,7 +650,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-**كيف تقرأ النتيجة؟** x64 تعني أن إصدار Office Click-to-Run مسجّل بمعمارية 64-bit؛ أما x86 فيشير إلى 32-bit.
+**ماذا تعني؟** x64 تعني أن إصدار Office Click-to-Run مسجّل بمعمارية 64-bit؛ أما x86 فيشير إلى 32-bit.
 
 </div>
 
@@ -662,7 +662,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-**تصحيح مهم للدليل الأصلي:** Office **ليس ملزمًا بأن يكون 64-bit في جميع تثبيتات Arena**. راجع متطلبات Rockwell والإصدار المستهدف. لا تُزِل Office أو تغيّر معماريته دون سبب محدد.
+ليس ضروريًا أن يكون Office بنسخة **64-bit** في كل الحالات. المهم توافقه مع نسخة Arena التي تستخدمها، ولا أنصح بتغيير نسخة Office ما لم تظهر مشكلة فعلية.
 
 </div>
 
@@ -674,13 +674,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 ## دليل التثبيت بالصور: Arena 17
 
-<p align="right" dir="rtl"><strong>من تسجيل الحساب إلى تشغيل برنامج Arena Simulation</strong></p>
+<p align="right" dir="rtl">هذا الجزء يوضح خطوات التسجيل والتنزيل كما تظهر في صفحات Rockwell، ثم مكان الملفات على جهاز Windows.</p>
 
-> 🔴 **شرطان قبل تنزيل Arena:** إكمال بيانات الملف الشخصي (**Complete Profile**) وإضافة موقع الجهة التعليمية (**Location**). إذا كنت من طلاب جامعة الملك سعود، اختر **King Saud University** واطلب إضافتها إلى حسابك عند الحاجة.
+> **قبل الضغط على Download:** تأكد أن بيانات حسابك مكتملة (**Complete Profile**) وأنك أضفت جهتك في **Location**. إذا كنت من جامعة الملك سعود، ابحث عن **King Saud University** وأرسل طلب الإضافة إذا لم تكن موجودة.
 
-> 🔴 **مهم:** يفضّل استخدام متصفح **Microsoft Edge** والبريد الجامعي لتسهيل عملية التسجيل. لا يمثل ذلك شرطًا حصريًا أو إلزاميًا مثبتًا من Rockwell.
+> أنصح باستخدام **Microsoft Edge** والبريد الجامعي عند إنشاء الحساب. هذه طريقة مفضلة، وليست شرطًا حصريًا من Rockwell.
 
-> **عن الصور:** هذه **رسومات إرشادية مبنية على الشاشات المرفقة**، وليست لقطات شاشة حرفية. الإطارات الحمراء تحدد الأزرار والحقول، وقد تتغير هيئة الصفحات مع التحديثات.
+الصور أدناه رسومات توضيحية أعددتها اعتمادًا على الشاشات المستخدمة في الشرح، وليست صورًا حرفية من الموقع. وضعت مربعات حمراء حول الأماكن التي تحتاج الضغط عليها.
 
 <p align="center">
 <a href="https://compatibility.rockwellautomation.com/Pages/Downloads.aspx?c=118&amp;pid=50026"><img src="images/arena-download-banner.svg" alt="صفحة التنزيل الرسمية المباشرة" width="95%"/></a>
@@ -688,122 +688,96 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <p align="center"><strong><a href="https://compatibility.rockwellautomation.com/Pages/Downloads.aspx?c=118&amp;pid=50026">فتح صفحة تنزيل Arena 17 الرسمية مباشرة</a></strong></p>
 
-> ⚠️ **التنزيل:** قد تتطلب الصفحة تسجيل الدخول. ولا تفترض أن ملف **Arena 17.00.01 Patch** يساوي مثبتًا كاملًا؛ تحقق من نوع الحزمة أولًا.
+> **انتبه لنوع الملف:** قد يطلب الموقع تسجيل الدخول قبل التحميل. كذلك فإن **Arena 17.00.01 Patch** قد يكون تحديثًا لنسخة مثبتة بالفعل، وليس ملف تثبيت كاملًا.
 
 <h3 align="right" dir="rtl"><a href="images/steps/01-open-account.svg"><strong>01 | فتح قائمة الحساب</strong></a></h3>
 
-<p align="right" dir="rtl">افتح موقع Rockwell Automation باستخدام Microsoft Edge، ثم اختر Sign In أو Create an Account لإنشاء حساب جديد.</p>
+<p align="right" dir="rtl">افتح موقع Rockwell باستخدام Edge، ثم اضغط <strong>Sign In</strong>. إذا ما عندك حساب، اختر <strong>Create an Account</strong> وأنشئ حسابًا جديدًا.</p>
 
 <p align="center"><img src="images/steps/01-open-account.svg" alt="01 | فتح قائمة الحساب" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/02-university-email.svg"><strong>02 | تسجيل الدخول بالبريد الجامعي</strong></a></h3>
 
-<p align="right" dir="rtl">أدخل بريدك الجامعي ثم اضغط Continue. توصي Rockwell باستخدام البريد الجامعي لتسهيل التحقق، لكنه توصية وليس شرطًا مطلقًا.</p>
+<p align="right" dir="rtl">اكتب البريد الجامعي واضغط <strong>Continue</strong>. استخدامه يساعد في التحقق من انتمائك للجامعة، لكنه ليس شرطًا مطلقًا من الشركة.</p>
 
 <p align="center"><img src="images/steps/02-university-email.svg" alt="02 | تسجيل الدخول بالبريد الجامعي" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/03-my-account.svg"><strong>03 | فتح My Account</strong></a></h3>
 
-<p align="right" dir="rtl">بعد تسجيل الدخول، افتح My Account ثم Account Profile Dashboard.</p>
+<p align="right" dir="rtl">بعد تسجيل الدخول، افتح <strong>My Account</strong>. ستصل إلى الصفحة التي تعرض معلومات الحساب والطلبات.</p>
 
 <p align="center"><img src="images/steps/03-my-account.svg" alt="03 | فتح My Account" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/04-complete-profile.svg"><strong>04 | إكمال بيانات الحساب</strong></a></h3>
 
-<p align="right" dir="rtl">من Profile → Personal Information، أكمل بيانات الملف الشخصي واحفظها. هذا هو الشرط الأول.</p>
+<p align="right" dir="rtl">من القائمة الجانبية اختر <strong>Profile</strong> ثم <strong>Personal Information</strong>. أكمل الخانات الناقصة واحفظ البيانات قبل الانتقال للتحميل.</p>
 
 <p align="center"><img src="images/steps/04-complete-profile.svg" alt="04 | إكمال بيانات الحساب" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/05-approved-location.svg"><strong>05 | إضافة الجهة التعليمية</strong></a></h3>
 
-<p align="right" dir="rtl">من Access → Locations، اختر King Saud University إذا كانت جامعتك، وقدّم Request Locations إذا لزم. تأكد من ظهور الاسم والحالة Approved. هذا هو الشرط الثاني.</p>
+<p align="right" dir="rtl">افتح <strong>Access → Locations</strong> وابحث عن <strong>King Saud University</strong>. إذا لم تجدها، استخدم <strong>Request Locations</strong> لإرسال طلب إضافتها. بعد الموافقة ستظهر حالة <strong>Approved</strong> بجانب اسم الجامعة.</p>
 
 <p align="center"><img src="images/steps/05-approved-location.svg" alt="05 | إضافة الجهة التعليمية" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/06-arena-search.svg"><strong>06 | البحث عن Arena</strong></a></h3>
 
-<p align="right" dir="rtl">ابحث عن Arena في موقع الشركة، أو استخدم رابط التحميل المباشر أعلاه.</p>
+<p align="right" dir="rtl">يمكنك كتابة <strong>Arena</strong> في بحث موقع Rockwell واختيار صفحة التنزيل، أو الدخول من الرابط المباشر الموجود أعلى الصور.</p>
 
 <p align="center"><img src="images/steps/06-arena-search.svg" alt="06 | البحث عن Arena" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/07-arena-17-download.svg"><strong>07 | تحديد إصدار Arena 17.00.01</strong></a></h3>
 
-<p align="right" dir="rtl">حدد الإصدار الصحيح وملف التنزيل ثم Download Selections. ملف Patch قد يتطلب نسخة أساسية سابقة.</p>
+<p align="right" dir="rtl">اختر الإصدار <strong>17.00.01</strong> وحدد الملف المناسب، ثم اضغط <strong>Download Selections</strong>. انتبه إلى كلمة <strong>Patch</strong> لأنها قد تعني تحديثًا لنسخة موجودة.</p>
 
 <p align="center"><img src="images/steps/07-arena-17-download.svg" alt="07 | تحديد إصدار Arena 17.00.01" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/08-accept-license.svg"><strong>08 | الموافقة على اتفاقية الترخيص</strong></a></h3>
 
-<p align="right" dir="rtl">اقرأ الاتفاقية ثم اختر Accept and Download إذا كنت موافقًا على شروطها.</p>
+<p align="right" dir="rtl">ستظهر اتفاقية الاستخدام. بعد قراءتها والموافقة عليها اضغط <strong>Accept and Download</strong>.</p>
 
 <p align="center"><img src="images/steps/08-accept-license.svg" alt="08 | الموافقة على اتفاقية الترخيص" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/09-save-download.svg"><strong>09 | حفظ مدير التنزيل</strong></a></h3>
 
-<p align="right" dir="rtl">اختر مكان الحفظ ثم اضغط Save، وشغّل مدير التنزيل الرسمي.</p>
+<p align="right" dir="rtl">عند ظهور نافذة الحفظ، اختر مجلدًا يسهل الرجوع إليه واضغط <strong>Save</strong>. بعدها شغّل ملف التنزيل الرسمي.</p>
 
 <p align="center"><img src="images/steps/09-save-download.svg" alt="09 | حفظ مدير التنزيل" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/10-drive-ra.svg"><strong>10 | الوصول إلى C:\RA</strong></a></h3>
 
-<p align="right" dir="rtl">افتح C:\RA بعد اكتمال التنزيل، وافتح مجلد الإصدار المناسب. فك الضغط عن ZIP إذا كان الملف مضغوطًا.</p>
+<p align="right" dir="rtl">بعد اكتمال التحميل، افتح القرص <strong>C:</strong> ثم مجلد <strong>RA</strong>. ابحث عن مجلد الإصدار الذي نزلته، وفك الضغط إن كانت الملفات بصيغة ZIP.</p>
 
 <p align="center"><img src="images/steps/10-drive-ra.svg" alt="10 | الوصول إلى C:\RA" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/11-mediaimage.svg"><strong>11 | فتح MediaImage</strong></a></h3>
 
-<p align="right" dir="rtl">افتح مجلد MediaImage داخل الملفات المستخرجة.</p>
+<p align="right" dir="rtl">من المجلد المستخرج، افتح <strong>MediaImage</strong>. هذا هو المجلد الذي يحتوي على واجهة التثبيت.</p>
 
 <p align="center"><img src="images/steps/11-mediaimage.svg" alt="11 | فتح MediaImage" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/12-autorun.svg"><strong>12 | تشغيل autorun.exe</strong></a></h3>
 
-<p align="right" dir="rtl">اختر autorun من نوع Application وليس Setup Information، ثم Run as administrator.</p>
+<p align="right" dir="rtl">ستجد ملفين قد يظهران باسم <strong>autorun</strong>. اختر الذي نوعه <strong>Application</strong> وليس <strong>Setup Information</strong>، ثم اضغط بزر الفأرة الأيمن واختر <strong>Run as administrator</strong>.</p>
 
 <p align="center"><img src="images/steps/12-autorun.svg" alt="12 | تشغيل autorun.exe" width="95%"/></p>
 
 <h3 align="right" dir="rtl"><a href="images/steps/13-install-arena.svg"><strong>13 | تثبيت Arena</strong></a></h3>
 
-<p align="right" dir="rtl">من نافذة Arena 2026 اختر Install Arena واتبع التعليمات، ثم اختبر النموذج.</p>
+<p align="right" dir="rtl">عندما تظهر نافذة <strong>Arena 2026</strong> اضغط <strong>Install Arena</strong> وأكمل خطوات المثبّت. بعد الانتهاء افتح البرنامج وجرب نموذجًا بسيطًا.</p>
 
 <p align="center"><img src="images/steps/13-install-arena.svg" alt="13 | تثبيت Arena" width="95%"/></p>
 
 **المصادر:** [Rockwell: شروط الحساب والتنزيل](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html) | [فيديو الشرح المرجعي](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q).
 
-### أ. التحميل من الشركة المصنّعة
+### ملاحظتان بعد تنزيل الملفات
 
-1. ‏افتح [صفحة تحميل Arena من Rockwell Automation](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
-2. ‏سجّل الدخول أو أنشئ حساب Rockwell وفق التعليمات الظاهرة.
-3. ‏أكمل بيانات الجامعة أو جهة العمل عند الطلب.
-4. ‏استخدم زر **Download** أو بوابة [Product Compatibility and Download Center](https://compatibility.rockwellautomation.com/) وابحث عن Arena.
-5. ‏تأكد من **رقم الإصدار المراد تثبيته** قبل التنزيل. لا تُفترض إتاحة إصدار 17 في رابط التحميل لمجرد امتلاكه على جهاز آخر.
-6. ‏شغّل Download Manager إذا تطلّب تنزيل الملفات ذلك؛ قد تُحفظ في `C:\RA` بحسب إرشادات Rockwell.
-7. ‏انتظر اكتمال التنزيل محليًا وتحقق من المجلد.
+- ‏إذا نزلت الملفات داخل `C:\RA` كأرشيف مضغوط، **فك الضغط كاملًا** قبل تشغيل `autorun.exe`.
+- ‏اتبع معالج التثبيت واختر الترخيص الذي توفره لك الجامعة أو نسخة الطالب، وأعد تشغيل Windows إذا طلب المثبّت ذلك.
 
 <div align="right" dir="rtl">
 
-### ب. تثبيت الملفات
-
-</div>
-
-1. ‏افتح مجلد التنزيل (غالبًا `C:\RA`).
-2. ‏**استخرج ملفات الأرشيف بالكامل** إلى مجلد فعلي. لا تشغّل المثبت من داخل ZIP.
-3. ‏افتح المجلد `MediaImage`.
-4. ‏انقر بزر الفأرة الأيمن على `AutoRun.exe` ثم **Run as administrator**.
-5. ‏اختر **Install Arena** واتبع الشاشة ووافق على شروط الترخيص الرسمية.
-6. ‏اختر مكان التثبيت إذا طلبه البرنامج.
-7. ‏**أدخل الترخيص الخاص بك أو خيار نسخة الطالب حسب تعليمات Rockwell**؛ لا تستخدم أرقامًا غير مرخصة.
-8. ‏عند الانتهاء، أعد تشغيل الجهاز **إذا طلب التثبيت ذلك**.
-
-<div align="right" dir="rtl">
-
-> تختلف تفاصيل المثبت حسب النسخة. لا تستخدم ملفات EXE المجهولة الموجودة في مستودعات GitHub باعتبارها بديلًا عن ملفات Arena الرسمية.
-
-</div>
-
-<div align="right" dir="rtl">
-
-### ج. ترخيص الطالب والترخيص المؤسسي
+### كيف أختار الترخيص؟
 
 </div>
 
@@ -846,7 +820,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-اتبع هذا التسلسل **دون حذف Arena في البداية**:
+إذا فتحت Arena ووجدت بعض القوائم أو الأدوات باللون الرمادي، جرّب الحلول التالية بالترتيب. **لا تحذف البرنامج قبل فحص السبب.**
 
 </div>
 
@@ -864,7 +838,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-### ماذا تُرسل إلى الدعم عند استمرار المشكلة؟
+### إذا استمرت المشكلة، ما المعلومات التي تفيد الدعم؟
 
 </div>
 
@@ -941,7 +915,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-لا. هو **دليل عربي مستقل** يلخّص خطوات فحص Windows وتثبيت البرنامج الرسمي. بعض متطلبات Rockwell المنشورة تشير إلى 16.20.02، لذلك يجب التحقق من وثائق Arena 17 إذا كان هذا الإصدار هو المطلوب.
+لا، هذه صفحة شرح أعددتها لمساعدة زملائي في تنزيل البرنامج وفحص المشكلات الشائعة. أما المتطلبات والملفات الرسمية فمصدرها **Rockwell Automation**. قد تشير بعض صفحات الشركة إلى 16.20.02، لذلك راجع وثائق الحزمة التي تنزلها.
 
 </div>
 
@@ -969,7 +943,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-استُلهم نطاق الفحص الأولي من مستودع [M02lsayed/Arena](https://github.com/M02lsayed/Arena/blob/main/README.md)، لكن **هذه صياغة عربية مستقلة** أُعيدت كتابتها مع روابط رسمية وملاحظات تصحيحية. المستودع المرجعي تابع لطرف ثالث وليس موردًا رسميًا من Rockwell Automation.
+استفدت في ترتيب قائمة الفحوصات من [هذا المستودع](https://github.com/M02lsayed/Arena/blob/main/README.md)، ثم أضفت الأوامر البديلة والروابط الرسمية وخطوات التسجيل والتنزيل بالصور.
 
 </div>
 
@@ -977,13 +951,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 <div align="right" dir="rtl">
 
-**ملاحظة عن نواتج الأوامر:** كل قسم **Output** في هذا الدليل مثال تعليمي على الشكل المحتمل للنتيجة، ولا يعتمد على فحص تلقائي لجهاز القارئ.
+**حول النتائج:** المخرجات المعروضة أسفل الأوامر مجرد أمثلة لتعرف شكل النتيجة. الأرقام والإصدارات الفعلية ستظهر حسب جهازك.
 
 </div>
 
 <div align="right" dir="rtl">
 
-**ملاحظة المسؤولية:** الأوامر هنا للفحص، ولا تعدّل سجل Windows أو تزيل البرامج. تثبيت أي مكوّن قرار منفصل بعد مطابقة المتطلبات والمصدر الرسمي.
+الأوامر الموجودة هنا للقراءة والفحص فقط. إذا احتجت تثبيت مكوّن، ارجع إلى رابط الشركة الخاص به أولًا.
 
 </div>
 
