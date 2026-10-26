@@ -1,7 +1,7 @@
 <div align="center">
 <img src="assets/software-guides-banner.svg" alt="Software Installation Guides" width="100%" />
-<h1>أدلة البرامج والتثبيت</h1>
-<p><b>إعداد: Talal Alsultan</b></p>
+<h1><strong>أدلة تحميل البرامج وتثبيتها واستخدامها</strong></h1>
+<p><strong>إعداد:</strong> Talal Alsultan &nbsp; | &nbsp; <strong>آخر تحديث:</strong> 26 أكتوبر 2026</p>
 <p>دليل عربي عملي لطلاب الجامعة والمهتمين بالمحاكاة والإحصاء والتحليل الكمي وذكاء الأعمال.</p>
 </div>
 
@@ -11,12 +11,12 @@
 
 ## ابدأ من هنا
 
-جمعت في هذا المستودع أدلة تنزيل البرامج التي نستخدمها في المقررات والمشروعات، مع شرح خطوات التثبيت وأبرز الاستخدامات والمشكلات الشائعة. وضعت روابط الشركات الأصلية حتى يسهل الرجوع إليها عند تحديث الإصدارات.
+إذا كنت تحتاج برنامجًا في المقرر أو المشروع، اختره من الجدول التالي. ستجد شرحًا لما يستخدم فيه، ثم طريقة تحميله وتثبيته خطوة بخطوة، وبعدها تجربة عملية وحلولًا للمشكلات الشائعة. أرفقت روابط الشركات الأصلية حتى تتمكن من الوصول إلى النسخ والتعليمات المحدثة.
 
 | البرنامج | محتويات الدليل | فتح الدليل |
 | :---: | :---: | :---: |
 | **Arena Simulation 17** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل Arena](Arena%20Simulation%20%D8%AF%D9%84%D9%8A%D9%84.md)** |
-| **IBM SPSS Statistics** | التحميل والتفعيل، Data View وVariable View، أول تحليل، وحل المشكلات | **[دليل SPSS](guides/SPSS/README.md)** |
+| **IBM SPSS Statistics** | التحميل والتفعيل، صور واجهة البرنامج، الارتباط، الانحدار البسيط والمتعدد، وANOVA | **[دليل SPSS](guides/SPSS/README.md)** |
 | **Excel QM / QM for Windows** | الفرق بين البرنامجين، التحميل من Pearson، الإضافة إلى Excel، أمثلة مسائل كمية | **[دليل Excel QM](guides/Excel-QM/README.md)** |
 | **Power BI Desktop** | تحميل البرنامج، استيراد Excel، Power Query وDAX، إنشاء التقارير | **[دليل Power BI Desktop](guides/Power-BI-Desktop/README.md)** |
 | **Power BI Report Server** | الفرق بين Desktop والخادم الداخلي، تنزيل PBIRS، النشر والصلاحيات والتحديث المجدول | **[دليل Power BI Report Server](guides/Power-BI-Report-Server/README.md)** |
