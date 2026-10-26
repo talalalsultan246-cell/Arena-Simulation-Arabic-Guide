@@ -207,9 +207,9 @@ END DATA.
 EXECUTE.
 
 REGRESSION
+  /STATISTICS COEFF R ANOVA
   /DEPENDENT ExamScore
-  /METHOD=ENTER StudyHours
-  /STATISTICS COEFF R ANOVA.
+  /METHOD=ENTER StudyHours.
 ```
 
 <div dir="rtl" align="right">
