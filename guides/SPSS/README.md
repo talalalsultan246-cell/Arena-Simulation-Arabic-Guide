@@ -66,10 +66,22 @@
 **Data View:** أدخل البيانات هنا؛ كل صف يمثل سجلًا أو حالة، وكل عمود يمثل متغيرًا. تأكد من وضع الأرقام في الأعمدة الرقمية وعدم إضافة العناوين على أنها سجلات.
 
 <div align="center">
+<img src="https://s3.amazonaws.com/libapps/accounts/2515/images/spss_creating-variables_insert-variables-2.png" alt="صورة فعلية لواجهة IBM SPSS Data View من مكتبة Kent State University" width="75%"/>
+</div>
+
+<small>**لقطة شاشة فعلية من البرنامج:** [مصدرها التعليمي — Kent State University](https://libguides.library.kent.edu/SPSS/CreateData). تتغير واجهة SPSS باختلاف الإصدار؛ إذا تعذر عرض الصورة الخارجية، فالرسم الإرشادي الموجود أعلاها محفوظ داخل المستودع.</small>
+
+<div align="center">
 <img src="images/03-variable-view.svg" alt="رسم إرشادي لواجهة Variable View وتعريف نوع المتغير" width="87%"/>
 </div>
 
 **Variable View:** حدد اسم المتغير **Name**، ونوعه **Type**، ووصفه **Label**، ومستوى قياسه **Measure**، والقيم المفقودة **Missing**. اختيار نوع المتغير الصحيح خطوة مهمة قبل أي تحليل.
+
+<div align="center">
+<img src="https://sscc.wisc.edu/sscc/pubs/spss/classintro/screenshots/spss_students1/SPSS07VariableView.jpg" alt="صورة فعلية لواجهة SPSS Variable View من جامعة Wisconsin" width="75%"/>
+</div>
+
+<small>**لقطة شاشة فعلية من البرنامج:** [جامعة Wisconsin — SPSS for the Classroom](https://sscc.wisc.edu/sscc/pubs/spss/classintro/spss_students1.html). اللقطة لإصدار أقدم، لكنها توضح نوع المتغيرات وأعمدتها. الرسم المحلي أعلاه مرجع بديل إذا تعذر تحميل الصورة.</small>
 
 | الجزء | ماذا تستخدمه لأجله؟ |
 | :--- | :--- |
