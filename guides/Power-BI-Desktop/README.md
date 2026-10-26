@@ -1,17 +1,38 @@
 <div dir="rtl" align="right">
 
-<h1><strong>دليل تثبيت واستخدام Power BI Desktop</strong></h1>
+# **دليل Power BI Desktop**
 
-<p><strong>إعداد:</strong> Talal bin Ibrahim Alsultan &nbsp; | &nbsp; <strong>آخر تحديث:</strong> 26 أكتوبر 2026</p>
+**إعداد:** Talal bin Ibrahim Alsultan  
+**آخر تحديث:** 27 أكتوبر 2026
 
 إذا كانت لديك بيانات في Excel أو CSV أو قاعدة بيانات، وتريد تحويلها إلى رسوم ومؤشرات تفاعلية، فابدأ ببرنامج **Power BI Desktop**. ستتعلم في هذا الدليل كيف تحمّله من Microsoft، وتثبّته، ثم تنشئ أول تقرير وتحفظه. وفي النهاية وضعت حلولًا للمشكلات التي قد تواجهك.
 
+> **دليل عملي لتحميل Power BI Desktop وتثبيته والتعرف على الواجهة وإنشاء تقرير تفاعلي بسيط.**
+
+<a name="desktop-toc"></a>
+## المحتويات
+
+1. [قبل أن تبدأ](#desktop-section-01)
+2. [تحميل البرنامج وتثبيته](#desktop-section-02)
+   - [الطريقة الأولى: Microsoft Store](#desktop-section-02-01)
+   - [الطريقة الثانية: ملف التثبيت من Microsoft](#desktop-section-02-02)
+3. [إنشاء أول تقرير خطوة بخطوة](#desktop-section-03)
+   - [تجربة مقياس DAX](#desktop-section-03-01)
+4. [أين أجد الأدوات الأساسية؟](#desktop-section-04)
+5. [إذا واجهتك مشكلة](#desktop-section-05)
+6. [قبل أن تشارك التقرير](#desktop-section-06)
+7. [المصادر الرسمية](#desktop-section-07)
+
+---
+
+<a name="desktop-section-01"></a>
 ## 1. قبل أن تبدأ
 
 Power BI Desktop برنامج مكتبي لتحليل البيانات وإعداد التقارير. تبدأ عادةً باستيراد البيانات، ثم تنظيفها في **Power Query**، وإنشاء العلاقات والحسابات عند الحاجة، وبعدها تصميم الرسوم البيانية والتفاعل معها.
 
 **معلومة مهمة:** تنزيل Power BI Desktop واستخدامه محليًا مجاني، لكن نشر التقارير ومشاركتها عبر Power BI Service يخضعان للصلاحيات والتراخيص المناسبة. وإذا كان عملك على **Power BI Report Server** داخل جهة العمل، فهناك نسخة Desktop مخصصة له؛ ستجد شرحها في [دليل Power BI Report Server](../Power-BI-Report-Server/README.md).
 
+<a name="desktop-section-02"></a>
 ## 2. تحميل البرنامج وتثبيته
 
 <p align="center"><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/2.1-Product-Overview-800x471-PBD?fit=constrain&amp;hei=1188&amp;op_usm=1.5%2C0.65%2C15%2C0&amp;qlt=100&amp;resMode=sharp2&amp;wid=2000" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 1" width="92%"/></p>
@@ -20,6 +41,7 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 يمكنك تثبيت البرنامج بإحدى الطريقتين. اختر طريقة واحدة فقط:
 
+<a name="desktop-section-02-01"></a>
 ### الطريقة الأولى: Microsoft Store
 
 1. افتح [Power BI Desktop في Microsoft Store](https://aka.ms/pbidesktopstore).
@@ -28,6 +50,7 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 هذه الطريقة مناسبة إذا كانت سياسة جهازك تسمح باستخدام Microsoft Store، وقد تساعدك في الحصول على تحديثات البرنامج من المتجر.
 
+<a name="desktop-section-02-02"></a>
 ### الطريقة الثانية: ملف التثبيت من Microsoft
 
 1. ادخل [صفحة التنزيل الرسمية](https://www.microsoft.com/en-us/download/details.aspx?id=58494).
@@ -37,6 +60,7 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 إذا كان لديك البرنامج أصلًا، فتحقق من نسخته قبل تثبيت إصدار جديد. إصدار 32-bit القديم من Power BI Desktop لم يعد مدعومًا.
 
+<a name="desktop-section-03"></a>
 ## 3. إنشاء أول تقرير خطوة بخطوة
 
 <p align="center"><img src="https://learn.microsoft.com/es-es/power-bi/fundamentals/media/desktop-getting-started/mergedcolumn.png" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 2" width="92%"/></p>
@@ -54,6 +78,7 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 
 بهذا تكون بنيت تقريرًا أوليًا: **استيراد البيانات ← تجهيزها ← تصميم الرسم ← إضافة الفلاتر ← حفظ التقرير**.
 
+<a name="desktop-section-03-01"></a>
 ### تجربة مقياس DAX
 
 إذا كان اسم الجدول `Sales` واسم عمود القيم `Amount`، اختر **Modeling → New Measure** ثم اكتب:
@@ -68,6 +93,7 @@ Total Sales = SUM(Sales[Amount])
 
 يعيد هذا المقياس مجموع المبالغ في العمود. على سبيل المثال، إذا كان العمود يحتوي على 100 و150 فالناتج **250**. وعند استخدام الفلاتر قد تتغير القيمة بحسب السجلات المعروضة. هذه أرقام تدريبية لتجربة المعادلة فقط.
 
+<a name="desktop-section-04"></a>
 ## 4. أين أجد الأدوات الأساسية؟
 
 <p align="center"><img src="https://learn.microsoft.com/id-id/power-bi/create-reports/media/sample-tutorial-connect-to-the-samples/power-bi-samples-desktop.png" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 3" width="92%"/></p>
@@ -83,6 +109,7 @@ Total Sales = SUM(Sales[Amount])
 | **Slicers** | عندما تريد أن يحدد المستخدم سنة أو منطقة أو فئة معينة |
 | **Publish** | عندما تريد نشر التقرير على الخدمة السحابية وتملك الصلاحيات اللازمة |
 
+<a name="desktop-section-05"></a>
 ## 5. إذا واجهتك مشكلة
 
 | المشكلة | جرب هذا أولًا |
@@ -95,15 +122,25 @@ Total Sales = SUM(Sales[Amount])
 | ملف PBIX لا يعمل في Report Server | افتحه بنسخة **Power BI Desktop for Report Server** المتوافقة مع الخادم |
 | أصبح التقرير بطيئًا | ابدأ بمراجعة حجم البيانات والاستعلامات والعلاقات غير الضرورية |
 
+<a name="desktop-section-06"></a>
 ## 6. قبل أن تشارك التقرير
 
 إذا استخدمت وضع **Import** فقد يحتوي ملف `.pbix` نفسه على نسخة من البيانات. لذلك افحص محتواه وصلاحية نشر البيانات قبل مشاركته، ولا تضع كلمات المرور أو مسارات الخوادم الداخلية ضمن ملفات عامة.
 
+<a name="desktop-section-07"></a>
 ## 7. المصادر الرسمية
 
 - [Microsoft — تنزيل Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 - [Microsoft Learn — دليل تثبيت Power BI Desktop](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop)
 
 يمكنك الرجوع إلى [صفحة أدلة البرامج](../../README.md) لاختيار البرنامج التالي.
+
+---
+
+### إعداد الدليل
+
+**Talal bin Ibrahim Alsultan**  
+*Applied Information System • Data Science • Decision Sciences*  
+King Saud University
 
 </div>
