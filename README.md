@@ -1,7 +1,7 @@
 <div align="center">
 <img src="assets/software-guides-banner.svg" alt="Software Installation Guides" width="100%" />
 <h1><strong>أدلة تحميل البرامج وتثبيتها واستخدامها</strong></h1>
-<p><strong>إعداد:</strong> Talal Alsultan &nbsp; | &nbsp; <strong>آخر تحديث:</strong> 26 أكتوبر 2026</p>
+<p><strong>إعداد:</strong> Talal bin Ibrahim Alsultan &nbsp; | &nbsp; <strong>آخر تحديث:</strong> 26 أكتوبر 2026</p>
 <p>دليل عربي عملي لطلاب الجامعة والمهتمين بالمحاكاة والإحصاء والتحليل الكمي وذكاء الأعمال.</p>
 </div>
 
@@ -15,7 +15,7 @@
 
 | البرنامج | محتويات الدليل | فتح الدليل |
 | :---: | :---: | :---: |
-| **Arena Simulation 17** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل Arena](Arena%20Simulation%20%D8%AF%D9%84%D9%8A%D9%84.md)** |
+| **Arena Simulation 17** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل Arena](guides/Arena/README.md)** |
 | **IBM SPSS Statistics** | التحميل والتفعيل، صور واجهة البرنامج، الارتباط، الانحدار البسيط والمتعدد، وANOVA | **[دليل SPSS](guides/SPSS/README.md)** |
 | **Excel QM / QM for Windows** | الفرق بين البرنامجين، التحميل من Pearson، الإضافة إلى Excel، أمثلة مسائل كمية | **[دليل Excel QM](guides/Excel-QM/README.md)** |
 | **Power BI Desktop** | تحميل البرنامج، استيراد Excel، Power Query وDAX، إنشاء التقارير | **[دليل Power BI Desktop](guides/Power-BI-Desktop/README.md)** |
@@ -40,10 +40,11 @@
 ```text
 Software-Installation-Guides/
 ├── README.md                        <- الصفحة الرئيسية للأدلة
-├── Arena Simulation دليل.md        <- الدليل المصور الحالي
+├── Arena Simulation دليل.md        <- رابط قديم محفوظ للواتساب
 ├── assets/                          <- الغلاف
 ├── images/                          <- صور شرح Arena
 └── guides/
+    ├── Arena/README.md             <- نسخة الدليل الأساسية
     ├── SPSS/README.md
     ├── Excel-QM/README.md
     ├── Power-BI-Desktop/README.md
@@ -60,7 +61,7 @@ Software-Installation-Guides/
 
 ---
 
-**Talal Alsultan**  
+**Talal bin Ibrahim Alsultan**  
 نظم المعلومات التطبيقية • علم البيانات • علوم القرار  
 King Saud University
 
