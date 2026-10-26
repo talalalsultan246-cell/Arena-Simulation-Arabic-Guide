@@ -64,9 +64,9 @@ Power BI Desktop برنامج مكتبي لتحليل البيانات وإعد�
 <a name="desktop-section-03"></a>
 ## 3. إنشاء أول تقرير خطوة بخطوة
 
-<p align="center"><img src="https://learn.microsoft.com/es-es/power-bi/fundamentals/media/desktop-getting-started/mergedcolumn.png" alt="لقطة حقيقية من واجهة Power BI Desktop — المثال 2" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/pl-pl/power-bi/connect-data/media/desktop-data-view/dataview_fullscreen.png" alt="لقطة شاشة فعلية من Microsoft Learn لعرض Table View في Power BI Desktop بعد استيراد البيانات" width="92%"/></p>
 
-*الصورة الثانية من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started)، وتعرض واجهة **Power Query Editor** الفعلية أثناء معالجة البيانات.*
+*تعرض الصورة **Table View** بعد استيراد البيانات، حيث يمكن مراجعة الصفوف والأعمدة. المصدر: [Microsoft Learn — Table View](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-view). وستجد صورة **Power Query Editor** في قسم الصور التالي.*
 
 للتجربة، جهّز ملف Excel بسيطًا يحتوي على أعمدة مثل `Region` و`Amount` و`Date`. ثم نفذ الخطوات التالية بالترتيب:
 
