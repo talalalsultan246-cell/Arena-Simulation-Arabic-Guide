@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="Arena interface annotated diagram with red rectangles and numbers">
+<rect width="1280" height="760" rx="18" fill="#f0f5fa"/>
+<rect x="24" y="22" width="1232" height="690" rx="13" fill="#fff" stroke="#b9cee2" stroke-width="3"/>
+<rect x="24" y="22" width="1232" height="72" rx="13" fill="#15375d"/>
+<text x="54" y="64" font-size="32" font-weight="bold" fill="#fff" font-family="Arial,DejaVu Sans,sans-serif">Arena Simulation — Main Interface</text>
+<rect x="48" y="115" width="1180" height="96" fill="#e8eff7" stroke="#bdcede"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#214a71"><text x="68" y="145">File</text><text x="162" y="145">Home</text><text x="262" y="145">Animate</text><text x="387" y="145">Draw</text><text x="488" y="145">Run</text><text x="572" y="145">View</text><text x="666" y="145">Tools</text>
+<text x="80" y="190" font-size="17">Connect</text><text x="214" y="190" font-size="17">Auto-Connect</text><text x="415" y="190" font-size="17">Save</text><text x="522" y="190" font-size="17">Run Setup</text><text x="716" y="190" font-size="17">Go / Pause</text></g>
+<rect x="48" y="229" width="259" height="427" fill="#ebf4fc" stroke="#b3c7d7"/>
+<text x="62" y="263" font-size="25" font-weight="bold" fill="#204663" font-family="Arial,sans-serif">Project Bar</text>
+<g font-family="Arial,sans-serif" font-size="20" fill="#1e4766"><text x="69" y="306">Discrete Processing</text><text x="83" y="349">Create</text><text x="83" y="390">Process</text><text x="83" y="431">Dispose</text><text x="69" y="495">Data Definition</text><text x="83" y="537">Resource</text><text x="83" y="579">Queue</text><text x="69" y="623">Reports</text></g>
+<rect x="327" y="229" width="901" height="287" fill="#fff" stroke="#b3c7d7"/>
+<text x="350" y="270" font-size="24" fill="#2b5376" font-family="Arial,sans-serif">Model Window (Flowchart View)</text>
+<rect x="390" y="326" width="205" height="96" rx="12" fill="#e4f2e6" stroke="#438d64" stroke-width="3"/>
+<rect x="673" y="326" width="204" height="96" rx="12" fill="#e5f0ff" stroke="#4b81ad" stroke-width="3"/>
+<rect x="956" y="326" width="204" height="96" rx="12" fill="#f3ebfa" stroke="#9468af" stroke-width="3"/>
+<g font-family="Arial,sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#274258"><text x="492" y="383">Create</text><text x="775" y="383">Process</text><text x="1058" y="383">Dispose</text></g>
+<g stroke="#365e83" stroke-width="5" fill="none"><path d="M595 374H668m-16-15l16 15-16 15"/><path d="M877 374h74m-16-15l16 15-16 15"/></g>
+<rect x="327" y="533" width="901" height="123" fill="#f6f9fd" stroke="#b3c7d7"/>
+<text x="350" y="566" font-size="21" font-weight="bold" fill="#2b5376" font-family="Arial,sans-serif">Spreadsheet View</text>
+<g font-family="Arial,sans-serif" font-size="17" fill="#284765"><text x="353" y="603">Name</text><text x="521" y="603">Action</text><text x="708" y="603">Delay Type</text><text x="907" y="603">Units</text><text x="1099" y="603">Resources</text></g>
+<path d="M348 611h858M510 577v62M688 577v62M893 577v62M1080 577v62" stroke="#c6d9e7" stroke-width="2"/>
+<rect x="48" y="674" width="1180" height="22" fill="#dfeaf3"/>
+<g font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ec1539" stroke="#ed2438" stroke-width="5" fill-opacity="0"><rect x="45" y="112" width="1186" height="102" rx="9"/><rect x="45" y="226" width="265" height="433" rx="9"/><rect x="324" y="226" width="907" height="294" rx="9"/><rect x="324" y="529" width="907" height="131" rx="9"/><rect x="46" y="672" width="1183" height="27" rx="5"/></g>
+<g font-family="Arial,sans-serif" fill="#fff" text-anchor="middle" font-size="23" font-weight="bold">
+<circle cx="65" cy="116" r="22" fill="#e52235"/><text x="65" y="124">1</text>
+<circle cx="65" cy="229" r="22" fill="#e52235"/><text x="65" y="237">2</text>
+<circle cx="347" cy="229" r="22" fill="#e52235"/><text x="347" y="237">3</text>
+<circle cx="347" cy="532" r="22" fill="#e52235"/><text x="347" y="540">4</text>
+<circle cx="65" cy="673" r="22" fill="#e52235"/><text x="65" y="681">5</text></g>
+<text x="1250" y="740" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#6a8196">REFERENCE DIAGRAM — NOT A LITERAL ARENA SCREENSHOT</text>
+</svg>
