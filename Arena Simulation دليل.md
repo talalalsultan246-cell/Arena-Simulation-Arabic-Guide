@@ -967,7 +967,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 ### إعداد الدليل
 
-**Talal Alsultan**  
+**Talal bin Ibrahim Alsultan**  
 *Applied Information System • Data Science • Decision Sciences*  
 King Saud University
 
