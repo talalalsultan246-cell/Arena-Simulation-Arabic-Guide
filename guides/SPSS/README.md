@@ -30,6 +30,7 @@
    - [قراءة نتائج الانحدار والسلاسل الزمنية](#spss-section-02-03)
    - [كيف أفهم الجداول بعد تشغيل Regression؟](#spss-section-02-04)
 3. [مثال تطبيقي واحد — Simple Linear Regression](#spss-section-03)
+   - [قراءة مخرجات المثال: Model Summary وANOVA وCoefficients وDurbin–Watson](#spss-example-output)
    - [الخطوات داخل البرنامج](#spss-section-03-01)
 4. [أسئلة متكررة عند الاستخدام](#spss-section-04)
 5. [المصادر الرسمية وروابط الاستخدام](#spss-section-05)
@@ -212,10 +213,94 @@ EXECUTE.
 REGRESSION
   /STATISTICS COEFF R ANOVA
   /DEPENDENT ExamScore
-  /METHOD=ENTER StudyHours.
+  /METHOD=ENTER StudyHours
+  /RESIDUALS.
 ```
 
 <div dir="rtl" align="right">
+
+<a name="spss-example-output"></a>
+### قراءة مخرجات المثال خطوة بخطوة (Output Viewer)
+
+بعد الضغط على **OK** ستظهر النتائج في نافذة **SPSS Output Viewer**. ابدأ بجدول **Model Summary**، ثم **ANOVA**، ثم **Coefficients**. ولعرض **Durbin–Watson** ورسوم البواقي، افتح **Statistics** و**Plots** في نافذة Linear Regression، أو استخدم أمر Syntax الموضح أعلاه.
+
+**صورة فعلية لنافذة Output Viewer تحتوي على جداول الانحدار:**
+
+<div align="center">
+<img src="https://stats.idre.ucla.edu/wp-content/uploads/2016/08/introreg_l1_25.png" alt="واجهة SPSS Output Viewer وجداول Model Summary وANOVA الفعلية — UCLA" width="88%"/>
+</div>
+
+<small>مصدر الصورة: [UCLA Statistical Consulting — Regression with SPSS](https://stats.oarc.ucla.edu/spss/seminars/introduction-to-regression-with-spss/introreg-lesson1/). **القيم في الصورة من المثال التعليمي الخاص بالمصدر، وليست قيم بيانات ساعات الدراسة الموجودة هنا.**</small>
+
+#### 1. Model Summary — ماذا تعني جودة النموذج؟
+
+<div align="center">
+<img src="https://scales.arabpsychology.com/wp-content/uploads/2024/06/linear-regression-summary-table-in-spss-1024x962.png" alt="جداول SPSS Model Summary وANOVA وCoefficients في شاشة واحدة — مثال مستقل" width="86%"/>
+</div>
+
+<small>لقطة حقيقية لنتائج SPSS: [مصدر الصورة وشرح المخرجات](https://scales.arabpsychology.com/stats/what-is-the-summary-of-linear-regression-analysis-in-spss/). القيم المصورة تخص بيانات أخرى.</small>
+
+**القيم المحسوبة من بيانات المثال الموجود في هذا الدليل:**
+
+| Model | R | R Square | Adjusted R Square | Std. Error of the Estimate | Durbin–Watson |
+| :---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 0.904 | 0.818 | 0.757 | 0.949 | 3.274 |
+
+- **R Square = 0.818:** النموذج يفسر نحو **81.8%** من التباين في درجات المثال الافتراضي.
+- **Adjusted R Square = 0.757:** معامل تحديد معدل يأخذ عدد المتغيرات وحجم العينة في الاعتبار.
+- **Std. Error = 0.949:** مقياس تقريبي لحجم أخطاء التقدير على مقياس المتغير التابع.
+- **Durbin–Watson = 3.274:** يقيس نمط الارتباط الذاتي المتتابع في البواقي؛ الرقم المرتفع بالنسبة إلى 2 قد يشير إلى ارتباط ذاتي سالب عندما يكون لترتيب الحالات معنى. **لأن المثال يحتوي على خمس حالات افتراضية فقط، فلا يصح الاعتماد على هذه القيمة للحكم على وجود ارتباط ذاتي فعلي أو تعميم النتيجة.**
+
+#### 2. ANOVA — هل نموذج الانحدار ككل دال إحصائيًا؟
+
+| Source | Sum of Squares | df | Mean Square | F | Sig. |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Regression | 12.100 | 1 | 12.100 | 13.444 | 0.035 |
+| Residual | 2.700 | 3 | 0.900 | | |
+| Total | 14.800 | 4 | | | |
+
+**طريقة القراءة:** هنا **F = 13.444** و**Sig. = 0.035**؛ وبما أن 0.035 أصغر من 0.05، فالانحدار دال إحصائيًا في **العينة التعليمية الصغيرة** عند هذا المستوى، مع ضرورة الانتباه إلى الافتراضات وعدم تعميم النتيجة.
+
+#### 3. Coefficients — كيف نكوّن المعادلة؟
+
+| Predictor | B | Std. Error | Beta | t | Sig. |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| (Constant) | 0.900 | 0.995 | — | 0.905 | 0.432 |
+| StudyHours | 1.100 | 0.300 | 0.904 | 3.667 | 0.035 |
+
+من عمود **Unstandardized Coefficients (B)** نأخذ قيمة الثابت **0.900** ومعامل ساعات الدراسة **1.100**، فتكون المعادلة:
+
+`ExamScore = 0.900 + (1.100 × StudyHours)`
+
+إذا كانت ساعات الدراسة **4** فإن الدرجة المتوقعة **5.3** وفق النموذج التدريبي.
+
+**صورة فعلية إضافية لنتائج الانحدار المتعدد، يظهر فيها عمود Durbin–Watson:**
+
+<div align="center">
+<img src="https://resdata.com.vn/public/upload/images/4_%20Ph%C3%A2n%20t%C3%ADch%20m%C3%B4%20h%C3%ACnh%20h%E1%BB%93i%20quy%20tuy%E1%BA%BFn%20t%C3%ADnh%20trong%20SPSS%20resdata.png" alt="صورة SPSS تحتوي على Model Summary وANOVA وCoefficients وDurbin-Watson في دراسة تعليمية مختلفة" width="86%"/>
+</div>
+
+<small>مصدر الصورة: [شرح لقراءة جداول الانحدار في SPSS](https://resdata.com.vn/bai-viet/148/phan-tich-va-doc-ket-qua-mo-hinh-hoi-quy-tuyen-tinh-boi-trong-spss-cap-nhat-2024). **هذا مثال آخر متعدد المتغيرات**؛ لا تستخدم قيم الصورة بدل نتائج المثال المحسوبة أعلاه.</small>
+
+#### 4. Durbin–Watson والرسوم التشخيصية
+
+لفحص البواقي داخل البرنامج افتح **Analyze → Regression → Linear → Statistics** واختر **Durbin–Watson**، ثم افتح **Plots** واختر Histogram وNormal probability plot، ويمكن رسم **ZRESID** مقابل **ZPRED** عند الحاجة.
+
+<div align="center">
+<img src="https://www.restore.ac.uk/srme/www/fac/soc/wie/research-new/srme/modules/mod3/14/spss_regression_stats_and_plots_setup.jpg" alt="لقطات فعلية لنوافذ SPSS Statistics وPlots وفيها Durbin-Watson وHistogram وNormal Probability Plot" width="86%"/>
+</div>
+
+<small>مصدر الصورة: [University of Warwick — Model Diagnostics](https://www.restore.ac.uk/srme/www/fac/soc/wie/research-new/srme/modules/mod3/14/index.html). تبيّن الصورة أماكن الخيارات داخل واجهة SPSS.</small>
+
+<div align="center">
+<img src="https://journals.sagepub.com/cms/10.1177/25152459251408046/asset/193031b9-0bd2-425b-8ddd-b8a13aa76460/assets/images/large/10.1177_25152459251408046-fig1.jpg" alt="صور فعلية لمخرجات فحص بواقي الانحدار: Normal P-P Plot وScatterplots" width="86%"/>
+</div>
+
+<small>مصدر الصورة: [منشور علمي في SAGE](https://journals.sagepub.com/doi/full/10.1177/25152459251408046). يوضح رسوم التشخيص في تحليل آخر؛ **ليست هذه الرسوم ناتجة عن بيانات المثال الصغير**.</small>
+
+**كيف تقرأ الرسوم؟** في **Histogram** تراجع الشكل العام لتوزيع البواقي، وفي **Normal P–P Plot** تلاحظ مدى اقتراب النقاط من الخط القطري، أما **Residual Scatterplot** فتبحث فيه عن الأنماط أو تغير التشتت. لا يكفي أي رسم بمفرده لإثبات صحة النموذج.
+
+للمزيد: [IBM — Linear Regression Statistics](https://www.ibm.com/docs/en/spss-statistics/30.0.0?topic=regression-linear-statistics) و[IBM — RESIDUALS Command](https://www.ibm.com/docs/en/spss-statistics/32.0.0?topic=regression-residuals-subcommand-command).
 
 <a name="spss-section-04"></a>
 ## 4. أسئلة متكررة عند الاستخدام
