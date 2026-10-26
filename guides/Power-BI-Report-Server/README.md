@@ -20,6 +20,7 @@
 4. [تنزيل Power BI Desktop المناسب للخادم](#pbirs-section-04)
 5. [نشر أول تقرير على بوابة الخادم](#pbirs-section-05)
 6. [ضبط تحديث البيانات Scheduled Refresh](#pbirs-section-06)
+   - [مثال نشر تقرير وتجربة التحديث](#pbirs-example)
 7. [أهم المشكلات والحلول](#pbirs-section-07)
 8. [روابط Microsoft الرسمية](#pbirs-section-08)
 
@@ -90,6 +91,14 @@ flowchart LR
 
 قد توجد على الجهاز نسخة Power BI Desktop عادية ونسخة مخصصة لـ Report Server. انتبه إلى اسم النسخة المفتوحة، خاصة عند النقر المزدوج على ملفات PBIX.
 
+### صورة فعلية لنسخة Power BI Desktop المخصصة للخادم
+
+<div align="center">
+<img src="https://learn.microsoft.com/ja-jp/power-bi/report-server/media/install-powerbi-desktop/power-bi-report-server-desktop.png" alt="واجهة Power BI Desktop الخاصة بـ Report Server ويظهر رقم الإصدار في شريط العنوان" width="88%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Power BI Desktop for Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/install-powerbi-desktop). الصورة لنسخة قديمة توضح ظهور الإصدار في شريط العنوان؛ استخدم النسخة المتوافقة مع خادمك الحالي.</small>
+
 <a name="pbirs-section-05"></a>
 ## 5. نشر أول تقرير على بوابة الخادم
 
@@ -102,6 +111,24 @@ flowchart LR
 5. اختبر الحساب الذي يملك دور **Browser** فقط للتأكد من قدرة القارئ على العرض دون صلاحيات تعديل.
 
 إذا لم يظهر زر النشر، فافحص الصلاحية أولًا؛ ليس بالضرورة أن تكون مشكلة في البرنامج نفسه.
+
+### صور فعلية من نشر وإدارة التقرير
+
+**الصورة الأولى: حفظ ملف التقرير مباشرة إلى Power BI Report Server**
+
+<div align="center">
+<img src="https://learn.microsoft.com/de-de/power-bi/report-server/media/quickstart-create-powerbi-report/report-server-save-as-powerbi-report-server.png" alt="واجهة Save As في Power BI Desktop وخيار Power BI Report Server" width="88%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Create a Power BI report for Report Server](https://learn.microsoft.com/en-us/power-bi/report-server/quickstart-create-powerbi-report). هذه لقطة لنسخة من البرنامج توضح اختيار جهة الحفظ.</small>
+
+**الصورة الثانية: إدارة خصائص التقرير وبياناته وصلاحيات عرضه**
+
+<div align="center">
+<img src="https://learn.microsoft.com/pt-br/power-bi/report-server/media/getting-around/report-server-web-portal-manage-properties.png" alt="لقطة فعلية لصفحة Manage وخصائص التقرير وإعدادات Security في Power BI Report Server" width="86%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Manage content in the web portal](https://learn.microsoft.com/en-us/power-bi/report-server/getting-around). تظهر الخيارات حسب نوع التقرير والدور الممنوح للمستخدم.</small>
 
 <a name="pbirs-section-06"></a>
 ## 6. ضبط تحديث البيانات Scheduled Refresh
@@ -121,6 +148,29 @@ flowchart LR
 **مثال مهم:** إذا كان تقريرك يقرأ ملف Excel من مجلد شخصي على جهازك، فقد يعجز خادم PBIRS عن الوصول إليه أثناء التحديث. غالبًا ستحتاج إلى نقل المصدر إلى مسار شبكي يمكن للخادم قراءته مع ضبط صلاحيات الحساب الذي ينفذ التحديث، وتعديل مصدر التقرير تبعًا لذلك.
 
 راجع [Microsoft — Scheduled Refresh](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh) للتأكد من أنواع البيانات المدعومة والإعدادات المناسبة لإصدارك.
+
+### صورة فعلية لخطة التحديث المجدول
+
+<div align="center">
+<img src="https://community.fabric.microsoft.com/t5/image/serverpage/image-id/505351i41B49E78DEDAB59B/image-size/large?px=999&amp;v=v2" alt="لقطة حقيقية لواجهة Edit Schedule في Power BI Report Server والحقول الخاصة بفترة التحديث" width="86%"/>
+</div>
+
+<small>المصدر: [Microsoft Fabric Community — PBIRS Scheduled Refresh Frequency](https://community.fabric.microsoft.com/t5/Report-Server/PBIRS-Scheduled-Refresh-Frequency-Setting/m-p/2527961). إعدادات الصورة تخص بيئة صاحب السؤال، **ولا يُنصح بنسخ فترة التحديث كما هي** دون مراعاة المصدر وحجم البيانات.</small>
+
+<a name="pbirs-example"></a>
+### مثال عملي صغير: نشر تقرير مبيعات تجريبي
+
+نفترض أن تقرير `Sales.pbix` يحتوي على جدول مبيعات بأربع مناطق، وأن مجموع المبيعات قبل تطبيق أي مرشح **3300** وحدة نقدية (بيانات افتراضية). يمكن اختبار عملية النشر بالخطوات التالية:
+
+1. افتح `Sales.pbix` بواسطة **Power BI Desktop for Report Server** المتوافق مع خادمك.
+2. احفظ التقرير في مجلد التجربة الموجود داخل بوابة Report Server.
+3. افتح البوابة من المتصفح بحساب يملك صلاحية العرض، ثم ادخل المجلد وافتح التقرير.
+4. تأكد من ظهور بطاقة إجمالي المبيعات **3300** وأن المرشح يستطيع عرض منطقة واحدة عند اختيارها.
+5. إذا كانت البيانات مستوردة من ملف Excel مشترك وتتوفر شروط **Scheduled Refresh**، فعّل خطة مناسبة ثم راجع حالة آخر تحديث في البوابة.
+
+**النتيجة المتوقعة:** ظهور تقرير قابل للفتح داخل **Web Portal** وتفاعل الرسوم والفلاتر مع بيانات المثال. إذا فشل تحديث البيانات فهذا لا يعني بالضرورة فشل النشر؛ افحص **Data Sources** والاتصال الشبكي وبيانات الاعتماد بشكل منفصل.
+
+**تنبيه:** صور Microsoft المعروضة في هذا الدليل أمثلة حقيقية لواجهة المنتج، لكنها لا تمثل نتيجة تقرير `Sales.pbix` الافتراضي المذكور هنا، ولا توثق خادمًا فعليًا تابعًا لأي جهة.
 
 <a name="pbirs-section-07"></a>
 ## 7. أهم المشكلات والحلول
