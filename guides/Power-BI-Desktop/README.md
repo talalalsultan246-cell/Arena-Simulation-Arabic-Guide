@@ -18,6 +18,7 @@
    - [الطريقة الثانية: ملف التثبيت من Microsoft](#desktop-section-02-02)
 3. [إنشاء أول تقرير خطوة بخطوة](#desktop-section-03)
    - [تجربة مقياس DAX](#desktop-section-03-01)
+   - [نتيجة المثال: الرسوم والبطاقة والمرشحات](#desktop-example-result)
 4. [أين أجد الأدوات الأساسية؟](#desktop-section-04)
 5. [إذا واجهتك مشكلة](#desktop-section-05)
 6. [قبل أن تشارك التقرير](#desktop-section-06)
@@ -93,6 +94,32 @@ Total Sales = SUM(Sales[Amount])
 
 يعيد هذا المقياس مجموع المبالغ في العمود. على سبيل المثال، إذا كان العمود يحتوي على 100 و150 فالناتج **250**. وعند استخدام الفلاتر قد تتغير القيمة بحسب السجلات المعروضة. هذه أرقام تدريبية لتجربة المعادلة فقط.
 
+### صور فعلية إضافية لمراحل استخدام Power BI Desktop
+
+**1. نافذة Get Data: اختيار ملف Excel أو مصدر بيانات آخر**
+
+<div align="center">
+<img src="https://learn.microsoft.com/en-us/power-bi/connect-data/media/desktop-data-sources/data-sources-02.png" alt="صورة حقيقية من Microsoft Learn لنافذة Get Data في Power BI Desktop" width="88%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Get data in Power BI Desktop](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-sources). اختر **Excel Workbook** ثم **Connect**.</small>
+
+**2. نافذة Power Query Editor: تنظيف البيانات والتحويلات**
+
+<div align="center">
+<img src="https://learn.microsoft.com/es-es/power-bi/fundamentals/media/desktop-getting-started/mergedcolumn.png" alt="لقطة فعلية لواجهة Power Query Editor وبها Applied Steps" width="88%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Get started with Power BI Desktop](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started). الجانب الأيمن يعرض **Applied Steps**، وفي الأعلى أدوات تحويل البيانات.</small>
+
+**3. Model View: عرض العلاقات بين الجداول**
+
+<div align="center">
+<img src="https://learn.microsoft.com/pt-pt/power-bi/transform-model/media/desktop-relationship-view/model-view-03.png" alt="صورة فعلية لواجهة Model View في Power BI Desktop تعرض الجداول والعلاقات بينها" width="88%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Model View](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationship-view). يمكن من هذه الواجهة مراجعة المفاتيح والعلاقات واتجاه التصفية بين الجداول.</small>
+
 <a name="desktop-section-04"></a>
 ## 4. أين أجد الأدوات الأساسية؟
 
@@ -108,6 +135,31 @@ Total Sales = SUM(Sales[Amount])
 | **Report View** | عندما تبدأ تصميم الرسوم والجداول والبطاقات |
 | **Slicers** | عندما تريد أن يحدد المستخدم سنة أو منطقة أو فئة معينة |
 | **Publish** | عندما تريد نشر التقرير على الخدمة السحابية وتملك الصلاحيات اللازمة |
+
+<a name="desktop-example-result"></a>
+### نتيجة المثال: كيف أتأكد من صحة الرسم؟
+
+للتجربة، يمكن إدخال القيم الافتراضية التالية داخل جدول Excel اسمه **Sales** قبل استيراده:
+
+| Region | Amount |
+| :---: | ---: |
+| Riyadh | 1200 |
+| Jeddah | 900 |
+| Dammam | 700 |
+| Abha | 500 |
+| **Total** | **3300** |
+
+عند إنشاء رسم عمودي يضع **Region** في المحور و**Amount** في القيم، يجب أن تظهر أربع أعمدة بارتفاعات **1200، 900، 700، 500**. وإذا أنشأت مقياس **Total Sales** فالقيمة الإجمالية **3300** قبل تطبيق الفلاتر.
+
+**4. صورة فعلية لمساحة التقرير Report View والمرئيات**
+
+<div align="center">
+<img src="https://learn.microsoft.com/en-us/power-bi/create-reports/media/service-the-report-editor-take-a-tour/power-bi-report-editor-overview-2.png" alt="لقطة حقيقية لمساحة تقرير Power BI وفيها رسوم عمودية وخطية وصفحات ومرشحات" width="90%"/>
+</div>
+
+<small>المصدر: [Microsoft Learn — Tour the Power BI Report Editor](https://learn.microsoft.com/en-us/power-bi/create-reports/service-the-report-editor-take-a-tour). تعرض الصورة بيانات مبيعات تجريبية مختلفة عن جدول المناطق أعلاه؛ الهدف توضيح شكل **المخرجات التفاعلية** في البرنامج.</small>
+
+تستطيع إضافة **Card** لعرض قيمة `Total Sales`، ثم **Slicer** يتيح اختيار منطقة واحدة. إذا اخترت **Riyadh** وحدها فمن المفترض أن تصبح قيمة البطاقة **1200** بدل **3300**. بذلك تكون قد اختبرت **استيراد البيانات، وبناء الرسم، وتفاعل الفلاتر، وحساب DAX** ضمن مثال واحد.
 
 <a name="desktop-section-05"></a>
 ## 5. إذا واجهتك مشكلة
