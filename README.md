@@ -11,11 +11,12 @@
 
 ## ابدأ من هنا
 
-إذا كنت تحتاج برنامجًا في المقرر أو المشروع، اختره من الجدول التالي. ستجد شرحًا لما يستخدم فيه، ثم طريقة تحميله وتثبيته خطوة بخطوة، وبعدها تجربة عملية وحلولًا للمشكلات الشائعة. أرفقت روابط الشركات الأصلية حتى تتمكن من الوصول إلى النسخ والتعليمات المحدثة.
+إذا كنت تحتاج برنامجًا في المقرر أو المشروع، اختره من الجدول التالي. ستجد شرحًا لما يستخدم فيه، وطريقة تحميله وتثبيته خطوة بخطوة، وأدلة الاستخدام والأمثلة العملية بحسب كل برنامج. أرفقت روابط الشركات الأصلية حتى تتمكن من الوصول إلى النسخ والتعليمات المحدثة.
 
 | البرنامج | محتويات الدليل | فتح الدليل |
 | :---: | :---: | :---: |
-| **Arena Simulation 17** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل Arena](guides/Arena/README.md)** |
+| **Arena Simulation — التثبيت** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل التثبيت](guides/Arena/README.md)** |
+| **Arena Simulation — الاستخدام** | شرح Home وAnimate وDraw وRun وView وTools، وProject Bar وDiscrete Processing، ثم نموذج عملي Create → Process → Dispose | **[دليل الاستخدام](guides/Arena/USAGE.md)** |
 | **IBM SPSS Statistics** | التحميل والتفعيل، صور واجهة البرنامج، الارتباط، الانحدار البسيط والمتعدد، وANOVA | **[دليل SPSS](guides/SPSS/README.md)** |
 | **Excel QM / QM for Windows** | الفرق بين البرنامجين، التحميل من Pearson، الإضافة إلى Excel، أمثلة مسائل كمية | **[دليل Excel QM](guides/Excel-QM/README.md)** |
 | **Power BI Desktop** | تحميل البرنامج، استيراد Excel، Power Query وDAX، إنشاء التقارير | **[دليل Power BI Desktop](guides/Power-BI-Desktop/README.md)** |
@@ -44,7 +45,8 @@ Software-Installation-Guides/
 ├── assets/                          <- الغلاف
 ├── images/                          <- صور شرح Arena
 └── guides/
-    ├── Arena/README.md             <- نسخة الدليل الأساسية
+    ├── Arena/README.md             <- دليل التثبيت الأساسي (لم يتغير)
+    ├── Arena/USAGE.md              <- دليل الاستخدام الجديد
     ├── SPSS/README.md
     ├── Excel-QM/README.md
     ├── Power-BI-Desktop/README.md
