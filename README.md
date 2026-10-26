@@ -61,7 +61,7 @@ Software-Installation-Guides/
 ---
 
 **Talal Alsultan**  
-نظم المعلومات • علم البيانات • علوم القرار  
+نظم المعلومات التطبيقية • علم البيانات • علوم القرار  
 King Saud University
 
 </div>
