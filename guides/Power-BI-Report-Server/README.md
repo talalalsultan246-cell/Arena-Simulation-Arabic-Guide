@@ -22,9 +22,9 @@
 
 ## 2. كيف تنتقل البيانات من Excel إلى لوحة التقارير؟
 
-<p align="center"><img src="https://learn.microsoft.com/vi-vn/power-bi/report-server/media/get-started/power-bi-report-server-overview.png" alt="لقطة فعلية للبوابة الداخلية Power BI Report Server من Microsoft Learn" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/vi-vn/power-bi/report-server/media/get-started/power-bi-report-server-overview.png" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 1" width="92%"/></p>
 
-*هذه صورة فعلية للبوابة الداخلية من [توثيق Microsoft الرسمي](https://learn.microsoft.com/en-us/power-bi/report-server/get-started)، وتوضح أماكن عرض التقارير والمؤشرات.*
+*لقطة فعلية لبوابة **Power BI Report Server** من [توثيق Microsoft](https://learn.microsoft.com/en-us/power-bi/report-server/get-started).*
 
 لنفترض أن القسم يحدّث ملف Excel محفوظًا في مجلد مشترك داخل الشبكة. يمكنك قراءة البيانات من الملف باستخدام Desktop، وبناء الرسوم والمؤشرات، ثم نشر تقرير متوافق على الخادم ليشاهده المستخدمون المصرح لهم. وإذا كانت طريقة الاتصال مدعومة، يمكن جدولة تحديث البيانات.
 
@@ -43,9 +43,9 @@ flowchart LR
 
 ## 3. تحميل الخادم وتثبيته
 
-<p align="center"><img src="https://learn.microsoft.com/vi-vn/power-bi/report-server/media/get-started/power-bi-report-server-overview.png" alt="واجهة Power BI Report Server web portal المعروضة في توثيق Microsoft" width="92%"/></p>
+<p align="center"><img src="https://community.fabric.microsoft.com/t5/image/serverpage/image-id/85502i1375C13D05CD4D3E/image-size/large?px=999&amp;v=v2" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 2" width="92%"/></p>
 
-*تُظهر الصورة الواجهة العامة للخادم وليس نافذة Configuration Manager؛ للاطلاع على شاشة الإعداد استخدم [دليل Microsoft لتثبيت الخادم](https://learn.microsoft.com/en-us/power-bi/report-server/install-report-server).*
+*لقطة فعلية لنافذة **Report Server Configuration Manager** منشورة في [Microsoft Fabric Community](https://community.fabric.microsoft.com/t5/Report-Server/Scheduled-data-refresh-for-local-excel-file/m-p/299893). الأسماء الظاهرة مثال من صاحب الصورة، وليست إعدادات موصى بنسخها.*
 
 **هذا القسم مخصص لمسؤول الأنظمة.**
 
@@ -85,9 +85,9 @@ flowchart LR
 
 ## 6. ضبط تحديث البيانات Scheduled Refresh
 
-<p align="center"><img src="https://learn.microsoft.com/vi-vn/power-bi/report-server/media/get-started/power-bi-report-server-overview.png" alt="الواجهة العامة للبوابة الداخلية Power BI Report Server" width="92%"/></p>
+<p align="center"><img src="https://learn.microsoft.com/fr-fr/power-bi/report-server/media/configure-scheduled-refresh/manage-power-bi-report.png" alt="لقطة حقيقية من واجهة Power BI Report Server — المثال 3" width="92%"/></p>
 
-*تُظهر الصورة بوابة الخادم؛ لإعداد التحديث المجدول استخدم [دليل Microsoft](https://learn.microsoft.com/en-us/power-bi/report-server/scheduled-refresh).*
+*لقطة فعلية من [Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/report-server/configure-scheduled-refresh)، توضّح فتح قائمة **Manage** تمهيدًا لإعداد مصدر البيانات وجدولة التحديث.*
 
 إذا كان التقرير يستورد البيانات من مصدر تدعمه ميزة التحديث المجدول، يمكن إعداد خطة تحديث من بوابة الخادم:
 
