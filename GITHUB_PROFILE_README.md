@@ -1,68 +1,60 @@
-<div align="center">
+<!--
+ملف تعريف GitHub جاهز للنشر.
+لإظهاره تلقائيًا في صفحة Overview، أنشئ مستودعًا عامًا يحمل اسم الحساب
+talalalsultan246-cell وضع هذه المحتويات في README.md داخل ذلك المستودع.
+لا يحتوي الملف على صورة شخصية.
+-->
 
-<img src="https://raw.githubusercontent.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/main/assets/github-profile-banner.svg" width="100%" alt="Talal Ibrahim Al-Sultan — Information Technology, Data Analytics and Decision Sciences"/>
+<div align="right" dir="rtl">
 
-### Hi, I'm Talal Ibrahim Al-Sultan
+# talal alsultan
 
-**IT Department Manager | Data Analytics & Decision Sciences**
+### تقنية المعلومات | تحليل البيانات | علوم القرار
 
-Master's Student in Decision Sciences (Quantitative Analysis) at **King Saud University**, Riyadh, Saudi Arabia.
+مدير قسم الحاسب الآلي، وطالب ماجستير **علوم القرار (التحليل الكمي)** في **جامعة الملك سعود**.
 
-I work at the intersection of **information technology, quantitative analysis, and decision support**. My interests include applied analytics, operations research, statistical forecasting, simulation, and responsible applications of AI.
+أهتم بتطوير الأنظمة والممارسات التقنية التي تدعم صنع القرار بالاستناد إلى البيانات والأساليب الكمية. أركز على تحليل البيانات، وبحوث العمليات، والمحاكاة، والتنبؤ، وتطبيقات الذكاء الاصطناعي في الإدارة.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Projects-181717?logo=github&logoColor=white)](https://github.com/talalalsultan246-cell?tab=repositories)
-[![Arena Guide](https://img.shields.io/badge/Arena_17-Arabic_Guide-1e40af)](https://github.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide)
-
-</div>
+**الموقع:** الرياض، المملكة العربية السعودية.
 
 ---
 
-### Areas of Focus
+## مجالات اهتمامي
 
-| Data & Analytics | Decision Sciences | Information Technology | Applied AI |
-|:---:|:---:|:---:|:---:|
-| Business Intelligence | Operations Research | IT Operations | Predictive Analytics |
-| Statistical Analysis | Optimization | Systems & Reporting | Forecasting |
-| Data Visualization | Simulation | Project Delivery | Decision Support |
+- **تقنية المعلومات:** تشغيل الأنظمة، وإعداد التقارير، وتحسين الإجراءات التقنية.
+- **تحليل البيانات وذكاء الأعمال:** مؤشرات الأداء والتصور البياني وتفسير البيانات.
+- **بحوث العمليات:** نمذجة المشكلات والتحسين والمحاكاة وتحليل البدائل.
+- **التنبؤ والإحصاء:** الانحدار، وتقييم نماذج التنبؤ، والتحليل الكمي.
+- **الذكاء الاصطناعي:** تطبيقات التحليلات التنبؤية والتوجيهية في دعم القرار.
 
-### Tools & Technologies
+## الأدوات والتقنيات
 
-**Programming & data:** Python, SQL, Jupyter, Excel  
-**Business intelligence:** Power BI, Tableau  
-**Statistics & modeling:** SPSS, Arena Simulation, QM for Windows  
-**Workflow:** Git, GitHub
+| المجال | الأدوات |
+| :---: | :---: |
+| البرمجة وتحليل البيانات | Python · SQL · Jupyter |
+| ذكاء الأعمال | Power BI · Tableau |
+| الإحصاء وتحليل البيانات | SPSS · Excel |
+| النمذجة والمحاكاة | Arena Simulation · QM for Windows |
+| إدارة المشاريع التقنية | Git · GitHub |
 
-### Featured Public Project
+## المشاريع
 
-#### [Arena Simulation 17 — Arabic Installation Guide](https://github.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide)
+### [برنامج Arena Simulation | دليل التثبيت بالعربية](https://github.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/blob/main/Arena%20Simulation%20%D8%AF%D9%84%D9%8A%D9%84.md)
 
-An Arabic step-by-step reference for students covering Rockwell account setup, university affiliation, Arena 17 download and installation, runtime prerequisites, Windows diagnostics, and illustrated instructions.
+دليل عربي مصور لإعداد حساب Rockwell Automation، وإضافة الجهة التعليمية، وتنزيل Arena 17، وفحص مكونات Windows، وتثبيت البرنامج خطوة بخطوة.
 
-### Academic & Practical Work
+### أعمال أكاديمية وتطبيقية
 
-- **Saudi Real Estate Analytics:** An ongoing Power BI analytics project focused on visualizing transaction patterns and building decision-support indicators.
-- **Statistical Forecasting:** Applied forecasting models, regression analysis, and model evaluation.
-- **Simulation & Optimization:** Discrete-event simulation, quantitative decision models, and operations research.
+- تحليل معاملات السوق العقاري السعودي باستخدام Power BI.
+- تطبيق أساليب التنبؤ الإحصائي والانحدار والمقارنة بين النماذج.
+- استخدام المحاكاة وتحليل القرار ضمن المشروعات الجامعية.
 
-*Projects are described by scope; items without a public repository are not presented as published software.*
+*هذه موضوعات أعمال ومشروعات أكاديمية، وليست ادعاءً بوجود مستودعات منشورة لكل مشروع.*
 
-### Professional Direction
+---
 
-I am interested in building reproducible analytical workflows and practical decision-support systems that connect technology, statistical evidence, and management.
+**تعلم · حلّل · طوّر · شارك**
 
-<div align="center">
-
-**Learn · Analyze · Build · Share**
-
-[Browse my repositories](https://github.com/talalalsultan246-cell?tab=repositories)
+[استعرض المستودعات المنشورة](https://github.com/talalalsultan246-cell?tab=repositories)
 
 </div>
-
-<!-- 
-PROFILE ACTIVATION
-For GitHub to render this content on your personal Overview, create a PUBLIC
-repository named EXACTLY "talalalsultan246-cell", under the account with the
-same username, and place the complete contents of this file in its README.md.
-This document is a reusable template stored inside the existing public Arena
-repository; it is not yet live on the personal Overview.
--->
