@@ -1,16 +1,29 @@
+<div align="center" dir="rtl">
+
 # دليل تثبيت وتشخيص Arena Simulation بالعربية
+
+</div>
+
+<div align="center" dir="rtl">
 
 > **آخر مراجعة للمصادر: 25 أكتوبر 2026**  
 > دليل مستقل باللغة العربية، موجّه لطلاب المحاكاة ومستخدمي **Arena 17** والإصدارات الأخرى. يعتمد على تعليمات الشركة المصنّعة ومراجع Microsoft، ولا يُعدّ وثيقة رسمية من Rockwell Automation.
 
+</div>
+
+<div align="center" dir="rtl">
 
 ## الإصدار المستهدف: Arena 17
+
+</div>
 
 - يستهدف هذا الدليل **Arena 17**، وبالأخص التحديث **17.00.01**.
 - يعرض [مركز تنزيل Rockwell الرسمي](https://compatibility.rockwellautomation.com/Pages/MultiProductFindDownloads.aspx?crumb=112&mode=3&refSoft=1&versions=65330) الإصدار **17.00.01** مع إصدارات سابقة.
 - توصي [نشرة Rockwell الأمنية](https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html) باستخدام **17.00.01** لمعالجة ثغرات في **17.00.00 وما قبله**. تحقق من رقم التصحيح قبل التحميل.
 - يظهر في تسجيل الشاشة المرفق مسار الملفات `C:\RA\17.00.01.10_x64\17.00.01.10_x64\MediaImage`، بينما تحمل شاشة المثبت اسم **Arena 2026**. يشير ذلك إلى اختلاف الاسم التسويقي للمثبت عن رقم فرع البرنامج؛ لا تخلط بينهما.
 - **تنبيه:** تظل صفحة متطلبات النظام العامة لدى Rockwell تعرض الإصدار **16.20.02**؛ راجع وثائق الإصدار 17 المطلوبة على مركز التنزيل عند وجود اختلاف.
+
+<div align="center" dir="rtl">
 
 ## المحتويات
 1. [قبل البدء](#1-قبل-البدء)
@@ -25,11 +38,21 @@
 10. [حل مشكلة الأدوات والقوائم غير المفعّلة](#10-حل-مشكلة-الأدوات-والقوائم-غير-المفعلة)
 11. [الأسئلة الشائعة والمراجع](#11-الأسئلة-الشائعة-والمراجع)
 
+</div>
+
 ---
+
+<div align="center" dir="rtl">
 
 ## 1. قبل البدء
 
+</div>
+
+<div align="center" dir="rtl">
+
 الغرض من هذا الدليل **التحقق أولًا، ثم تنزيل وتثبيت الناقص فقط**. إذا كان Arena يفتح ولكن أدوات Create وProcess وDispose أو القوائم تظهر باللون الرمادي (Disabled)، **لا تبدأ بإلغاء تثبيته**؛ فالمشكلة قد تكون في عدم فتح نموذج أو وضع التشغيل أو الترخيص أو مكوّنات النظام.
+
+</div>
 
 - احفظ نسخًا احتياطية من نماذجك (`.doe` وأي ملفات مشروع مرتبطة بها).
 - استخدم روابط Microsoft وRockwell الرسمية؛ لا تشغّل ملفات `.exe` مجهولة المصدر من مستودعات خارجية.
@@ -38,10 +61,20 @@
 - وجود حزمة مثبتة **لا يثبت وحده** أنها سبب العطل أو أن إصدارها مناسب لكل نسخة Arena.
 - افحص معمارية برنامج Arena نفسه (`x86` أو `x64`)، فهي ليست بالضرورة مطابقة لمعمارية Office أو Windows.
 
+<div align="center" dir="rtl">
+
 ### روابط التنزيل الرسمية المختصرة
 
+</div>
+
+<div align="center" dir="rtl">
+
+> **الروابط الخارجية:** روابط التحميل والمراجع تنقلك مباشرةً إلى المواقع الرسمية المعنية. إذا أردت فتح الرابط في تبويب منفصل دون مغادرة هذا الدليل، استخدم **Ctrl + Click** على Windows أو **فتح في علامة تبويب جديدة** من قائمة المتصفح على الهاتف. لا يمكن فرض فتح تبويب جديد تلقائيًا داخل GitHub README.
+
+</div>
+
 | البرنامج | المصدر الرسمي | متى أحتاجه؟ |
-|---|---|---|
+| :---: | :---: | :---: |
 | Arena Simulation | [Rockwell Automation: تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html) | تنزيل البرنامج أو إعادة تثبيته بعد التشخيص |
 | .NET Framework 4.8.1 Runtime | [Microsoft: .NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481) | إذا تطلّبه Arena وكانت النسخة المثبتة أقدم وكانت 4.8.1 متوافقة مع Windows |
 | Visual C++ Redistributable x64 | [Microsoft: تنزيل مباشر x64](https://aka.ms/vc14/vc_redist.x64.exe) | للتطبيقات ذات معمارية 64-bit التي تحتاج مكتبات v14 |
@@ -50,14 +83,26 @@
 | SQL Server Compact 4.0 SP1 | [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=30709) | **اختياري** فقط عند ثبوت الحاجة |
 | Microsoft Office | [Microsoft 365](https://www.microsoft.com/microsoft-365) | إذا كانت ميزات تقارير Excel مطلوبة ولم يكن Office موجودًا |
 
+<div align="center" dir="rtl">
+
 > **تنبيه دقة:** تعرض [صفحة متطلبات Rockwell الرسمية](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/support/system-requirements.html) بيانات لإصدار **16.20.02**. لا يُفترض تلقائيًا أن تفاصيل الصفحة تنطبق بالكامل على **Arena 17**. راجع ملف المتطلبات المرفق مع نسختك إذا اختلفت الأرقام.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 2. الحد الأدنى للمواصفات
 
+</div>
+
+<div align="center" dir="rtl">
+
 بحسب صفحة Rockwell المتاحة لإصدار 16.20.02:
 
+</div>
+
 | العنصر | الحد الأدنى في صفحة Rockwell | الموصى به |
-|---|---|---|
+| :---: | :---: | :---: |
 | RAM | 8 GB | 16 GB |
 | مساحة القرص الحرة | 2 GB | 4 GB |
 | المعالج | Intel ثنائي النواة، 3 GHz | بحسب تعقيد النموذج |
@@ -65,19 +110,39 @@
 | Microsoft Office | يُستخدم لعرض تقارير إحصاءات Excel | تحقق من التوافق |
 | صلاحيات التثبيت | صلاحيات Administrator | مطلوبة للتثبيت |
 
+<div align="center" dir="rtl">
+
 **لا تعتمد رقم 4GB RAM الموجود في الدليل القديم كحد أدنى موثّق حاليًا من Rockwell.** ولا تَعُدّ الدعم الرسمي لنظام Windows أو Arena 17 مؤكدًا إلا بعد مراجعة وثائق نسختك.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 3. فحص Windows والذاكرة والمساحة
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### معرفة إصدار Windows
 
+</div>
+
+<div align="center" dir="rtl">
+
 افتح CMD:
+
+</div>
 
 ```cmd
 winver
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 [تفتح نافذة About Windows في واجهة النظام]
@@ -85,31 +150,59 @@ Windows 11
 Version: 23H2 (مثال فقط)
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** هذا الأمر يفتح نافذة رسومية؛ لا يطبع تقريرًا داخل CMD. الرقم المعروض على جهازك قد يختلف.
 
+</div>
+
+<div align="center" dir="rtl">
+
 أو:
+
+</div>
 
 ```cmd
 ver
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 Microsoft Windows [Version 10.0.22631.XXXX]
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** يعرض إصدار نظام Windows في نافذة CMD؛ قيمة XXXX موضعية وليست نتيجة فعلية.
+
+</div>
+
+<div align="center" dir="rtl">
 
 لمعلومات أوسع: اضغط `Win + R`، واكتب `msinfo32`. ستجد `OS Name` و`System Type` و`Installed Physical Memory`.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### قياس الذاكرة RAM بواسطة CMD
+
+</div>
 
 ```cmd
 powershell -NoProfile -Command "Get-CimInstance Win32_ComputerSystem | Select-Object @{N='RAM_GB';E={[math]::Round($_.TotalPhysicalMemory/1GB,2)}}"
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 RAM_GB
@@ -117,15 +210,27 @@ RAM_GB
  16.00
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** 16.00 تعني سعة ذاكرة RAM قدرها 16 جيجابايت في هذا المثال فقط.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### قياس المساحة الحرة على القرص C:
+
+</div>
 
 ```cmd
 powershell -NoProfile -Command "Get-PSDrive C | Select-Object Name,@{N='Free_GB';E={[math]::Round($_.Free/1GB,2)}}"
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 Name Free_GB
@@ -133,51 +238,99 @@ Name Free_GB
 C      125.50
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** Free_GB هي المساحة الحرة المتبقية على محرك C، وليست المساحة الإجمالية.
+
+</div>
+
+<div align="center" dir="rtl">
 
 **التفسير:** إذا أظهر الحاسوب 8GB RAM ومساحة كافية، فهذا اجتياز أولي للمواصفات المذكورة، لكنه لا يثبت صلاحية الترخيص أو التوافق الكامل لإصدار Arena 17.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ## 4. فحص وتثبيت .NET Framework
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### الأمر الأول (CMD)
+
+</div>
 
 ```cmd
 reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" /v Release
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
     Release    REG_DWORD    0x80ea8
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** القيمة السداسية 0x80ea8 تساوي 528040 بالنظام العشري، وتمثل .NET Framework 4.8 في إحدى بيئات Windows.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### الأمر البديل (PowerShell)
+
+</div>
 
 ```powershell
 (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 528040
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** يعرض PowerShell القيمة نفسها بالأرقام العشرية؛ 528040 قيمة نموذجية لـ .NET Framework 4.8.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ### تفسير أشهر قيم Release
 
+</div>
+
 | القيمة | نسخة .NET Framework |
-|---|---|
+| :---: | :---: |
 | 528040 أو 528049 أو 528372 أو 528449 | 4.8 (تختلف قيمة التسجيل بحسب Windows) |
 | 533320 أو 533325 أو 533509 | 4.8.1 |
 
+<div align="center" dir="rtl">
+
 توجد قيم أخرى بحسب إصدار Windows. الرقم **528040 أو أعلى** يدل عادة على وجود .NET Framework 4.8 أو إصدار أحدث ضمن سلسلة 4.x. المرجع: [Microsoft: كيفية التعرف إلى الإصدارات المثبتة](https://learn.microsoft.com/en-us/dotnet/framework/install/how-to-determine-which-versions-are-installed).
 
+</div>
+
+<div align="center" dir="rtl">
+
 **عند الحاجة للتثبيت:**
+
+</div>
 
 1. ادخل [صفحة Microsoft الرسمية لـ .NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481).
 2. اختر **Runtime** لتشغيل البرامج؛ ليس **Developer Pack**.
@@ -185,40 +338,84 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 4. نفّذ مثبت Microsoft الرسمي وأعد تشغيل الجهاز **إذا طُلب منك ذلك**.
 5. كرّر أمر قراءة `Release` للتحقق.
 
+<div align="center" dir="rtl">
+
 لا تثبّت .NET 4.8.1 إذا كان Windows يحتوي عليه بالفعل.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 5. فحص جميع إصدارات Microsoft Visual C++
 
+</div>
+
+<div align="center" dir="rtl">
+
 هذه أكثر خطوة احتاجت إلى تحديث في المستودع المرجعي.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### الطريقة الأولى: أمر المستودع القديم باستخدام WMIC
+
+</div>
 
 ```cmd
 wmic product where "name like '%%Visual C++%%'" get name,version
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 'wmic' is not recognized as an internal or external command,
 operable program or batch file.
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** هذه رسالة فشل محتملة على Windows 11 الحديث؛ عند ظهورها استخدم الطريقة الثانية بدل إعادة تثبيت WMIC.
+
+</div>
+
+<div align="center" dir="rtl">
 
 **مهم:** هذه الصيغة من دليل GitHub الأصلي، وهي **قديمة وغير موصى بها**؛ وقد تفشل برسالة `'wmic' is not recognized` على Windows 11 الحديث. أعلنت Microsoft إزالة أداة WMIC من Windows 11 المدعوم في 2026. كذلك فحص `Win32_Product` قد يكون بطيئًا ويُسبّب عمليات فحص اتساق لحزم MSI، ولا يضمن إظهار جميع الحزم.
 
+</div>
+
+<div align="center" dir="rtl">
+
 **إذا لم يعمل الأمر الأول، انتقل مباشرةً إلى الطريقة الثانية؛ لا تحتاج إلى إعادة تثبيت WMIC.**
+
+</div>
+
+<div align="center" dir="rtl">
 
 ### الطريقة الثانية: أمر بديل يعمل داخل CMD ويُظهر الأسماء والإصدارات
 
+</div>
+
+<div align="center" dir="rtl">
+
 انسخ **السطر كاملًا** في نافذة CMD:
+
+</div>
 
 ```cmd
 powershell -NoProfile -Command "Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like '*Microsoft Visual C++*' } | Sort-Object DisplayName,DisplayVersion | Select-Object DisplayName,DisplayVersion | Format-Table -AutoSize"
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 DisplayName                                                  DisplayVersion
@@ -228,18 +425,38 @@ Microsoft Visual C++ 2015-2022 Redistributable (x64)          14.40.33816
 Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** يعرض العمود الأول أسماء الحزم ومعماريتها، والثاني الإصدارات المثبتة. الصفوف هنا أمثلة وليست بيانات جهازك.
 
+</div>
+
+<div align="center" dir="rtl">
+
 **هذا هو البديل الموصى به في الدليل.** يقرأ بيانات البرامج المسجلة في مساري Uninstall ذوي المعماريتين. سيعرض عمودين:
+
+</div>
 
 - `DisplayName`: اسم الحزمة، وغالبًا يظهر فيه x86 أو x64.
 - `DisplayVersion`: رقم الإصدار المثبت.
 
+<div align="center" dir="rtl">
+
 ملاحظة: قد توجد حزم غير مسجلة في هذه المفاتيح، لذا لا يُعدّ الأمر فحصًا جنائيًا شاملًا لكل ملف DLL في النظام.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ### الطريقة الثالثة: تنفيذ الأمر مباشرة داخل PowerShell
 
+</div>
+
+<div align="center" dir="rtl">
+
 إذا أردت استخدام PowerShell بدل CMD:
+
+</div>
 
 ```powershell
 Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue |
@@ -249,7 +466,11 @@ Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','
   Format-Table -AutoSize
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 DisplayName                                                  DisplayVersion
@@ -258,13 +479,29 @@ Microsoft Visual C++ 2015-2022 Redistributable (x64)          14.40.33816
 Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** نفس المبدأ عند استخدام PowerShell مباشرة. قد تختلف القائمة والإصدارات، وقد تظهر صفوف إضافية.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ### الطريقة الرابعة: واجهة Windows
 
+</div>
+
+<div align="center" dir="rtl">
+
 `Settings > Apps > Installed apps` ثم ابحث عن `Microsoft Visual C++`. تظهر النتائج حسب البرامج المسجلة في النظام.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### تنزيل حزم Microsoft عند الحاجة فقط
+
+</div>
 
 1. راجع معمارية **Arena** المطلوبة: x86 أو x64.
 2. افتح [صفحة Microsoft للإصدارات المدعومة](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
@@ -273,95 +510,202 @@ Microsoft Visual C++ 2015-2022 Redistributable (x86)          14.40.33816
 5. لا تحذف حزم 2008/2010/2012/2013 لمجرد أنها قديمة؛ قد تستخدمها برامج أخرى، وهي تُثبّت جنبًا إلى جنب مع الحزم الأحدث.
 6. أعد تشغيل Windows إذا طلب المثبت، ثم افحص الإصدارات مجددًا.
 
+<div align="center" dir="rtl">
+
 **تنبيه:** تثبيت نسخة x64 وحدها لا يغطي جميع تطبيقات x86. وفي المقابل، ليس كل برنامج Arena بحاجة إلى جميع إصدارات Visual C++ المذكورة.
+
+</div>
+
+<div align="center" dir="rtl">
 
 مراجع: [Microsoft VC++ downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) | [Microsoft WMIC removal](https://support.microsoft.com/en-us/servicing/os/windows/docs/2025/09/windows-management-instrumentation-command-line-wmic-removal-from-windows).
 
+</div>
+
+<div align="center" dir="rtl">
+
 ## 6. فحص SQL Server Compact 4.0
+
+</div>
+
+<div align="center" dir="rtl">
 
 ورد هذا المكوّن في الدليل الأصلي، **لكن لم يثبت أنه متطلب لازم لجميع تثبيتات Arena 17**.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### فحص مسار السجل الأساسي باستخدام CMD
+
+</div>
 
 ```cmd
 reg query "HKLM\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0" /v Version
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v4.0
     Version    REG_SZ    4.0.8876.1
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** هذه نتيجة افتراضية عند وجود مفتاح Version في هذا المسار. قد يعرض جهازك قيمة أخرى أو عدم وجود المفتاح.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### فحص مسار السجل الثاني عند استخدام Windows 64-bit
+
+</div>
 
 ```cmd
 reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server Compact Edition\v4.0" /v Version
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 ERROR: The system was unable to find the specified registry key or value.
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** مثال عند عدم العثور على المفتاح في مسار WOW6432Node تحديدًا؛ لا يثبت هذا غياب المكوّن كليًا.
+
+</div>
+
+<div align="center" dir="rtl">
 
 إذا ظهرت `ERROR: The system was unable to find the specified registry key or value.`، فالمعنى أن المفتاح غير موجود في **المسار المحدد**؛ وليس بالضرورة أن المكوّن غير موجود بأي صورة.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### عند إثبات الحاجة إليه
+
+</div>
 
 1. افتح [صفحة SQL Server Compact 4.0 SP1 على Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=30709).
 2. اختر `SSCERuntime_x86-ENU.exe` أو `SSCERuntime_x64-ENU.exe` وفق المتطلب الفعلي.
 3. شغّل المثبت الرسمي وتحقق من النتائج.
 4. **تحذير أمني:** انتهى دعم SQL Server Compact 4.0 الممتد في **14 يوليو 2021**؛ لا توصي هذه الصفحة بتثبيته افتراضيًا على جهاز حديث. راجع [سجل دورة الحياة الرسمي](https://learn.microsoft.com/en-us/lifecycle/products/microsoft-sql-server-compact-40).
 
+<div align="center" dir="rtl">
+
 ## 7. فحص Office
+
+</div>
+
+<div align="center" dir="rtl">
 
 افتح **Excel > File > Account > About Excel** وتحقق من المعمارية والإصدار.
 
+</div>
+
+<div align="center" dir="rtl">
+
 يمكن فحص نظام Click-to-Run عبر CMD:
+
+</div>
 
 ```cmd
 reg query "HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration" /v Platform
 ```
 
+<div align="center" dir="rtl">
+
 **Output (مثال توضيحي، وليس نتيجة جهازك):**
+
+</div>
 
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
     Platform    REG_SZ    x64
 ```
 
+<div align="center" dir="rtl">
+
 **كيف تقرأ النتيجة؟** x64 تعني أن إصدار Office Click-to-Run مسجّل بمعمارية 64-bit؛ أما x86 فيشير إلى 32-bit.
+
+</div>
+
+<div align="center" dir="rtl">
 
 القيمتان المحتملتان: `x86` و`x64`. إذا لم يظهر المفتاح، قد يكون Office مثبتًا بطريقة أخرى؛ هذا الأمر وحده لا يكفي للحكم.
 
+</div>
+
+<div align="center" dir="rtl">
+
 **تصحيح مهم للدليل الأصلي:** Office **ليس ملزمًا بأن يكون 64-bit في جميع تثبيتات Arena**. راجع متطلبات Rockwell والإصدار المستهدف. لا تُزِل Office أو تغيّر معماريته دون سبب محدد.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 8. تحميل Arena وتثبيته رسميًا
 
+</div>
+
+<div align="center" dir="rtl">
 
 ### دليل مصور: الحساب الجامعي وتفعيل أهلية التنزيل
 
+</div>
+
+<div align="center" dir="rtl">
+
 > **توصية بشأن المتصفح:** يُفضّل استخدام **Microsoft Edge** (بأحدث إصدار) عند إنشاء حساب Rockwell Automation، وتسجيل الدخول، وإكمال الملف الشخصي، وإضافة **Location**، وتنزيل **Arena 17**. افتح الموقع مباشرةً من Edge بدلًا من المتصفح المدمج داخل التطبيقات. إذا واجهت مشكلة في تسجيل الدخول أو ظهور خيارات التحميل، جرّب تحديث Edge والسماح بملفات تعريف الارتباط والنوافذ المنبثقة اللازمة للموقع، ثم أعد المحاولة. **هذه توصية عملية وليست شرطًا رسميًا أو حصريًا من Rockwell Automation**؛ قد تعمل متصفحات حديثة أخرى أيضًا.
+
+</div>
+
+<div align="center" dir="rtl">
 
 > **نوع الصور:** الرسومات التالية **توضيحية مرسومة وليست لقطات فعلية** من صفحات Rockwell. المربعات الحمراء تحدد ما ينبغي البحث عنه في الواجهة؛ قد تختلف مواقع الأزرار. أما مسار مجلد التثبيت وتسميات ملفاته فقد تمت مطابقتها مع تسجيل الشاشة المرفق بتاريخ 25 أكتوبر 2026.
 
+</div>
+
+<div align="center" dir="rtl">
+
 **المرحلة 1 — الدخول أو إنشاء حساب:**
 
+</div>
+
+<div align="center" dir="rtl">
+
 ![رسم توضيحي لصفحة Sign In والبريد الجامعي](images/01-sign-in-account.svg)
+
+</div>
 
 1. ادخل [صفحة تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)، ثم اختر **Sign In** إذا كان لديك حساب أو [Create Account](https://www.rockwellautomation.com/account/create-account) عند إنشاء حساب جديد.
 2. **يفضّل استخدام البريد الجامعي** المرتبط بجامعة الملك سعود؛ موقع Rockwell يوصي ببريد الجامعة أو جهة العمل، لكنه **لا يضع البريد الجامعي شرطًا مطلقًا**. قد يتأخر التحقق من الحساب الشخصي.
 3. أكمل التسجيل وتحقق من بريدك إذا طُلب.
 
+<div align="center" dir="rtl">
+
 **المرحلة 2 — الشرطان اللازمان قبل ظهور رابط تنزيل Arena:**
 
+</div>
+
+<div align="center" dir="rtl">
+
 ![رسم توضيحي لإكمال ملف الحساب وإضافة موقع الجامعة](images/02-profile-location.svg)
+
+</div>
 
 1. بعد الدخول، افتح **My Account / Account Profile Dashboard** وأكمل **Personal Information / Complete Profile**.
 2. في قسم **Access** افتح **Locations**، أو استخدم رابط طلب الموقع المعروض في لوحة حسابك.
@@ -369,11 +713,23 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 4. ارجع إلى لوحة الحساب وتأكد من ظهور شرطَي **Completed Profile** و**Location Added** أو ما يقابلهما وقد تحققا. **إنشاء حساب جديد فقط لا يضيف الجامعة تلقائيًا.**
 5. إذا تعذر العثور على الجامعة في قائمة المواقع، تواصل مع دعم Rockwell لإضافتها؛ لا تختَر جهة أخرى لمجرد تجاوز التحقق.
 
+<div align="center" dir="rtl">
+
 المصدر الرسمي الذي يوضح الشرطين: [Rockwell — Create and Complete Your Rockwell Automation Account](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
+
+</div>
+
+<div align="center" dir="rtl">
 
 **المرحلة 3 — تنزيل Arena 17 والتثبيت من مجلد C:**
 
+</div>
+
+<div align="center" dir="rtl">
+
 ![رسم توضيحي لمسار التثبيت وملف autorun والخيار Install Arena](images/03-c-ra-arena-install.svg)
+
+</div>
 
 1. بعد استكمال بيانات الحساب والموقع، اختر [Arena Download](https://download.rockwellautomation.com/) أو استخدم [مركز Product Compatibility and Download Center](https://compatibility.rockwellautomation.com/) للبحث عن **Arena 17.00.01**.
 2. نفّذ ملف **Download Manager** عند الحاجة. بحسب Rockwell غالبًا تُحفَظ ملفات التثبيت في **`C:\RA`**، وقد يختلف المجلد إن اخترت مكانًا آخر.
@@ -384,10 +740,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 7. اترك ملفات **Dependencies** والمكونات التابعة كما وفّرها المثبّت؛ لا تشغّل حزمًا إضافية غير لازمة.
 8. بعد التثبيت افحص التفعيل وجرّب نموذج Create → Process → Dispose.
 
+<div align="center" dir="rtl">
+
 **رابط الفيديو الذي أرسله المستخدم لخطوات التحميل:** [شرح Arena على YouTube](https://youtu.be/apJPCLteJ0A?si=fJQ-PgGWp7WWCs_q). لا تمثّل الرسومات أعلاه لقطات من YouTube؛ هي توضيحات منفصلة تعتمد على تسلسل التعليمات.
 
+</div>
+
+<div align="center" dir="rtl">
 
 ### أ. التحميل من الشركة المصنّعة
+
+</div>
 
 1. افتح [صفحة تحميل Arena من Rockwell Automation](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
 2. سجّل الدخول أو أنشئ حساب Rockwell وفق التعليمات الظاهرة.
@@ -397,7 +760,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 6. شغّل Download Manager إذا تطلّب تنزيل الملفات ذلك؛ قد تُحفظ في `C:\RA` بحسب إرشادات Rockwell.
 7. انتظر اكتمال التنزيل محليًا وتحقق من المجلد.
 
+<div align="center" dir="rtl">
+
 ### ب. تثبيت الملفات
+
+</div>
 
 1. افتح مجلد التنزيل (غالبًا `C:\RA`).
 2. **استخرج ملفات الأرشيف بالكامل** إلى مجلد فعلي. لا تشغّل المثبت من داخل ZIP.
@@ -408,17 +775,33 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 7. **أدخل الترخيص الخاص بك أو خيار نسخة الطالب حسب تعليمات Rockwell**؛ لا تستخدم أرقامًا غير مرخصة.
 8. عند الانتهاء، أعد تشغيل الجهاز **إذا طلب التثبيت ذلك**.
 
+<div align="center" dir="rtl">
+
 > تختلف تفاصيل المثبت حسب النسخة. لا تستخدم ملفات EXE المجهولة الموجودة في مستودعات GitHub باعتبارها بديلًا عن ملفات Arena الرسمية.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### ج. ترخيص الطالب والترخيص المؤسسي
+
+</div>
 
 - **Student**: توضح [Rockwell FAQ](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/support/frequently-asked-questions.html) أن كلمة `STUDENT` يمكن إدخالها عندما يطلب مثبت نسخة الطالب رقمًا تسلسليًا، مع تطبيق حدود النموذج الأكاديمي وفق النسخة.
 - **ترخيص الجامعة أو الشركة**: استخدم بيانات الترخيص التي منحتها الجهة. قد يلزم **FactoryTalk Activation Manager** مع تراخيص المؤسسات. راجع التعليمات المتاحة داخل مثبت Arena.
 - ظهور واجهة Arena وحده ليس دليلًا على أن الترخيص نشط.
 
+<div align="center" dir="rtl">
+
 ## 9. فحص الترخيص وتشغيل نموذج تجريبي
 
+</div>
+
+<div align="center" dir="rtl">
+
 بعد التثبيت:
+
+</div>
 
 1. افتح Arena.
 2. افتح `File > New` أو استخدم `Ctrl + N` لإنشاء نموذج جديد.
@@ -429,14 +812,26 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 7. جرّب أمر **Run / Go** وفق واجهة نسختك.
 8. إذا اشتغلت المحاكاة دون أخطاء، فهذا اختبار عملي أولي على أن الوظائف الأساسية تعمل.
 
+<div align="center" dir="rtl">
+
 إذا كانت أدوات النمذجة رمادية اللون، انتقل للخطوة التالية.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 10. حل مشكلة الأدوات والقوائم غير المفعلة
 
+</div>
+
+<div align="center" dir="rtl">
+
 اتبع هذا التسلسل **دون حذف Arena في البداية**:
 
+</div>
+
 | الحالة | الإجراء الأول |
-|---|---|
+| :---: | :---: |
 | الصفحة فارغة أو الأدوات رمادية | افتح نموذجًا جديدًا `File > New` |
 | البرنامج في وضع تشغيل محاكاة | أوقف/أنهِ التشغيل ثم أعد محاولة التحرير |
 | لوحة Basic Process لا تظهر | افحص عرض لوحات القوالب وإرفاق Basic Process |
@@ -447,7 +842,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 | تثبيت غير مكتمل أو رسائل Installer | جرّب Repair إن كان متاحًا، ثم إعادة التثبيت رسميًا بعد حفظ المشاريع |
 | مشكلة مستمرة خاصة بـ Arena 17 | تحقق من متطلبات الإصدار الفرعية واطلب إرشادات Rockwell مع نص رسالة الخطأ |
 
+<div align="center" dir="rtl">
+
 ### ماذا تُرسل إلى الدعم عند استمرار المشكلة؟
+
+</div>
 
 - رقم Arena الدقيق كما يظهر في About.
 - إصدار Windows ورقم البناء ومعمارية التطبيق.
@@ -456,31 +855,83 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 - نص رسالة الخطأ (إن ظهرت).
 - قائمة Visual C++ الصادرة من أمر PowerShell البديل (الأسماء والإصدارات فقط).
 
+<div align="center" dir="rtl">
+
 **الخصوصية:** لا تنشر رقم الترخيص أو معلومات حسابك أو لقطات تحتوي على بيانات شخصية في Issue عام.
+
+</div>
+
+<div align="center" dir="rtl">
 
 ## 11. الأسئلة الشائعة والمراجع
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### لماذا أمر WMIC لا يعمل؟
+
+</div>
+
+<div align="center" dir="rtl">
 
 لأنه أداة قديمة أزالتها Microsoft من إصدارات Windows 11 المدعومة في 2026. استخدم أمر PowerShell من CMD في القسم الخامس. لا تحتاج إلى إعادة تثبيت WMIC.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### هل يجب تثبيت جميع الإصدارات القديمة من Visual C++؟
+
+</div>
+
+<div align="center" dir="rtl">
 
 لا. ثبّت الحزم التي تتطلبها نسخة Arena أو التي يحددها سجل الخطأ. إصدارات x86 وx64 مختلفة، ولا يصح حذف الحزم القديمة دون سبب.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### هل برنامج Office 64-bit ضروري؟
+
+</div>
+
+<div align="center" dir="rtl">
 
 لا يوجد أساس لتعميم هذا الشرط على جميع إصدارات Arena. اقرأ متطلبات النسخة لديك.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### هل تثبيت SQL Server Compact 4.0 آمن وضروري؟
+
+</div>
+
+<div align="center" dir="rtl">
 
 هو منتج انتهى دعمه؛ لا تنصّبه إلا عند إثبات الحاجة ومع فهم المخاطر.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### هل هذه وثيقة رسمية لإصدار Arena 17؟
+
+</div>
+
+<div align="center" dir="rtl">
 
 لا. هو **دليل عربي مستقل** يلخّص خطوات فحص Windows وتثبيت البرنامج الرسمي. بعض متطلبات Rockwell المنشورة تشير إلى 16.20.02، لذلك يجب التحقق من وثائق Arena 17 إذا كان هذا الإصدار هو المطلوب.
 
+</div>
+
+<div align="center" dir="rtl">
+
 ### المصادر (روابط مباشرة)
+
+</div>
 
 1. [Rockwell Automation — تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)
 2. [Rockwell Automation — متطلبات النظام وخطوات التثبيت](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/support/system-requirements.html)
@@ -492,12 +943,28 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 8. [Microsoft — SQL Server Compact 4.0 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=30709)
 9. [Microsoft — دورة حياة SQL Server Compact 4.0](https://learn.microsoft.com/en-us/lifecycle/products/microsoft-sql-server-compact-40)
 
+<div align="center" dir="rtl">
+
 ### أصل الفكرة
+
+</div>
+
+<div align="center" dir="rtl">
 
 استُلهم نطاق الفحص الأولي من مستودع [M02lsayed/Arena](https://github.com/M02lsayed/Arena/blob/main/README.md)، لكن **هذه صياغة عربية مستقلة** أُعيدت كتابتها مع روابط رسمية وملاحظات تصحيحية. المستودع المرجعي تابع لطرف ثالث وليس موردًا رسميًا من Rockwell Automation.
 
+</div>
+
 ---
+
+<div align="center" dir="rtl">
 
 **ملاحظة عن نواتج الأوامر:** كل قسم **Output** في هذا الدليل مثال تعليمي على الشكل المحتمل للنتيجة، ولا يعتمد على فحص تلقائي لجهاز القارئ. لا تنشر بيانات حساسة من سجل النظام أو الحساب عند طلب المساعدة.
 
+</div>
+
+<div align="center" dir="rtl">
+
 **ملاحظة المسؤولية:** الأوامر هنا للفحص، ولا تعدّل سجل Windows أو تزيل البرامج. تثبيت أي مكوّن قرار منفصل بعد مطابقة المتطلبات والمصدر الرسمي.
+
+</div>
