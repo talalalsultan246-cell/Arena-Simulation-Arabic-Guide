@@ -45,7 +45,7 @@
 
 ### 3. ماذا عن الروابط غير الرسمية؟
 
-سبق أن طُرح رابط [Traidsoft — صفحة SPSS](https://apps.traidsoft.net/download-ibm-spss-statistics/). أدرجه هنا **للتعريف بالمصدر الخارجي فقط**، وليس كرابط التنزيل المعتمد أو دليل على الترخيص الأصلي. الصفحة تعرض أداة تفعيل غير رسمية؛ لذلك لا أوصي باستخدامها أو بتعطيل برنامج الحماية لتشغيلها.
+قد يصادف القارئ [صفحة SPSS في Traidsoft](https://apps.traidsoft.net/download-ibm-spss-statistics/)، وهي **ليست مصدرًا رسميًا تابعًا لـ IBM**، ولا تُعد بديلًا للتحميل والترخيص النظاميين. تعرض الصفحة أداة تنشيط غير رسمية؛ لذلك لا أوصي باستخدامها أو بتعطيل أدوات الحماية.
 
 <div align="center">
 <img src="images/third-party-disclaimer.svg" alt="إخلاء مسؤولية بشأن مصادر SPSS غير الرسمية" width="90%"/>
@@ -60,28 +60,24 @@
 أول ما يفتح البرنامج عادةً ستتعامل مع **Data View** و**Variable View**، وبعد تشغيل أي تحليل ستظهر نافذة **Output Viewer**.
 
 <div align="center">
-<img src="images/02-data-view.svg" alt="رسم إرشادي لواجهة Data View في SPSS" width="87%"/>
+<img src="https://s3.amazonaws.com/libapps/accounts/2515/images/spss_creating-variables_insert-variables-2.png" alt="لقطة حقيقية لواجهة SPSS Data View من مكتبة Kent State University" width="82%"/>
 </div>
+
+<small>صورة فعلية من [مكتبة جامعة Kent State](https://libguides.library.kent.edu/SPSS/CreateData). في حال تغيّر رابط الصورة، تتوفر صورة إرشادية في [ملفات الدليل](images/02-data-view.svg).</small>
 
 **Data View:** أدخل البيانات هنا؛ كل صف يمثل سجلًا أو حالة، وكل عمود يمثل متغيرًا. تأكد من وضع الأرقام في الأعمدة الرقمية وعدم إضافة العناوين على أنها سجلات.
 
-<div align="center">
-<img src="https://s3.amazonaws.com/libapps/accounts/2515/images/spss_creating-variables_insert-variables-2.png" alt="صورة فعلية لواجهة IBM SPSS Data View من مكتبة Kent State University" width="75%"/>
-</div>
 
-<small>**لقطة شاشة فعلية من البرنامج:** [مصدرها التعليمي — Kent State University](https://libguides.library.kent.edu/SPSS/CreateData). تتغير واجهة SPSS باختلاف الإصدار؛ إذا تعذر عرض الصورة الخارجية، فالرسم الإرشادي الموجود أعلاها محفوظ داخل المستودع.</small>
 
 <div align="center">
-<img src="images/03-variable-view.svg" alt="رسم إرشادي لواجهة Variable View وتعريف نوع المتغير" width="87%"/>
+<img src="https://sscc.wisc.edu/sscc/pubs/spss/classintro/screenshots/spss_students1/SPSS07VariableView.jpg" alt="لقطة حقيقية من SPSS Variable View - University of Wisconsin" width="82%"/>
 </div>
+
+<small>صورة فعلية من [University of Wisconsin](https://sscc.wisc.edu/sscc/pubs/spss/classintro/spss_students1.html). نسخة احتياطية إرشادية في [ملفات الدليل](images/03-variable-view.svg).</small>
 
 **Variable View:** حدد اسم المتغير **Name**، ونوعه **Type**، ووصفه **Label**، ومستوى قياسه **Measure**، والقيم المفقودة **Missing**. اختيار نوع المتغير الصحيح خطوة مهمة قبل أي تحليل.
 
-<div align="center">
-<img src="https://sscc.wisc.edu/sscc/pubs/spss/classintro/screenshots/spss_students1/SPSS07VariableView.jpg" alt="صورة فعلية لواجهة SPSS Variable View من جامعة Wisconsin" width="75%"/>
-</div>
 
-<small>**لقطة شاشة فعلية من البرنامج:** [جامعة Wisconsin — SPSS for the Classroom](https://sscc.wisc.edu/sscc/pubs/spss/classintro/spss_students1.html). اللقطة لإصدار أقدم، لكنها توضح نوع المتغيرات وأعمدتها. الرسم المحلي أعلاه مرجع بديل إذا تعذر تحميل الصورة.</small>
 
 | الجزء | ماذا تستخدمه لأجله؟ |
 | :--- | :--- |
@@ -106,13 +102,11 @@
 - **Residual Diagnostics:** فحص بواقي الانحدار ومخططاتها وتقييم افتراضات النماذج.
 - **Graphs and Tables:** الرسوم البيانية وجداول النتائج الإحصائية.
 
-#### ما الذي استخرجته من ملفات مشروع SPSS المرفقة؟
+### قراءة نتائج الانحدار والسلاسل الزمنية
 
-راجعت بنية ملف **Land_Forecasting_Complete_Output.spv** الذي رفعته. يتضمن مخرجات فعلية لإجراءات **Regression** تتصل بجداول **Model Summary** و**ANOVA** و**Coefficients**، ورسوم للبواقي مثل **Histogram** و**Normal P–P Plot** و**Scatterplot**. ويتضمن أيضًا **ACF** و**Time Series Modeler** و**Sequence Plot**. لذلك أدرجت هذه الاستخدامات ضمن القدرات التي طبقتها أو ظهرت في مخرجات مشروعك.
+عند تطبيق **Regression** في SPSS ستظهر جداول مثل **Model Summary** و**ANOVA** و**Coefficients**، ويمكن عرض **Histogram** و**Normal P–P Plot** و**Scatterplot** لفحص البواقي. أما عند تحليل البيانات الزمنية، فقد تحتاج إلى **ACF** و**Time Series Modeler** و**Sequence Plot** حسب الهدف من التحليل.
 
-أما ملف **Binary Logistic updated.sav** فهو ملف بيانات بامتداد **SAV**؛ اسمه وحده **لا يكفي لإثبات** تنفيذ الانحدار اللوجستي أو الحصول على نتائجه. ولذلك ذكرت **Binary Logistic Regression** كإمكان تحليلي للبرنامج فقط، وليس كنتيجة موثقة من ملف المخرجات.
-
-**حفاظًا على خصوصية المشروع:** لم أنقل بيانات الأراضي أو مسارات ملفات الجهاز أو القيم الإحصائية أو صور المخرجات الخاصة إلى المستودع العام.
+هذه أدوات يمكن استخدامها في البرنامج، ولا يلزم تنفيذها كلها في مشروع واحد. اختر الإجراء المناسب للسؤال وطبيعة البيانات، ثم فسّر النتيجة بناءً على الافتراضات الإحصائية.
 
 ### 6. كيف أفهم الجداول بعد تشغيل Regression؟
 
@@ -127,7 +121,7 @@
 
 ## الجزء الثالث: مثال واحد — Simple Linear Regression
 
-سنجرب علاقة **ساعات الدراسة** بدرجة اختبار افتراضية. هذه بيانات تعليمية من خمسة سجلات، وليست بيانات مأخوذة من مشروعك.
+سأستخدم مثالًا تعليميًا من خمس حالات افتراضية لتوضيح كيفية دراسة العلاقة بين **ساعات الدراسة** و**درجة الاختبار**، ثم قراءة معادلة الانحدار.
 
 | StudyHours (X) | ExamScore (Y) |
 | :---: | :---: |
@@ -147,10 +141,10 @@
 6. اقرأ نتائج **Model Summary** و**ANOVA** و**Coefficients**، وقارنها بالحساب المتوقع أدناه.
 
 <div align="center">
-<img src="images/04-linear-regression.svg" alt="رسم إرشادي لتحديد المتغير التابع والمستقل في الانحدار الخطي" width="87%"/>
+<img src="https://higherlogicdownload.s3.amazonaws.com/IMWUC/UploadedImages/whOqiC1CTyvBUXPTjC0W_Clip_614-L.jpeg" alt="لقطة حقيقية لنافذة الانحدار الخطي في IBM SPSS Statistics" width="82%"/>
 </div>
 
-<small>الرسم إرشادي للتعرف على مواضع الخيارات؛ ليس صورة حقيقية لنسخة بعينها من SPSS. يمكنك مقارنة الخطوات بما يظهر في الإصدار المثبت على جهازك.</small>
+<small>لقطة فعلية من [IBM Community](https://community.ibm.com/community/user/discussion/ibm-spss-26-are-all-prediction-models-available-in-spss) توضح موقع المتغير التابع والمتغيرات المستقلة. قد تختلف النافذة بحسب الإصدار؛ يوجد [رسم توضيحي احتياطي](images/04-linear-regression.svg).</small>
 
 </div>
 
@@ -210,8 +204,6 @@ REGRESSION
 - [IBM — SPSS Statistics Resources](https://www.ibm.com/products/spss-statistics/resources)
 - [IBM — Variable View](https://www.ibm.com/docs/en/spss-statistics/31.0.0?topic=editor-variable-view)
 - [IBM — One-Way ANOVA](https://www.ibm.com/docs/en/spss-statistics/30.0.0?topic=features-one-way-anova)
-
-**المصدر الإضافي لهذا الدليل:** تحليل أنواع الإجراءات والجداول في ملف SPV المرفق. لم أضع نتائجك الخاصة في المستودع، لأن الغرض هنا تعليم القارئ ما الذي يمكن فعله داخل SPSS وليس نشر مشروع التنبؤ.
 
 [العودة إلى مركز أدلة البرامج](../../README.md)
 
