@@ -993,8 +993,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration
 
 ### إعداد الدليل
 
-**talal alsultan**  
-*Information Technology • Data Analytics • Decision Sciences*  
+**Talal Alsultan**  
+*Information Systems • Data Science • Decision Sciences*  
 King Saud University
 
 [GitHub Profile](https://github.com/talalalsultan246-cell)
