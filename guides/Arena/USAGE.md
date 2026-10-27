@@ -339,11 +339,9 @@ Calls Arrive → Technical Support → Calls Completed
 
 ### فيديو تشغيل النموذج
 
-اضغط زر التشغيل في المقطع التالي لمشاهدة تشغيل Arena والانتقال إلى التقرير:
+[▶ مشاهدة تسجيل تشغيل Arena والانتقال إلى التقرير (15 ثانية)](https://github.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/blob/main/guides/Arena/videos/Arena_Call_Center_Run_Slow.mp4)
 
-https://github.com/user-attachments/assets/df5264e4-c51f-44d7-b431-01c1c5e8e42b
-
-[فتح ملف الفيديو مباشرة](https://raw.githubusercontent.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/main/guides/Arena/videos/Arena_Call_Center_Run_Slow.mp4)
+إذا لم يعرض GitHub الفيديو في الصفحة، اضغط `View raw` لتشغيل الملف مباشرة.
 
 يعرض المقطع المرفق جزءًا من تشغيل نموذج مركز الاتصالات والانتقال إلى التقرير. الملف الأصلي مدته 10 ثوانٍ، وأبطأنا عرضه إلى نحو 15 ثانية لتسهيل المتابعة؛ ولا يعرض تسجيلًا كاملًا مدته ثلاث دقائق.
 
