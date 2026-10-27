@@ -16,7 +16,7 @@
 | البرنامج | محتويات الدليل | فتح الدليل |
 | :---: | :---: | :---: |
 | **Arena Simulation — التثبيت** | تسجيل حساب Rockwell، تنزيل البرنامج، الصور، التثبيت، Visual C++، الترخيص، معالجة الأعطال | **[دليل التثبيت](guides/Arena/README.md)** |
-| **Arena Simulation — الاستخدام** | شرح Home وAnimate وDraw وRun وView وTools، وProject Bar وDiscrete Processing، ثم نموذج عملي Create → Process → Dispose | **[دليل الاستخدام](guides/Arena/USAGE.md)** |
+| **Arena Simulation — الاستخدام** | شرح واجهة Arena 17، ثم تطبيق مركز الاتصال Aly وBander خطوة بخطوة مع صور الإعداد والنموذج ونتائج تشغيل 100 مكالمة | **[دليل الاستخدام](guides/Arena/USAGE.md)** |
 | **IBM SPSS Statistics** | التحميل والتفعيل، صور واجهة البرنامج، الارتباط، الانحدار البسيط والمتعدد، وANOVA | **[دليل SPSS](guides/SPSS/README.md)** |
 | **Excel QM / QM for Windows** | الفرق بين البرنامجين، التحميل من Pearson، الإضافة إلى Excel، أمثلة مسائل كمية | **[دليل Excel QM](guides/Excel-QM/README.md)** |
 | **Power BI Desktop** | تحميل البرنامج، استيراد Excel، Power Query وDAX، إنشاء التقارير | **[دليل Power BI Desktop](guides/Power-BI-Desktop/README.md)** |

@@ -158,7 +158,7 @@
 <p dir="rtl" align="right"><strong>(3)</strong> <strong>Process:</strong> تنفيذ عملية الخدمة. يمكنها أن تحجز موردًا وتؤخر الكيان وتحرره حسب إعداد Action.</p>
 <p dir="rtl" align="right"><strong>(4)</strong> <strong>Dispose:</strong> إنهاء مسار الكيان بعد اكتمال الخدمة.</p>
 
-تحتوي اللوحة أيضًا على وحدات **Seize = حجز مورد**، **Delay = وقت الخدمة**، **Release = تحرير مورد**. سنستخدم هذه الوحدات في المثال لأن وقت خدمة Aly يختلف عن وقت خدمة Bander.
+تحتوي اللوحة أيضًا على وحدات **Seize = حجز مورد**، **Delay = وقت الخدمة**، **Release = تحرير مورد**. في التطبيق أدناه تنفذ وحدة **Process** العمليات الثلاث بإعداد **Seize Delay Release**، وتختار زمن الخدمة وفق الموظف الذي حجزته المكالمة.
 
 ---
 
@@ -196,190 +196,126 @@
 ---
 
 <a id="arena-use-12"></a>
-## 11. مثال من المادة — Chapter 2: Simulation Examples, Slide 1.2
+## 11. بيانات المثال: مركز اتصالات Aly وBander
 
-### Example 2: Call Center Problem
+يمثل كل كيان (Entity) مكالمة واحدة. يبدأ الموظفان متاحين، وتبلغ سعة كل منهما مكالمة واحدة. عند وصول مكالمة، يختار Arena الموظف المتاح بحسب ترتيب المجموعة: Aly أولًا ثم Bander. إذا انشغل الاثنان، تنتظر المكالمة في طابور واحد بترتيب الوصول (FIFO).
 
-يستقبل **Call Center = مركز الاتصالات** المكالمات ويقدم الخدمة موظفان: **Aly** و**Bander**. الموظف Aly أسرع من Bander وفق بيانات المثال.
+اعتمدنا توزيعات الفصل الثاني من ملف المحاضرة المحلي `Ch02 Simulation Examples using Excel Mah Final.pptx`: أولوية Aly في الشريحة 31، والتوزيعات في الشريحة 32، ومنطق المثال في الشريحة 33، وتجربة 100 مكالمة في الشريحة 34. لا يتوافر رابط عام موثوق للملف، ولم أتحقق من مؤلفه أو تاريخ إعداده.
 
-**المطلوب:** محاكاة وصول **100 Callers = 100 متصل**، وتوزيع المكالمات على الموظفين، ثم قياس **Waiting Time = وقت الانتظار** و**Time in System = الوقت داخل النظام** ونسبة انشغال الموظفين.
-
-**مصدر البيانات:** **Chapter 2 — Slide 1.3**.
-
-| البيانات | الوقت بالدقائق | الاحتمالات |
+| المدخل | القيم بالدقائق | الاحتمالات |
 |---|---|---|
-| **Interarrival Time = الزمن بين الوصولات** | 1، 2، 3، 4 | 0.25، 0.40، 0.20، 0.15 |
-| **Aly Service Time = وقت خدمة Aly** | 2، 3، 4، 5 | 0.30، 0.28، 0.25، 0.17 |
-| **Bander Service Time = وقت خدمة Bander** | 3، 4، 5، 6 | 0.35، 0.25، 0.20، 0.20 |
+| الزمن بين وصول مكالمتين | 1، 2، 3، 4 | 0.25، 0.40، 0.20، 0.15 |
+| زمن خدمة Aly | 2، 3، 4، 5 | 0.30، 0.28، 0.25، 0.17 |
+| زمن خدمة Bander | 3، 4، 5، 6 | 0.35، 0.25، 0.20، 0.20 |
 
-في **Slide 1.2** تبدأ الخدمة مع Aly إذا كان كلا الموظفين متاحًا، ثم تُدرس سياسات أخرى في **Slide 1.7**، منها **Bander First** و**Random Assignment**.
+تستخدم دالة `DISC` الاحتمالات التراكمية، ولذلك تصبح حدود الوصول: 0.25، 0.65، 0.85، 1.00.
 
 ---
 
 <a id="arena-use-13"></a>
-## 12. التطبيق العملي: بناء Call Center في Arena
+## 12. بناء النموذج داخل Arena 17
 
-<text dir="ltr"></text>
+### الخطوة 1: سحب الوحدات وربطها
 
-### الخطوة 1 — New Model
+1. افتح `File → New`، ثم أظهر لوحة `Discrete Processing` من `Project Bar` على يسار الشاشة.
+2. من اللوحة اليسرى اسحب `Create` إلى مساحة النموذج البيضاء (`Model Window`). ضع `Process` على يمينه، ثم `Dispose` على يمينهما.
+3. اختر `Home → Connect`، ثم انقر مخرج `Create` ومدخل `Process`. كرر ذلك من `Process` إلى `Dispose`. يجب أن يصل السهم بين الوحدات، لأن تجاورها بصريًا لا ينقل المكالمات.
+4. احفظ الملف من `File → Save As` بامتداد `.doe`.
 
-1. افتح **Arena Simulation 17**.
-2. اختر **File → New** لإنشاء نموذج فارغ.
-3. افتح **File → Save As** واحفظه باسم **Call_Center_Aly_Bander.doe**.
-4. من **Project Bar** افتح **Discrete Processing**.
+<div align="center"><img src="images/07_Discrete_Processing_Arena17.jpg" width="86%" alt="لوحة Discrete Processing في Arena، ومنها تسحب Create وProcess وDispose"/></div>
 
-### الخطوة 2 — Create: إنشاء المكالمات
+### الخطوة 2: إعداد وصول المكالمات في Create
 
-اسحب **Create** إلى Model Window وانقر عليه مرتين.
-
-| الحقل في Arena | القيمة |
-|---|---|
-| Name | Caller Arrivals |
-| Entity Type | Caller |
-| Time Between Arrivals — Type | Expression |
-| Expression | DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4) |
-| Units | Minutes |
-| Entities per Arrival | 1 |
-| Max Arrivals | 100 |
-| First Creation | 0 |
-
-**Interarrival Time = الزمن بين وصول مكالمتين متتاليتين**. يستخدم تعبير DISC الاحتمالات التراكمية من **Chapter 2, Slide 1.3**.
-
-### الخطوة 3 — Seize: حجز موظف متاح
-
-اسحب **Seize** من لوحة Discrete Processing وضعه بعد Create.
-
-أثناء إعداد وحدة Seize:
-
-1. افتح بيانات **Resource** من لوحة **Data Definition**، وأدخل **Aly — Capacity = 1** ثم **Bander — Capacity = 1**.
-2. من بيانات **Set** أنشئ مجموعة موارد باسم **SupportTeam**، وأضف إليها **Aly** أولًا ثم **Bander** ثانيًا.
-3. انقر مرتين على **Seize** وسمِّها **Assign Available Agent**.
-4. افتح قائمة **Resources → Add**، وحدد **Type = Set** و**Set Name = SupportTeam** و**Quantity = 1**.
-5. اختر **Selection Rule = Preferred Order**، ثم أدخل **Save Attribute = aAgentIndex**.
-
-هذا يطبّق سيناريو **Aly First = أولوية Aly**: إذا كان Aly متاحًا يختاره النظام، وإلا يختار Bander؛ وإذا كان الاثنان مشغولين تنتظر المكالمة في **Queue = طابور الانتظار** المتعلق بوحدة Seize. تستخدم **Save Attribute** لحفظ رقم الموظف الذي اختاره Arena من المجموعة. <https://www.manualsdir.com/manuals/580146/rockwell-automation-arena-basic-edition-users-guide.html?page=39>
-
-### الخطوة 4 — Decide: تحديد من يقدم الخدمة
-
-من **Project Bar → Decisions** اسحب **Decide** وضعه بعد Seize.
-
-- **Name:** Which Agent?
-- **Type:** 2-way by Condition
-- **Condition:** aAgentIndex == 1
-
-**True** يعني أن الموظف المختار هو **Aly**، و**False** يعني **Bander**. تأكد أن ترتيب أعضاء مجموعة SupportTeam هو Aly ثم Bander.
-
-### الخطوة 5 — Delay: إدخال Service Time
-
-ضع وحدتين من **Delay** بعد Decide، ثم اضبط:
-
-**Delay الأولى — Aly Service**
+انقر وحدة `Create` مرتين، ثم أدخل القيم التالية. إذا ظهرت خانة `Entity Type` في نسختك، يمكن إبقاء الاسم الافتراضي `Entity 1`؛ فهو يمثل المكالمة هنا.
 
 | الحقل | القيمة |
 |---|---|
-| Name | Aly Service |
-| Delay Type | Expression |
-| Expression | DISC(0.30,2, 0.58,3, 0.83,4, 1.00,5) |
-| Units | Minutes |
+| `Name` | `Calls Arrive` |
+| `Time Between Arrivals → Type` | `Expression` |
+| `Expression` | `DISC(0.25,1,0.65,2,0.85,3,1,4)` |
+| `Units` | `Minutes` |
+| `Entities per Arrival` | `1` |
+| `Max Arrivals` | `100` |
+| `First Creation` | `0` |
 
-**Delay الثانية — Bander Service**
+تعني `First Creation = 0` أن أول مكالمة تصل عند بداية التشغيل. أما `Max Arrivals` فيوقف توليد مكالمات جديدة بعد المكالمة المئة، لكنه وحده لا ينهي المحاكاة.
+
+### الخطوة 3: تعريف الموظفين ومجموعة الموارد
+
+1. من بيانات `Resource` في `Project Bar` أضف صفًا باسم `Aly`، واختر `Type = Fixed Capacity` و`Capacity = 1`.
+2. أضف صفًا ثانيًا باسم `Bander`، وبالسعة نفسها. فعّل تسجيل إحصاءات الموردين.
+3. من بيانات `Set` أنشئ مجموعة باسم `Support Agents` ونوع `Resource`. أضف `Aly` عضوًا أولًا، ثم `Bander` عضوًا ثانيًا. ترتيب العضوين جزء من سياسة أولوية Aly.
+
+### الخطوة 4: إعداد الخدمة في Process
+
+انقر `Process` مرتين، ثم أدخل:
 
 | الحقل | القيمة |
 |---|---|
-| Name | Bander Service |
-| Delay Type | Expression |
-| Expression | DISC(0.35,3, 0.60,4, 0.80,5, 1.00,6) |
-| Units | Minutes |
+| `Name` | `Technical Support` |
+| `Action` | `Seize Delay Release` |
+| `Resources → Add → Type` | `Set` |
+| `Set Name` | `Support Agents` |
+| `Quantity` | `1` |
+| `Selection Rule` | `Preferred Order` |
+| `Save Attribute` | `aAgent` |
+| `Delay Type` | `Expression` |
+| `Units` | `Minutes` |
+| `Allocation` | `Value Added` |
 
-**Service Time = وقت الخدمة.** تعبيرا DISC مأخوذان من توزيعي الخدمة في **Chapter 2, Slide 1.3**.
+اكتب في خانة `Expression` النص كاملًا:
 
-### الخطوة 6 — Release ثم Dispose
+```text
+(aAgent==1)*DISC(0.30,2,0.58,3,0.83,4,1,5)+(aAgent==2)*DISC(0.35,3,0.60,4,0.80,5,1,6)
+```
 
-1. ضع وحدة **Release** بعد مساري Delay، وسمّها **Free Agent**.
-2. في **Resources → Add** اختر **Type = Set**، ثم **Set Name = SupportTeam**.
-3. اختر **Release Rule = Specific Member** و**Set Index = aAgentIndex** و**Quantity = 1**، حتى تحرر وحدة Release الموظف نفسه الذي حجزته وحدة Seize.
-4. أضف **Dispose** باسم **Call Completed**.
+يحفظ `aAgent` رقم عضو المجموعة الذي حجزته المكالمة: 1 لـAly و2 لـBander. يختار التعبير توزيع زمن الخدمة الموافق له. تنفذ `Seize Delay Release` حجز الموظف، وزمن الخدمة، وتحرير الموظف في وحدة واحدة. إذا لم يتوافر موظف، تدخل المكالمة `Technical Support.Queue` وتنتظر دورها.
 
-### الخطوة 7 — Connect: توصيل النموذج
+<div align="center"><img src="images/call-center/01-process-settings.jpg" width="86%" alt="إعداد Process: حجز موظف من مجموعة Support Agents ثم الخدمة والتحرير"/></div>
 
-صِل الوحدات بالترتيب:
+### الخطوة 5: إنهاء المكالمة ومراجعة الشكل
 
-~~~text
-Create: Caller Arrivals
-          |
-          v
-Seize: Assign Available Agent
-          |
-          v
-Decide: Which Agent?
-      /           \
-  True / Aly    False / Bander
-     |              |
-     v              v
-Delay: Aly      Delay: Bander
- Service          Service
-     \              /
-      \            /
-       v          v
-       Release: Free Agent
-                |
-                v
-       Dispose: Call Completed
-~~~
+سمِّ وحدة `Dispose` باسم `Calls Completed`، وفعّل `Record Entity Statistics`. راجع الوصلتين واتجاههما. يصبح المسار:
 
-تنتظر المكالمة داخل Seize إلى أن يتوافر موظف. بعد ذلك تنتقل إلى **Delay** الخاصة به، ثم يُحرّر الموظف وتغادر المكالمة.
+```text
+Calls Arrive → Technical Support → Calls Completed
+```
 
-### الخطوة 8 — مقارنة السيناريوهات
-
-بعد حفظ النموذج وتشغيل **Aly First**:
-
-- **Scenario 2 — Bander First:** غيّر ترتيب أعضاء SupportTeam إلى **Bander ثم Aly** مع إبقاء **Preferred Order**. حدّث شرط Decide حتى يتوافق كل مسار Delay مع الموظف الصحيح.
-- **Scenario 3 — Random:** أبقِ ترتيب **Aly ثم Bander**، وغيّر **Selection Rule = Random** في Seize. إذا كان الموظفان متاحين يُختار أحدهما باحتمال متساوٍ، أما إذا كان أحدهما فقط متاحًا فتُسند المكالمة إليه.
-
-احفظ كل سيناريو باسم مختلف للمقارنة.
+<div align="center"><img src="images/call-center/02-model.jpg" width="86%" alt="نموذج مركز الاتصال النهائي: وصول المكالمات، الدعم الفني، اكتمال الخدمة"/></div>
 
 ---
 
 <a id="arena-use-14"></a>
-## 13. تشغيل المحاكاة وقراءة النتائج
+## 13. التشغيل والنتائج الفعلية
 
-### الخطوة 9 — Run: التشغيل
+### إعداد التشغيل
 
-1. افتح **Run → Check Model** للتحقق من النموذج.
-2. افتح **Run → Setup**.
-3. اجعل **Base Time Units = Minutes**.
-4. اختر **Replication Length = 1000 Minutes** و**Number of Replications = 1** للتجربة الأولى.
-5. اضغط **Go** لبدء المحاكاة.
-6. افتح **Reports** بعد الانتهاء.
+1. افتح `Run → Setup` وحدد `Base Time Units = Minutes` و`Number of Replications = 1` و`Warm-up Period = 0`.
+2. اجعل `Replication Length = Infinite`، وأدخل شرط الانتهاء `Calls Completed.NumberOut >= 100`. بهذا ينتهي التشغيل بعد اكتمال خدمة المكالمات المئة، مهما بلغ زمنها.
+3. فعّل جمع إحصاءات `Entities` و`Queues` و`Resources` و`Processes`.
+4. نفّذ `Run → Check Model`، ثم `Run → Go` أو `Fast Forward`. في التشغيل الموثق، اجتاز النموذج الفحص دون أخطاء أو تحذيرات.
 
-**Max Arrivals = 100** يمنع إنشاء أكثر من 100 مكالمة؛ ومدة 1000 دقيقة تسمح في هذا المثال بزمن كافٍ لانتهاء المكالمات التي بدأت، في ضوء الحدود القصوى لأزمنة الوصول والخدمة الموجودة في الشريحة 1.3. عند المقارنة، استخدم مدة التشغيل نفسها لجميع السيناريوهات.
+### قراءة التقرير
 
-### الخطوة 10 — نتائج Arena
+بعد انتهاء التشغيل، افتح تقرير Arena. يعرض `Wait Time` متوسط انتظار المكالمة قبل الخدمة، و`VA Time` متوسط زمن الخدمة، و`Total Time` متوسط الزمن من الوصول حتى المغادرة. صورة التقرير التالية تعرض هذه المقاييس للتشغيل الموثق:
 
-راجع في التقارير:
+<div align="center"><img src="images/call-center/03-results.jpg" width="96%" alt="تقرير Arena الفعلي: متوسط الانتظار 0.18 دقيقة، والخدمة 3.52، والزمن في النظام 3.70"/></div>
 
-| Performance Measure = مقياس الأداء | القراءة المطلوبة |
-|---|---|
-| **Number In = عدد الداخلين** | يجب أن يكون 100 متصل |
-| **Number Out = عدد الخارجين** | تحقق من اكتمال خدمة المتصلين المئة |
-| **Average Waiting Time = متوسط وقت الانتظار** | معدل الانتظار قبل حجز الموظف |
-| **Number Waiting = عدد المنتظرين** | عدد المكالمات في Queue |
-| **Aly Utilization = نسبة انشغال Aly** | نسبة الوقت الذي كان فيه Aly مشغولًا |
-| **Bander Utilization = نسبة انشغال Bander** | نسبة الوقت الذي كان فيه Bander مشغولًا |
-| **Time in System = الوقت داخل النظام** | من وقت وصول المكالمة إلى مغادرتها |
+| المقياس | نتيجة تشغيل واحد |
+|---|---:|
+| المكالمات التي وصلت واكتملت | 100 و100 |
+| زمن انتهاء المحاكاة | 252 دقيقة |
+| متوسط الانتظار | 0.18 دقيقة |
+| متوسط الخدمة | 3.52 دقيقة |
+| متوسط الزمن في النظام | 3.70 دقيقة |
+| أقصى انتظار | دقيقتان |
+| متوسط طول الطابور | 0.07143 مكالمة |
+| Aly: عدد المكالمات ونسبة الانشغال | 58 و75.00% |
+| Bander: عدد المكالمات ونسبة الانشغال | 42 و64.68% |
 
-**للمقارنة مع المحاضرة:** في جدول تجربة **Chapter 2, Slide 1.5**، بلغ مجموع **Caller Delay = وقت انتظار المتصلين** مقدار **211 دقيقة**، ومجموع **Time in System = الوقت داخل النظام** مقدار **564 دقيقة** لـ100 مكالمة؛ أي متوسطين **2.11 دقيقة** و**5.64 دقيقة** على التوالي. **هذه أرقام المثال الوارد في الشريحة، وليست نتائج تشغيل فعلي لهذا النموذج في Arena**. تختلف المخرجات عند اختلاف تسلسل الأرقام العشوائية أو سياسة توزيع المكالمات.
+تتحقق المجاميع: `58 + 42 = 100`، ومجموع أزمنة الانتظار `18` دقيقة، لذا `18 ÷ 100 = 0.18` دقيقة. ومجموع أزمنة الخدمة `352` دقيقة، لذا `(352 + 18) ÷ 100 = 3.70` دقائق في النظام.
 
-**معادلات الفصل الثاني — Slide 1.4:**
-
-~~~text
-Arrival Time(k) = Arrival Time(k−1) + Interarrival Time(k)
-Waiting Time(k) = Service Start Time(k) − Arrival Time(k)
-Service Completion Time(k) = Service Start Time(k) + Service Time(k)
-Time in System(k) = Service Completion Time(k) − Arrival Time(k)
-~~~
-
-**صلة الفصلين السادس والسابع:** يوضح **Chapter 6 — Random-Number Generation** توليد الأرقام العشوائية، ويعرض **Chapter 7 — Random-Variate Generation** توليد القيم وفق توزيعاتها. في Arena ينفّذ **DISC** اختيار الوقت طبقًا للاحتمالات التراكمية في شريحة المثال.
+هذه القيم ناتجة عن تكرار عشوائي واحد في Arena 17. يعرض التقرير `Insufficient` لفاصل الثقة، لذلك لا نستخلص منه تقديرًا إحصائيًا دقيقًا أو تفوقًا على سياسة إسناد أخرى. قد تختلف الأرقام عند إعادة التشغيل. كما أن جدول الشريحة 34 يستخدم تسلسلًا عشوائيًا لم يُقدَّم للنموذج، فلا يُتوقع تطابق نتائجه العددية مع هذا التشغيل.
 
 ---
 
