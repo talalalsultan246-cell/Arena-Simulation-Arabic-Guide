@@ -135,13 +135,12 @@
 <a id="arena-use-08"></a>
 ## 8. Tools — الأدوات
 
-<div align="center"><img src="images/06_Tools_Arena17.jpg" width="96%" alt="Arena 17 Tools tab with three numbered highlights"/></div>
+<div align="center"><img src="images/06_Tools_Arena17_no3.svg" width="96%" alt="Arena 17 Tools tab with two numbered highlights"/></div>
 
 **الأرقام في الصورة:**
 
 <p dir="rtl" align="right"><strong>(1)</strong> <strong>Tools:</strong> تبويب الأدوات المساعدة.</p>
 <p dir="rtl" align="right"><strong>(2)</strong> <strong>Object Transfer to Arena:</strong> أداة ضمن مجموعة الربط والتكامل الموجودة يسار الشريط.</p>
-<p dir="rtl" align="right"><strong>(3)</strong> <strong>المساحة المحددة يمين الشريط:</strong> لا يظهر بداخل المربع زر أو أمر في هذه اللقطة.</p>
 
 من هذا التبويب يمكن الوصول إلى أدوات مثل Input Analyzer وModel Report حسب الأدوات الظاهرة في الشاشة.
 
