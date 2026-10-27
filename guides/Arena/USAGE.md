@@ -63,7 +63,7 @@
 | **Model Verification** | التحقق من صحة تنفيذ النموذج |
 | **Simulation Reports** | تقارير نتائج المحاكاة |
 
-**مثال سريع:** **Service Time = وقت الخدمة**، و**Interarrival Time = الزمن بين وصول المكالمات**. تظل الأسماء الإنجليزية كما هي داخل **Arena**.
+**مثال من المادة (Chapter 2 — Simulation Examples, Slide 1.3):** يوضح جدول **Call Center Problem** مصطلحي **Service Time = وقت الخدمة** و**Interarrival Time = الزمن بين وصول المكالمات**. وتظل الأسماء الإنجليزية كما هي داخل **Arena**.
 
 ---
 
@@ -71,19 +71,19 @@
 
 1. [المصطلحات العلمية English / العربية](#arena-use-glossary)
 2. [الصورة العامة ومكونات النافذة](#arena-use-01)
-2. [File — فتح وحفظ النموذج](#arena-use-02)
-3. [Home — بناء النموذج](#arena-use-03)
-4. [Animate — مشاهدة الكيانات](#arena-use-04)
-5. [Draw — الرسم](#arena-use-05)
-6. [Run — تشغيل المحاكاة](#arena-use-06)
-7. [View — طريقة العرض](#arena-use-07)
-8. [Tools — أدوات التحليل](#arena-use-08)
-9. [Project Bar / Discrete Processing](#arena-use-10)
-10. [Call Center: الشرائح والتوزيعات والقوانين](#arena-use-12)
-11. [التطبيق خطوة بخطوة](#arena-use-13)
-12. [قراءة النتائج](#arena-use-14)
-13. [اختصارات مهمة](#arena-use-shortcuts)
-14. [المراجع والصور](#arena-use-15)
+3. [File — فتح وحفظ النموذج](#arena-use-02)
+4. [Home — بناء النموذج](#arena-use-03)
+5. [Animate — مشاهدة الكيانات](#arena-use-04)
+6. [Draw — الرسم](#arena-use-05)
+7. [Run — تشغيل المحاكاة](#arena-use-06)
+8. [View — طريقة العرض](#arena-use-07)
+9. [Tools — أدوات التحليل](#arena-use-08)
+10. [Project Bar / Discrete Processing](#arena-use-10)
+11. [Call Center: الشرائح والتوزيعات والقوانين](#arena-use-12)
+12. [التطبيق خطوة بخطوة](#arena-use-13)
+13. [قراءة النتائج](#arena-use-14)
+14. [اختصارات مهمة](#arena-use-shortcuts)
+15. [المراجع والصور](#arena-use-15)
 
 ---
 
@@ -112,7 +112,7 @@
 <a id="arena-use-02"></a>
 ## 2. File — إنشاء النموذج وحفظه
 
-**File → New → Blank Model** لإنشاء ملف جديد، و**Open** لفتح السابق، و**Save / Save As** لحفظه. اسم مقترح: \`Call_Center_Aly_Bander.doe\`.
+**File → New → Blank Model** لإنشاء ملف جديد، و**Open** لفتح السابق، و**Save / Save As** لحفظه. اسم مقترح: `Call_Center_Aly_Bander.doe`.
 
 ---
 
@@ -131,7 +131,7 @@
 - **Auto-Connect:** وصل تلقائي عند سحب الوحدة إذا كان الخيار مفعلًا.
 - **Check Model / Expression Builder / Manuals:** فحص النموذج والتعبيرات وفتح الأدلة إذا كانت هذه الأوامر ظاهرة.
 
-**جرب:** اسحب \`Create\` ثم \`Process\` ثم \`Dispose\`، واستخدم \`Connect\` لربطها من اليسار إلى اليمين.
+**جرب:** اسحب `Create` ثم `Process` ثم `Dispose`، واستخدم `Connect` لربطها من اليسار إلى اليمين.
 
 ---
 
@@ -216,14 +216,14 @@
 | **Release = تحرير المورد** | إتاحة الموظف لمتصل آخر |
 | **Dispose = خروج الكيان** | انتهاء المكالمة وخروجها من النموذج |
 
-**الفرق:** \`Process: Seize Delay Release\` يجمع حجز الموظف ثم خدمته ثم تحريره. أما \`Delay\` وحدها فلا تمثل تلقائيًا انتظار الموظف المشغول.
+**الفرق:** `Process: Seize Delay Release` يجمع حجز الموظف ثم خدمته ثم تحريره. أما `Delay` وحدها فلا تمثل تلقائيًا انتظار الموظف المشغول.
 
 ---
 
 <a id="arena-use-12"></a>
-## 10. Call Center Problem (مسألة مركز الاتصالات) — Source, Slides & Equations
+## 10. مثال من المادة — Chapter 2: Simulation Examples, Slide 1.2 — Call Center Problem
 
-**Source = المصدر:** *Chapter 2 — Simulation Examples = الفصل الثاني: أمثلة المحاكاة*، **Example 2: Call Center Problem = مسألة مركز الاتصالات**. **Aly** هو **Server = موظف خدمة** الأكثر خبرة، ويقدم الخدمة أسرع من **Bander** وفق المثال.
+**مصدر المثال:** **Chapter 2 — Simulation Examples, Slide 1.2**، بعنوان **Example 2: Call Center Problem = مسألة مركز الاتصالات**. وتوجد توزيعات **Interarrival Time = الزمن بين الوصولات** و**Service Time = وقت الخدمة** في **Slide 1.3**، وقوانين المحاكاة في **Slide 1.4**. **Aly** هو **Server = موظف خدمة** الأكثر خبرة، ويقدم الخدمة أسرع من **Bander** وفق المثال.
 
 | الفصل | الشريحة المطبوعة | ما الذي نأخذه؟ |
 |---|---|---|
@@ -234,12 +234,12 @@
 | Chapter 2 | **1.6** | بعض إحصاءات الانتظار |
 | Chapter 2 | **1.7** | سياسات بديلة: Bander أولًا، أو اختيار عشوائي |
 | Chapter 2 | **1.8** | خوارزمية **Bander أولًا**، وليس التوزيع العشوائي |
-| **Chapter 6 — Random-Number Generation** | **6.7** | الانتظام والاستقلال، \`R ~ U(0,1)\` |
+| **Chapter 6 — Random-Number Generation** | **6.7** | الانتظام والاستقلال، `R ~ U(0,1)` |
 | Chapter 6 | **6.16–6.18** | **Linear Congruential Method** |
 | **Chapter 7 — Random-Variate Generation** | **7.7** | **Inverse-Transform Technique** |
 | Chapter 7 | **7.8–7.10** | أمثلة توليد زمن أُسي للتوضيح النظري، **وليست** توزيعات الكول سنتر |
 
-### جدول الاحتمالات — Chapter 2, Slide 1.3
+### مثال من المادة — Chapter 2, Slide 1.3: Probability Distributions = التوزيعات الاحتمالية
 
 | Variable (المتغير) | Time in Minutes (الوقت بالدقائق) | Probability (الاحتمال) | Cumulative Probability (الاحتمال التراكمي) |
 |---|---|---|---|
@@ -250,49 +250,49 @@
 **Arena DISC Expressions = تعبيرات التوزيع الاحتمالي المتقطع**، والمشتقة من جدول الاحتمالات في الشريحة 1.3:
 
 **Interarrival Time**
-\`\`\`text
+```text
 DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4)
-\`\`\`
+```
 **Aly Service Time**
-\`\`\`text
+```text
 DISC(0.30,2, 0.58,3, 0.83,4, 1.00,5)
-\`\`\`
+```
 **Bander Service Time**
-\`\`\`text
+```text
 DISC(0.35,3, 0.60,4, 0.80,5, 1.00,6)
-\`\`\`
+```
 
-لا تستبدل هذه التوزيعات بـ \`EXPO(6)\` أو \`TRIA(2,4,6)\` إذا كان الهدف تنفيذ مثال المحاضرة نفسه؛ كانت تلك قيمًا افتراضية لمثال مختلف.
+لا تستبدل هذه التوزيعات بـ `EXPO(6)` أو `TRIA(2,4,6)` إذا كان الهدف تنفيذ مثال المحاضرة نفسه؛ كانت تلك قيمًا افتراضية لمثال مختلف.
 
-### القوانين التي يعتمد عليها المثال
+### قوانين المثال من المادة — Chapter 2, Slide 1.4; Chapter 6, Slides 6.16–6.17; Chapter 7, Slide 7.7
 
 **Chapter 6, Slides 6.16–6.17: Pseudo-Random Number Generation = توليد الأرقام شبه العشوائية**
 
-\`\`\`text
+```text
 X(i+1) = (a × X(i) + c) mod m
 R(i) = X(i) / m
-\`\`\`
+```
 
-حيث \`a\` معامل الضرب، \`c\` الزيادة، \`m\` المقياس، و\`X(0)\` البذرة. المعادلة للتفسير العلمي؛ **لا تُعد إعدادًا يثبت أن Arena يستخدم المعاملات الموضحة في المحاضرة**.
+حيث `a` معامل الضرب، `c` الزيادة، `m` المقياس، و`X(0)` البذرة. المعادلة للتفسير العلمي؛ **لا تُعد إعدادًا يثبت أن Arena يستخدم المعاملات الموضحة في المحاضرة**.
 
 **Chapter 7, Slide 7.7: Inverse-Transform Technique = طريقة التحويل العكسي**
 
-\`\`\`text
+```text
 X = F⁻¹(R)
 For discrete X: choose the smallest x with F(x) ≥ R
-\`\`\`
+```
 
-**مثال:** إذا كان \`R = 0.69\` فإن زمن ما بين الوصولات **3 دقائق**، وزمن خدمة Aly **4 دقائق**، وخدمة Bander **5 دقائق**، لأن القيمة تقع داخل المجالات التراكمية المقابلة.
+**مثال:** إذا كان `R = 0.69` فإن زمن ما بين الوصولات **3 دقائق**، وزمن خدمة Aly **4 دقائق**، وخدمة Bander **5 دقائق**، لأن القيمة تقع داخل المجالات التراكمية المقابلة.
 
 **Chapter 2, Slide 1.4: Call Center Equations = معادلات نموذج الاتصالات**
 
-\`\`\`text
+```text
 Arrival(k) = Arrival(k−1) + Interarrival(k)
 Waiting(k) = ServiceStart(k) − Arrival(k)
 Finish(k) = ServiceStart(k) + ServiceTime(k)
 TimeInSystem(k) = Finish(k) − Arrival(k)
 AverageWaiting = Sum(Waiting(k)) / N
-\`\`\`
+```
 
 ### Call Center Scenarios = سيناريوهات توزيع المكالمات
 
@@ -312,31 +312,31 @@ AverageWaiting = Sum(Waiting(k)) / N
 ### Step 1 — Create = إنشاء المكالمات
 - **File → New → Blank Model**.
 - **Project Bar → Discrete Processing → Create**.
-- الاسم: \`Caller Arrivals\`، ونوع الكيان: \`Caller\`.
+- الاسم: `Caller Arrivals`، ونوع الكيان: `Caller`.
 - **Time Between Arrivals → Type: Expression**، ثم أدخل:
-\`\`\`text
+```text
 DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4)
-\`\`\`
+```
 - **Units: Minutes**؛ **Entities per Arrival: 1**.
 
 ### Step 2 — Resource Definition = تعريف الموارد
-- من بيانات الموارد **Resource** أنشئ \`Aly\` و\`Bander\`، مع **Capacity = 1** لكل موظف.
-- من **Set** أنشئ \`SupportTeam\` يضم \`Aly\` و\`Bander\`، إذا كانت هذه الوحدة في قالب البيانات الملحق.
+- من بيانات الموارد **Resource** أنشئ `Aly` و`Bander`، مع **Capacity = 1** لكل موظف.
+- من **Set** أنشئ `SupportTeam` يضم `Aly` و`Bander`، إذا كانت هذه الوحدة في قالب البيانات الملحق.
 
 ### Step 3 — Process = تنفيذ الخدمة
-- أضف \`Process\` باسم \`Handle Call\`.
+- أضف `Process` باسم `Handle Call`.
 - **Action = Seize Delay Release**.
-- اختر موردًا من المجموعة \`SupportTeam\`، مع **Selection Rule = Random** بين الموارد المتاحة عند توافر الخيار في إصدارك.
+- اختر موردًا من المجموعة `SupportTeam`، مع **Selection Rule = Random** بين الموارد المتاحة عند توافر الخيار في إصدارك.
 - احفظ هوية الموظف المختار في **Attribute** لتطبيق توزيع زمن الخدمة الخاص به؛ راجع **Expression Builder** لاختبار التعبير الشرطي وربطه بفهرس المورد الذي تُرجعه نسختك.
 
-> **حد التحقق:** لم يُنفذ النموذج فعليًا داخل نسخة Arena على جهاز الطالب في هذه المحادثة؛ لذلك اختيار العضو العشوائي وحفظ فهرسه وتخصيص توزيعين مختلفين هما **خطوات إعداد تحتاج اختبارًا**، ولا أدعي أنها ملف نموذج \`.doe\` جاهز أو مخرجات فعلية. لا تنشئ طابورين مستقلين للمكالمات دون التصريح بتغيير سياسة الانتظار الأصلية.
+> **حد التحقق:** لم يُنفذ النموذج فعليًا داخل نسخة Arena على جهاز الطالب في هذه المحادثة؛ لذلك اختيار العضو العشوائي وحفظ فهرسه وتخصيص توزيعين مختلفين هما **خطوات إعداد تحتاج اختبارًا**، ولا أدعي أنها ملف نموذج `.doe` جاهز أو مخرجات فعلية. لا تنشئ طابورين مستقلين للمكالمات دون التصريح بتغيير سياسة الانتظار الأصلية.
 
 ### Step 4 — Dispose & Connect = إخراج الكيان وربط الوحدات
-أضف \`Dispose\` باسم \`Call Completed\`، ثم صِل:
+أضف `Dispose` باسم `Call Completed`، ثم صِل:
 
-\`\`\`text
+```text
 Create: Caller Arrivals  →  Process: Handle Call  →  Dispose: Call Completed
-\`\`\`
+```
 
 ### Step 5 — Run = تشغيل المحاكاة
 - **Run → Check Model** للتحقق من التعابير والوصلات والموارد.
@@ -383,9 +383,9 @@ Create: Caller Arrivals  →  Process: Handle Call  →  Dispose: Call Completed
 ## 14. المراجع والصور
 
 **مواد المقرر المقدمة من الطالب:**
-- محمود الشربيني، *Chapter 2 — Simulation Examples*, Example 2: Call Center Problem، الشرائح المطبوعة **1.2–1.8**. ملف: \`Ch02_Call_Center_Scenarios_Highlighted.pptx\`، مواد مقرر غير منشورة.
-- *Chapter 6 — Random-Number Generation*، خاصة الشرائح **6.7** و**6.16–6.18**. ملف: \`06 Random-Number Generation simulation Mah Final(4).pptx\`.
-- *Chapter 7 — Random-Variate Generation*، خاصة الشرائح **7.7–7.10**. ملف: \`07 Random-Variate Generation Mah Final [Autosaved](2).pptx\`.
+- محمود الشربيني، *Chapter 2 — Simulation Examples*, Example 2: Call Center Problem، الشرائح المطبوعة **1.2–1.8**. ملف: `Ch02_Call_Center_Scenarios_Highlighted.pptx`، مواد مقرر غير منشورة.
+- *Chapter 6 — Random-Number Generation*، خاصة الشرائح **6.7** و**6.16–6.18**. ملف: `06 Random-Number Generation simulation Mah Final(4).pptx`.
+- *Chapter 7 — Random-Variate Generation*، خاصة الشرائح **7.7–7.10**. ملف: `07 Random-Variate Generation Mah Final [Autosaved](2).pptx`.
 
 **مصادر البرنامج والصورة الحديثة:**
 - [Rockwell Automation — صفحة تنزيل Arena Professional Edition](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
