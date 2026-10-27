@@ -10,75 +10,18 @@
 
 في محاضرة يوم الأحد **25 أكتوبر 2026**، استعرض **الأستاذ الدكتور محمود الشربيني مشكوراً** واجهات Arena الأساسية وبعض طرق إنشاء نموذج أولي. يربط هذا الدليل بين واجهة **Arena Simulation 17** وبين مثال **Call Center Problem = مسألة مركز الاتصالات** الوارد في **Chapter 2: Simulation Examples = الفصل الثاني: أمثلة المحاكاة**.
 
-<a id="arena-use-glossary"></a>
-## المصطلحات العلمية — English = العربية
-
-هذه المصطلحات مستخدمة في شرائح المقرر وفي إعدادات **Arena**. احتفظ بالاسم الإنجليزي عند إدخال البيانات إلى البرنامج.
-
-| English Term | المعنى باللغة العربية |
-|---|---|
-| **Call Center** | مركز الاتصالات |
-| **Simulation** | المحاكاة |
-| **Discrete-Event Simulation** | محاكاة الأحداث المنفصلة |
-| **Simulation Model** | نموذج المحاكاة |
-| **Caller** | المتصل |
-| **Entity** | الكيان الذي يتحرك داخل النموذج |
-| **Server** | موظف تقديم الخدمة |
-| **Resource** | المورد المستخدم لتقديم الخدمة |
-| **Interarrival Time** | الزمن بين وصول مكالمتين متتاليتين |
-| **Arrival Time** | وقت وصول المكالمة |
-| **Service Time** | وقت الخدمة |
-| **Service Start Time** | وقت بدء الخدمة |
-| **Service Completion Time** | وقت انتهاء الخدمة |
-| **Waiting Time / Caller Delay** | وقت انتظار المتصل |
-| **Queue** | طابور الانتظار |
-| **Time in System = الوقت داخل النظام** | الوقت الذي تقضيه المكالمة داخل النظام |
-| **Service Time Distribution** | التوزيع الاحتمالي لوقت الخدمة |
-| **Interarrival Time Distribution** | التوزيع الاحتمالي للزمن بين الوصولات |
-| **Probability** | الاحتمال |
-| **Cumulative Probability** | الاحتمال التراكمي |
-| **Random Number** | رقم عشوائي |
-| **Pseudo-Random Number** | رقم شبه عشوائي |
-| **Random Variate** | قيمة عشوائية من توزيع احتمالي محدد |
-| **Random-Number Generation** | توليد الأرقام العشوائية |
-| **Random-Variate Generation** | توليد القيم العشوائية من التوزيعات الاحتمالية |
-| **Uniformity** | خاصية التوزيع المنتظم |
-| **Independence** | خاصية الاستقلال |
-| **CDF: Cumulative Distribution Function** | دالة التوزيع التراكمي |
-| **Inverse-Transform Technique** | طريقة التحويل العكسي |
-| **Linear Congruential Method (LCM)** | الطريقة التوافقية الخطية |
-| **DISC: Discrete Probability Distribution** | تعبير التوزيع الاحتمالي المتقطع في Arena |
-| **Create** | إنشاء كيان جديد أو إدخال مكالمة |
-| **Process** | تنفيذ عملية الخدمة |
-| **Dispose** | إنهاء مسار الكيان وخروجه من النموذج |
-| **Seize** | حجز المورد |
-| **Delay** | زمن العملية أو تأخيرها |
-| **Release** | تحرير المورد |
-| **Capacity** | الطاقة الاستيعابية للمورد |
-| **Utilization** | نسبة انشغال المورد |
-| **Replication** | تكرار تجربة المحاكاة |
-| **Replication Length** | مدة تكرار المحاكاة |
-| **Simulation Time** | الزمن داخل نموذج المحاكاة |
-| **Performance Measures** | مقاييس الأداء |
-| **Model Verification** | التحقق من صحة تنفيذ النموذج |
-| **Simulation Reports** | تقارير نتائج المحاكاة |
-
-**مثال من المادة (Chapter 2 — Simulation Examples, Slide 1.3):** يوضح جدول **Call Center Problem** مصطلحي **Service Time = وقت الخدمة** و**Interarrival Time = الزمن بين وصول المكالمات**. وتظل الأسماء الإنجليزية كما هي داخل **Arena**.
-
----
-
 ## المحتويات
 
-1. [المصطلحات العلمية English / العربية](#arena-use-glossary)
-2. [الصورة العامة ومكونات النافذة](#arena-use-01)
-3. [File — فتح وحفظ النموذج](#arena-use-02)
-4. [Home — بناء النموذج](#arena-use-03)
-5. [Animate — مشاهدة الكيانات](#arena-use-04)
-6. [Draw — الرسم](#arena-use-05)
-7. [Run — تشغيل المحاكاة](#arena-use-06)
-8. [View — طريقة العرض](#arena-use-07)
-9. [Tools — أدوات التحليل](#arena-use-08)
-10. [Project Bar / Discrete Processing](#arena-use-10)
+1. [الصورة العامة ومكونات النافذة](#arena-use-01)
+2. [File — فتح وحفظ النموذج](#arena-use-02)
+3. [Home — بناء النموذج](#arena-use-03)
+4. [Animate — مشاهدة الكيانات](#arena-use-04)
+5. [Draw — الرسم](#arena-use-05)
+6. [Run — تشغيل المحاكاة](#arena-use-06)
+7. [View — طريقة العرض](#arena-use-07)
+8. [Tools — أدوات التحليل](#arena-use-08)
+9. [Project Bar / Discrete Processing](#arena-use-10)
+10. [مصطلحات واجهة Arena](#arena-use-glossary)
 11. [Call Center: الشرائح والتوزيعات والقوانين](#arena-use-12)
 12. [التطبيق خطوة بخطوة](#arena-use-13)
 13. [قراءة النتائج](#arena-use-14)
@@ -217,6 +160,50 @@
 | **Dispose = خروج الكيان** | انتهاء المكالمة وخروجها من النموذج |
 
 **الفرق:** `Process: Seize Delay Release` يجمع حجز الموظف ثم خدمته ثم تحريره. أما `Delay` وحدها فلا تمثل تلقائيًا انتظار الموظف المشغول.
+
+---
+
+<a id="arena-use-glossary"></a>
+## مصطلحات واجهة Arena
+
+الجدول التالي يشرح أسماء **التبويبات والأدوات والأوامر الظاهرة في واجهة Arena 17**. أُبقيت الأسماء الإنجليزية كما تظهر في البرنامج.
+
+| المصطلح في واجهة Arena | المعنى بالعربية |
+|---|---|
+| **File** | تبويب الملفات |
+| **New / Blank Model** | إنشاء نموذج جديد / نموذج فارغ |
+| **Open** | فتح نموذج |
+| **Save / Save As** | حفظ / حفظ باسم |
+| **Home** | التبويب الرئيسي |
+| **Animate** | تبويب الحركة |
+| **Draw** | تبويب الرسم |
+| **Run** | تبويب التشغيل |
+| **View** | تبويب العرض |
+| **Tools** | تبويب الأدوات |
+| **Project Bar** | لوحة المشروع الجانبية |
+| **Model Window** | نافذة بناء النموذج |
+| **Spreadsheet View** | عرض البيانات والخصائص في جدول |
+| **Animate Bar** | لوحة عناصر الحركة |
+| **Status Bar** | شريط الحالة |
+| **Discrete Processing** | لوحة وحدات العمليات المنفصلة |
+| **Create** | وحدة إنشاء الكيانات |
+| **Assign** | وحدة تعيين القيم والخصائص |
+| **Process** | وحدة تنفيذ العملية |
+| **Seize** | حجز مورد |
+| **Delay** | تأخير |
+| **Release** | تحرير مورد |
+| **Dispose** | وحدة خروج الكيانات |
+| **Resource** | مورد في النموذج |
+| **Connect** | توصيل وحدتين |
+| **Auto-Connect** | التوصيل التلقائي |
+| **Zoom / Pan** | تكبير وتصغير / تحريك طريقة العرض |
+| **Check Model** | فحص النموذج |
+| **Setup** | إعدادات التشغيل |
+| **Go** | بدء التشغيل |
+| **Reports** | تقارير النتائج |
+| **Help / Product Manuals** | المساعدة / أدلة البرنامج |
+
+> هذا الجدول مخصص **لمصطلحات واجهة البرنامج فقط**. أما المصطلحات المتعلقة بالقوانين والتوزيعات الاحتمالية فتُشرح ضمن مثال **Call Center** في القسم التالي.
 
 ---
 
