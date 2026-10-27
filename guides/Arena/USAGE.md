@@ -1,6 +1,6 @@
 <div dir="rtl" align="right">
 
-# دليل استخدام Arena Simulation 17 — Call Center Simulation (محاكاة مركز الاتصالات)
+# دليل استخدام Arena Simulation
 
 **إعداد:** Talal bin Ibrahim Alsultan  
 **آخر تحديث:** 27 أكتوبر 2026  
