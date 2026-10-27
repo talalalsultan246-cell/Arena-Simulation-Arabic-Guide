@@ -240,6 +240,8 @@
 
 تعني `First Creation = 0` أن أول مكالمة تصل عند بداية التشغيل. أما `Max Arrivals` فيوقف توليد مكالمات جديدة بعد المكالمة المئة، لكنه وحده لا ينهي المحاكاة.
 
+<div align="center"><img src="images/call-center/06-create-settings.png" width="86%" alt="إعداد Create الفعلي: وصول المكالمات وتعبير DISC وعدد 100 مكالمة"/></div>
+
 ### الخطوة 3: تعريف الموظفين ومجموعة الموارد
 
 1. من بيانات `Resource` في `Project Bar` أضف صفًا باسم `Aly`، واختر `Type = Fixed Capacity` و`Capacity = 1`.
@@ -311,6 +313,8 @@ Calls Arrive → Technical Support → Calls Completed
 3. فعّل جمع إحصاءات `Entities` و`Queues` و`Resources` و`Processes`.
 4. نفّذ `Run → Check Model`، ثم `Run → Go` أو `Fast Forward`. في التشغيل الموثق، اجتاز النموذج الفحص دون أخطاء أو تحذيرات.
 
+<div align="center"><img src="images/call-center/07-run-setup.png" width="90%" alt="إعداد Run Setup الفعلي: تكرار واحد، شرط انتهاء 100 مكالمة، ووحدة الزمن بالدقائق"/></div>
+
 ### قراءة التقرير
 
 بعد انتهاء التشغيل، افتح تقرير Arena. يعرض `Wait Time` متوسط انتظار المكالمة قبل الخدمة، و`VA Time` متوسط زمن الخدمة، و`Total Time` متوسط الزمن من الوصول حتى المغادرة. صورة التقرير التالية تعرض هذه المقاييس للتشغيل الموثق:
@@ -332,6 +336,14 @@ Calls Arrive → Technical Support → Calls Completed
 تتحقق المجاميع: `58 + 42 = 100`، ومجموع أزمنة الانتظار `18` دقيقة، لذا `18 ÷ 100 = 0.18` دقيقة. ومجموع أزمنة الخدمة `352` دقيقة، لذا `(352 + 18) ÷ 100 = 3.70` دقائق في النظام.
 
 هذه القيم ناتجة عن تكرار عشوائي واحد في Arena 17. يعرض التقرير `Insufficient` لفاصل الثقة، لذلك لا نستخلص منه تقديرًا إحصائيًا دقيقًا أو تفوقًا على سياسة إسناد أخرى. قد تختلف الأرقام عند إعادة التشغيل. كما أن جدول الشريحة 34 يستخدم تسلسلًا عشوائيًا لم يُقدَّم للنموذج، فلا يُتوقع تطابق نتائجه العددية مع هذا التشغيل.
+
+### فيديو تشغيل النموذج
+
+[▶ اضغط لتشغيل تسجيل Arena (15 ثانية)](https://raw.githubusercontent.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/main/guides/Arena/videos/Arena_Call_Center_Run_Slow.mp4)
+
+<video controls width="860" src="https://raw.githubusercontent.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/main/guides/Arena/videos/Arena_Call_Center_Run_Slow.mp4"></video>
+
+يعرض المقطع المرفق جزءًا من تشغيل نموذج مركز الاتصالات والانتقال إلى التقرير. الملف الأصلي مدته 10 ثوانٍ، وأبطأنا عرضه إلى نحو 15 ثانية لتسهيل المتابعة؛ ولا يعرض تسجيلًا كاملًا مدته ثلاث دقائق.
 
 ---
 
