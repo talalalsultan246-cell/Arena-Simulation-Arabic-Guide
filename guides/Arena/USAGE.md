@@ -38,12 +38,12 @@
 
 **الأرقام في الصورة:**
 
-1. **Home = التبويب الرئيسي:** أدوات تحرير نموذج المحاكاة والتحكم في عرضه وربط الوحدات.
-2. **Project Bar = لوحة المشروع:** تعرض مجموعات الوحدات التي تستخدم في إنشاء النموذج.
-3. **Model Window = نافذة النموذج:** المساحة البيضاء التي تسحب إليها الوحدات وترسم فيها تسلسل العمليات.
-4. **Spreadsheet View = عرض الجداول:** إدخال خصائص الوحدات والموارد ومراجعتها.
-5. **Animate Bar = لوحة الحركة:** تعرض عناصر الحركة مثل Queues وResources وEntity Pictures.
-6. **Connect = توصيل الوحدات:** ترسم مسار انتقال الكيان من وحدة إلى أخرى.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Home = التبويب الرئيسي:</strong> أدوات تحرير نموذج المحاكاة والتحكم في عرضه وربط الوحدات.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Project Bar = لوحة المشروع:</strong> تعرض مجموعات الوحدات التي تستخدم في إنشاء النموذج.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Model Window = نافذة النموذج:</strong> المساحة البيضاء التي تسحب إليها الوحدات وترسم فيها تسلسل العمليات.</p>
+<p dir="rtl" align="right"><strong>(4)</strong> <strong>Spreadsheet View = عرض الجداول:</strong> إدخال خصائص الوحدات والموارد ومراجعتها.</p>
+<p dir="rtl" align="right"><strong>(5)</strong> <strong>Animate Bar = لوحة الحركة:</strong> تعرض عناصر الحركة مثل Queues وResources وEntity Pictures.</p>
+<p dir="rtl" align="right"><strong>(6)</strong> <strong>Connect = توصيل الوحدات:</strong> ترسم مسار انتقال الكيان من وحدة إلى أخرى.</p>
 
 ---
 
@@ -63,12 +63,12 @@
 
 **الأرقام في الصورة:**
 
-1. **Home:** التبويب الرئيسي.
-2. **Project Bar:** اختيار وحدات المحاكاة من اللوحة اليسرى.
-3. **Model Window:** سحب الوحدات إلى منطقة بناء النموذج.
-4. **Spreadsheet View:** تعديل البيانات والخصائص.
-5. **Animate Bar:** عرض عناصر الحركة.
-6. **Connect:** ربط مخرج الوحدة الأولى بمدخل الوحدة التالية.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Home:</strong> التبويب الرئيسي.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Project Bar:</strong> اختيار وحدات المحاكاة من اللوحة اليسرى.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Model Window:</strong> سحب الوحدات إلى منطقة بناء النموذج.</p>
+<p dir="rtl" align="right"><strong>(4)</strong> <strong>Spreadsheet View:</strong> تعديل البيانات والخصائص.</p>
+<p dir="rtl" align="right"><strong>(5)</strong> <strong>Animate Bar:</strong> عرض عناصر الحركة.</p>
+<p dir="rtl" align="right"><strong>(6)</strong> <strong>Connect:</strong> ربط مخرج الوحدة الأولى بمدخل الوحدة التالية.</p>
 
 **مثال سريع:** اسحب Create ثم Process ثم Dispose إلى Model Window، واستخدم Connect لتوصيلها بالترتيب.
 
@@ -81,9 +81,9 @@
 
 **الأرقام في الصورة:**
 
-1. **Animate:** التبويب المخصص لعناصر عرض الحركة.
-2. **Status / Waiting / Queue / Resource:** مجموعات لعرض الحالة والطوابير والموارد أثناء المحاكاة.
-3. **Animate Bar:** القائمة اليمنى التي تجمع عناصر الحركة مثل Levels وQueues وResources.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Animate:</strong> التبويب المخصص لعناصر عرض الحركة.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Status / Waiting / Queue / Resource:</strong> مجموعات لعرض الحالة والطوابير والموارد أثناء المحاكاة.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Animate Bar:</strong> القائمة اليمنى التي تجمع عناصر الحركة مثل Levels وQueues وResources.</p>
 
 في نموذج Call Center يمكن إظهار حالة الموظفين وعدد المكالمات المنتظرة أثناء التشغيل.
 
@@ -96,9 +96,9 @@
 
 **الأرقام في الصورة:**
 
-1. **Draw:** تبويب رسم العناصر التوضيحية.
-2. **Line / Fill / Text / Shapes:** رسم الخطوط والأشكال وإضافة النصوص وتنسيقها.
-3. **Model Window:** المكان الذي تظهر فيه الرسوم إلى جانب وحدات النموذج.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Draw:</strong> تبويب رسم العناصر التوضيحية.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Line / Fill / Text / Shapes:</strong> رسم الخطوط والأشكال وإضافة النصوص وتنسيقها.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Model Window:</strong> المكان الذي تظهر فيه الرسوم إلى جانب وحدات النموذج.</p>
 
 استخدم Text لإضافة عنوان Call Center أعلى الرسم. خطوط Draw للتوضيح؛ أما توصيل مسار المكالمات فيتم بواسطة Connect.
 
@@ -111,9 +111,9 @@
 
 **الأرقام في الصورة:**
 
-1. **Run:** تبويب تشغيل المحاكاة.
-2. **Go / Pause / Stop / Check Model / Review Errors:** بدء التشغيل والتحكم به وفحص الأخطاء.
-3. **Debug / Visualization:** أدوات متابعة المحاكاة والعناصر المتحركة.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Run:</strong> تبويب تشغيل المحاكاة.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Go / Pause / Stop / Check Model / Review Errors:</strong> بدء التشغيل والتحكم به وفحص الأخطاء.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Debug / Visualization:</strong> أدوات متابعة المحاكاة والعناصر المتحركة.</p>
 
 **Run → Setup** يفتح إعدادات التشغيل مثل Replication Length وNumber of Replications.
 
@@ -126,9 +126,9 @@
 
 **الأرقام في الصورة:**
 
-1. **View:** تبويب إعدادات العرض.
-2. **Zoom In / Zoom Out / Zoom Factor:** تكبير نموذج المحاكاة وتصغيره.
-3. **Views / Project Bar / Status Bar / Animate Bar:** إظهار مناطق البرنامج وتنظيم طريقة العرض.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>View:</strong> تبويب إعدادات العرض.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Zoom In / Zoom Out / Zoom Factor:</strong> تكبير نموذج المحاكاة وتصغيره.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Views / Project Bar / Status Bar / Animate Bar:</strong> إظهار مناطق البرنامج وتنظيم طريقة العرض.</p>
 
 ---
 
@@ -139,9 +139,9 @@
 
 **الأرقام في الصورة:**
 
-1. **Tools:** تبويب الأدوات المساعدة.
-2. **Object Transfer to Arena:** أداة ضمن مجموعة الربط والتكامل الموجودة يسار الشريط.
-3. **المساحة المحددة يمين الشريط:** لا يظهر بداخل المربع زر أو أمر في هذه اللقطة.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Tools:</strong> تبويب الأدوات المساعدة.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Object Transfer to Arena:</strong> أداة ضمن مجموعة الربط والتكامل الموجودة يسار الشريط.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>المساحة المحددة يمين الشريط:</strong> لا يظهر بداخل المربع زر أو أمر في هذه اللقطة.</p>
 
 من هذا التبويب يمكن الوصول إلى أدوات مثل Input Analyzer وModel Report حسب الأدوات الظاهرة في الشاشة.
 
@@ -154,10 +154,10 @@
 
 **الأرقام في الصورة:**
 
-1. **Discrete Processing:** اللوحة التي تضم وحدات مسار الكيانات.
-2. **Create:** إنشاء المكالمات أو الكيانات عند وصولها.
-3. **Process:** تنفيذ عملية الخدمة. يمكنها أن تحجز موردًا وتؤخر الكيان وتحرره حسب إعداد Action.
-4. **Dispose:** إنهاء مسار الكيان بعد اكتمال الخدمة.
+<p dir="rtl" align="right"><strong>(1)</strong> <strong>Discrete Processing:</strong> اللوحة التي تضم وحدات مسار الكيانات.</p>
+<p dir="rtl" align="right"><strong>(2)</strong> <strong>Create:</strong> إنشاء المكالمات أو الكيانات عند وصولها.</p>
+<p dir="rtl" align="right"><strong>(3)</strong> <strong>Process:</strong> تنفيذ عملية الخدمة. يمكنها أن تحجز موردًا وتؤخر الكيان وتحرره حسب إعداد Action.</p>
+<p dir="rtl" align="right"><strong>(4)</strong> <strong>Dispose:</strong> إنهاء مسار الكيان بعد اكتمال الخدمة.</p>
 
 تحتوي اللوحة أيضًا على وحدات **Seize = حجز مورد**، **Delay = وقت الخدمة**، **Release = تحرير مورد**. سنستخدم هذه الوحدات في المثال لأن وقت خدمة Aly يختلف عن وقت خدمة Bander.
 
