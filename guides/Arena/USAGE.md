@@ -219,7 +219,7 @@
 
 1. افتح `File → New`، ثم أظهر لوحة `Discrete Processing` من `Project Bar` على يسار الشاشة.
 2. من اللوحة اليسرى اسحب `Create` إلى مساحة النموذج البيضاء (`Model Window`). ضع `Process` على يمينه، ثم `Dispose` على يمينهما.
-3. اختر `Home → Connect`، ثم انقر مخرج `Create` ومدخل `Process`. كرر ذلك من `Process` إلى `Dispose`. يجب أن يصل السهم بين الوحدات، لأن تجاورها بصريًا لا ينقل المكالمات.
+3. اختر `Home → Connect`، ثم انقر مخرج `Create` ومدخل `Process`. كرر ذلك من `Process` إلى `Dispose`. يجب أن تظهر وصلتا Connect بين الوحدات، لأن تجاورها بصريًا لا ينقل المكالمات.
 4. احفظ الملف من `File → Save As` بامتداد `.doe`.
 
 <div align="center"><img src="images/07_Discrete_Processing_Arena17.jpg" width="86%" alt="لوحة Discrete Processing في Arena، ومنها تسحب Create وProcess وDispose"/></div>
@@ -281,7 +281,23 @@
 Calls Arrive → Technical Support → Calls Completed
 ```
 
-<div align="center"><img src="images/call-center/02-model.jpg" width="86%" alt="نموذج مركز الاتصال النهائي: وصول المكالمات، الدعم الفني، اكتمال الخدمة"/></div>
+<div align="center"><img src="images/call-center/02-model.jpg" width="86%" alt="النموذج بعد إظهار وصلتي Connect بين Calls Arrive وTechnical Support وCalls Completed"/></div>
+
+في صورة النموذج تظهر وصلتا `Connect` الأفقيتان بين الوحدات الثلاث. أما الخط القصير الذي قد يظهر أعلى `Technical Support` في وضع التحرير وصور الجدول، فهو تمثيل بصري لطابور `Technical Support.Queue`؛ لا يمثل مسارًا إضافيًا للمكالمات. إذا غابت الوصلات عن العرض، جرّب مستوى تكبير يقارب 120% من `View → Zoom`، ثم تحقق من وجودها في وضع التشغيل. فحص `Check Model` والتشغيل المكتمل يؤكدان اتصال مسار هذا النموذج.
+
+### ماذا يعرض الجدول أسفل مساحة الرسم؟
+
+المساحة الشبكية تحت الرسم اسمها `Spreadsheet View`، وهي جدول إدخال خصائص النموذج، وليست تقرير النتائج. يتغير محتواها حسب العنصر أو نوع البيانات الذي تختاره. يمكن تعديل بعض الخلايا مباشرة، كما يمكن فتح نافذة الوحدة بالنقر المزدوج عليها. اسحب الحد الأفقي بين الرسم والجدول إلى أعلى إذا أردت إظهار صفوف أو أعمدة أكثر.
+
+عند اختيار `Resource` من `Project Bar`، يظهر صف لكل موظف. في المثال يبيّن عمود `Name` الاسمين Aly وBander، و`Type` يحدد `Fixed Capacity`، و`Capacity` تساوي 1 لكل موظف. علامة `Report Statistics` تعني تسجيل إحصاءات استخدام المورد في التقرير.
+
+<div align="center"><img src="images/call-center/04-resource-spreadsheet.jpg" width="96%" alt="Spreadsheet View أسفل الرسم عند اختيار Resource، مع صفي Aly وBander وسعة كل منهما 1"/></div>
+
+عند اختيار `Process` يظهر صف `Technical Support`. الأعمدة `Action` و`Resources` و`Delay Type` و`Units` و`Allocation` و`Expression` تلخص طريقة حجز الموظف وزمن الخدمة. قيمة `1 rows` في `Resources` تعني وجود تعريف مورد واحد داخل نافذة العملية، وهو مجموعة `Support Agents`؛ لا تعني وجود موظف واحد في المركز. النص الكامل لتعبير زمن الخدمة موجود في الخطوة 4 أعلاه لأن عرض الخلية قد يقتطع نهايته.
+
+<div align="center"><img src="images/call-center/05-process-spreadsheet.jpg" width="96%" alt="Spreadsheet View لصف Technical Support وأعمدة Action وResources وDelay Type وExpression"/></div>
+
+أثناء `Run Mode` يظهر شريط `Command` في أسفل النافذة بدل جدول التحرير. بعد الضغط على `End` يعود `Spreadsheet View`. أما النتائج العددية فتظهر في تقرير Arena بعد انتهاء التشغيل.
 
 ---
 
