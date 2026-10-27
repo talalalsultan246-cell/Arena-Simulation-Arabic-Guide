@@ -4,381 +4,406 @@
 
 **إعداد:** Talal bin Ibrahim Alsultan  
 **آخر تحديث:** 27 أكتوبر 2026  
-**الإصدار المستهدف:** Arena 17 بواجهة الشريط الحديث **Home · Animate · Draw · Run · View · Tools**.  
+**الإصدار المستهدف:** Arena Simulation 17.
 
 > هذا **دليل استخدام** مستقل عن [دليل تحميل وتثبيت Arena](https://github.com/talalalsultan246-cell/Arena-Simulation-Arabic-Guide/blob/main/guides/Arena/README.md).
 
 في محاضرة يوم الأحد **25 أكتوبر 2026**، استعرض **الأستاذ الدكتور محمود الشربيني مشكوراً** واجهات Arena الأساسية وبعض طرق إنشاء نموذج أولي. يربط هذا الدليل بين واجهة **Arena Simulation 17** وبين مثال **Call Center Problem = مسألة مركز الاتصالات** الوارد في **Chapter 2: Simulation Examples = الفصل الثاني: أمثلة المحاكاة**.
 
+
 ## المحتويات
 
-1. [الصورة العامة ومكونات النافذة](#arena-use-01)
-2. [File — فتح وحفظ النموذج](#arena-use-02)
-3. [Home — بناء النموذج](#arena-use-03)
-4. [Animate — مشاهدة الكيانات](#arena-use-04)
-5. [Draw — الرسم](#arena-use-05)
-6. [Run — تشغيل المحاكاة](#arena-use-06)
-7. [View — طريقة العرض](#arena-use-07)
-8. [Tools — أدوات التحليل](#arena-use-08)
-9. [Project Bar / Discrete Processing](#arena-use-10)
+1. [الواجهة الرئيسية](#arena-use-01)
+2. [File](#arena-use-02)
+3. [Home](#arena-use-03)
+4. [Animate](#arena-use-04)
+5. [Draw](#arena-use-05)
+6. [Run](#arena-use-06)
+7. [View](#arena-use-07)
+8. [Tools](#arena-use-08)
+9. [Discrete Processing](#arena-use-10)
 10. [مصطلحات واجهة Arena](#arena-use-glossary)
-11. [Call Center: الشرائح والتوزيعات والقوانين](#arena-use-12)
-12. [التطبيق خطوة بخطوة](#arena-use-13)
-13. [قراءة النتائج](#arena-use-14)
-14. [اختصارات مهمة](#arena-use-shortcuts)
-15. [المراجع والصور](#arena-use-15)
+11. [مثال Call Center من Chapter 2](#arena-use-12)
+12. [تنفيذ المثال داخل Arena](#arena-use-13)
+13. [تشغيل النموذج وقراءة النتائج](#arena-use-14)
+14. [الأوامر السريعة](#arena-use-shortcuts)
+15. [مصادر البرنامج](#arena-use-15)
 
 ---
 
 <a id="arena-use-01"></a>
-## 1. النافذة الرئيسية: أين أجد الأدوات؟
+## 1. الواجهة الرئيسية — Home
 
-<div align="center">
-<img src="images/01_Home_Arena17.jpg" width="96%" alt="لقطة أصلية توضح الصفحة الرئيسية Home ومساحة بناء النموذج في Arena 17"/>
-</div>
+<div align="center"><img src="images/01_Home_Arena17.jpg" width="96%" alt="Arena 17 Home interface with six red numbered areas"/></div>
 
-**مصدر الصورة:** لقطة أصلية من واجهة **Arena 17 – Training & Evaluation Mode (Student)** على جهاز الطالب، مع ترقيم مواضع الأدوات.
+**الأرقام في الصورة:**
 
-| الموضع | وظيفته |
-|---|---|
-| **الأعلى: Home/Animate/Draw/Run/View/Tools** | اختيار الأدوات |
-| **اليسار: Project Bar = لوحة المشروع** | **Modules = وحدات بناء النموذج** |
-| **الوسط: Model Window = نافذة النموذج** | مساحة بناء **Simulation Model = نموذج المحاكاة** |
-| **الأسفل: Spreadsheet View = عرض الجداول** | خصائص **Resources = الموارد** و**Modules = الوحدات** |
-| **اليمين: Animate Bar** عند ظهوره | عناصر الحركة والمراقبة |
-| **أسفل النافذة: Command/Status** | الرسائل وحالة التشغيل |
-
-**قاعدة:** نضع الوحدات في **Model Window** ثم نوصلها بأداة **Connect**. قرب الوحدات من بعضها لا يعني اتصالها.
+1. **Home = التبويب الرئيسي:** أدوات تحرير نموذج المحاكاة والتحكم في عرضه وربط الوحدات.
+2. **Project Bar = لوحة المشروع:** تعرض مجموعات الوحدات التي تستخدم في إنشاء النموذج.
+3. **Model Window = نافذة النموذج:** المساحة البيضاء التي تسحب إليها الوحدات وترسم فيها تسلسل العمليات.
+4. **Spreadsheet View = عرض الجداول:** إدخال خصائص الوحدات والموارد ومراجعتها.
+5. **Animate Bar = لوحة الحركة:** تعرض عناصر الحركة مثل Queues وResources وEntity Pictures.
+6. **Connect = توصيل الوحدات:** ترسم مسار انتقال الكيان من وحدة إلى أخرى.
 
 ---
 
 <a id="arena-use-02"></a>
-## 2. File — إنشاء النموذج وحفظه
+## 2. File — الملفات والحفظ
 
-**File → New → Blank Model** لإنشاء ملف جديد، و**Open** لفتح السابق، و**Save / Save As** لحفظه. اسم مقترح: `Call_Center_Aly_Bander.doe`.
+- **New = جديد:** إنشاء نموذج.
+- **Open = فتح:** فتح نموذج محفوظ.
+- **Save / Save As = حفظ / حفظ باسم:** حفظ نموذج Arena بامتداد .doe.
 
 ---
 
 <a id="arena-use-03"></a>
-## 3. Home — بناء النموذج
+## 3. Home — أدوات بناء النموذج
 
-<div align="center"><img src="images/01_Home_Arena17.jpg" alt="Home: (1) شريط الأدوات، (2) Project Bar، (3) مساحة النموذج، (4) جدول الخصائص، (5) Animate Bar، (6) Connect" width="96%"/></div>
+<div align="center"><img src="images/01_Home_Arena17.jpg" width="96%" alt="Arena 17 Home tab and red highlighted Connect button"/></div>
 
-**الصورة الأصلية:** Home: (1) شريط الأدوات، (2) Project Bar، (3) مساحة النموذج، (4) جدول الخصائص، (5) Animate Bar، (6) Connect.
+**الأرقام في الصورة:**
 
-**ما الذي تبحث عنه في صورة Home؟**
+1. **Home:** التبويب الرئيسي.
+2. **Project Bar:** اختيار وحدات المحاكاة من اللوحة اليسرى.
+3. **Model Window:** سحب الوحدات إلى منطقة بناء النموذج.
+4. **Spreadsheet View:** تعديل البيانات والخصائص.
+5. **Animate Bar:** عرض عناصر الحركة.
+6. **Connect:** ربط مخرج الوحدة الأولى بمدخل الوحدة التالية.
 
-- **Attach/Detach:** إظهار اللوحات داخل Project Bar.
-- **Select/Zoom/Pan:** التحديد والتكبير والتنقل.
-- **Connect:** ربط وحدات النموذج بمسار فعلي.
-- **Auto-Connect:** وصل تلقائي عند سحب الوحدة إذا كان الخيار مفعلًا.
-- **Check Model / Expression Builder / Manuals:** فحص النموذج والتعبيرات وفتح الأدلة إذا كانت هذه الأوامر ظاهرة.
-
-**جرب:** اسحب `Create` ثم `Process` ثم `Dispose`، واستخدم `Connect` لربطها من اليسار إلى اليمين.
+**مثال سريع:** اسحب Create ثم Process ثم Dispose إلى Model Window، واستخدم Connect لتوصيلها بالترتيب.
 
 ---
 
 <a id="arena-use-04"></a>
-## 4. Animate — الحركة أثناء التشغيل
+## 4. Animate — عرض الحركة
 
-<div align="center"><img src="images/02_Animate_Arena17.jpg" alt="Animate: متابعة الحركة والعدادات وحالة الموارد" width="96%"/></div>
+<div align="center"><img src="images/02_Animate_Arena17.jpg" width="96%" alt="Arena 17 Animate tab with three numbered red highlights"/></div>
 
-**الصورة الأصلية:** Animate: متابعة الحركة والعدادات وحالة الموارد.
+**الأرقام في الصورة:**
 
-تُستخدم أدوات **Animate = التحريك** لعرض **Entities = الكيانات**، و**Servers = موظفي الخدمة**، و**Queues = طوابير الانتظار** خلال المحاكاة. في **Call Center**، تمثل المكالمة **Entity = كيان**، ويمثل **Aly / Bander** كلا منهما **Server / Resource = موظف خدمة / مورد**.
+1. **Animate:** التبويب المخصص لعناصر عرض الحركة.
+2. **Status / Waiting / Queue / Resource:** مجموعات لعرض الحالة والطوابير والموارد أثناء المحاكاة.
+3. **Animate Bar:** القائمة اليمنى التي تجمع عناصر الحركة مثل Levels وQueues وResources.
 
-**ملاحظة:** تساعد **Animation = الحركة** في **Model Verification = التحقق من صحة تنفيذ النموذج**. أما **Average Caller Delay = متوسط وقت انتظار المتصل** فيُستخرج من **Simulation Reports = تقارير المحاكاة**.
+في نموذج Call Center يمكن إظهار حالة الموظفين وعدد المكالمات المنتظرة أثناء التشغيل.
 
 ---
 
 <a id="arena-use-05"></a>
-## 5. Draw — إضافة الرسم والعناوين
+## 5. Draw — الرسم
 
-<div align="center"><img src="images/03_Draw_Arena17.jpg" alt="Draw: كتابة النصوص ورسم الأشكال التوضيحية" width="96%"/></div>
+<div align="center"><img src="images/03_Draw_Arena17.jpg" width="96%" alt="Arena 17 Draw tab with three numbered highlights"/></div>
 
-**الصورة الأصلية:** Draw: كتابة النصوص ورسم الأشكال التوضيحية.
+**الأرقام في الصورة:**
 
-استخدم **Text** لعنوان النموذج، و**Line / Rectangle / Ellipse** لتوضيح الأقسام. **Draw Line ليس Connect**؛ الأول للرسم، والثاني لمسار الكيانات الفعلي.
+1. **Draw:** تبويب رسم العناصر التوضيحية.
+2. **Line / Fill / Text / Shapes:** رسم الخطوط والأشكال وإضافة النصوص وتنسيقها.
+3. **Model Window:** المكان الذي تظهر فيه الرسوم إلى جانب وحدات النموذج.
+
+استخدم Text لإضافة عنوان Call Center أعلى الرسم. خطوط Draw للتوضيح؛ أما توصيل مسار المكالمات فيتم بواسطة Connect.
 
 ---
 
 <a id="arena-use-06"></a>
-## 6. Run — تشغيل المحاكاة
+## 6. Run — التشغيل
 
-<div align="center"><img src="images/04_Run_Arena17.jpg" alt="Run: تشغيل النموذج، والتحقق منه، وتحديد فترة المحاكاة" width="96%"/></div>
+<div align="center"><img src="images/04_Run_Arena17.jpg" width="96%" alt="Arena 17 Run tab with three numbered highlights"/></div>
 
-**الصورة الأصلية:** Run: تشغيل النموذج، والتحقق منه، وتحديد فترة المحاكاة.
+**الأرقام في الصورة:**
 
-1. افتح **Run → Check Model**.
-2. افتح **Run → Setup**.
-3. حدد وحدات الزمن و**Replication Length** و**Number of Replications**.
-4. اضغط **Go**، ثم راجع **Reports**.
+1. **Run:** تبويب تشغيل المحاكاة.
+2. **Go / Pause / Stop / Check Model / Review Errors:** بدء التشغيل والتحكم به وفحص الأخطاء.
+3. **Debug / Visualization:** أدوات متابعة المحاكاة والعناصر المتحركة.
 
-**انتبه:** **Replication Length = مدة تكرار المحاكاة** بقيمة `480 Minutes` تمثل ثماني ساعات من **Simulation Time = الزمن المحاكى**، بينما مثال الشريحة 1.5 يتناول **100 Callers = 100 متصل**. يجب توحيد شروط التشغيل قبل مقارنة النتائج.
+**Run → Setup** يفتح إعدادات التشغيل مثل Replication Length وNumber of Replications.
 
 ---
 
 <a id="arena-use-07"></a>
-## 7. View — التحكم في العرض
+## 7. View — العرض
 
-<div align="center"><img src="images/05_View_Arena17.jpg" alt="View: التكبير والتصغير وإظهار اللوحات" width="96%"/></div>
+<div align="center"><img src="images/05_View_Arena17.jpg" width="96%" alt="Arena 17 View tab with three numbered highlights"/></div>
 
-**الصورة الأصلية:** View: التكبير والتصغير وإظهار اللوحات.
+**الأرقام في الصورة:**
 
-**Zoom / Fit / Pan** لتغيير حجم واتجاه رؤية النموذج؛ ويمكن إظهار أو إخفاء مناطق الواجهة وفق إعدادات النسخة. إذا اختفى **Spreadsheet View** فتأكد من الفاصل السفلي القابل للسحب.
+1. **View:** تبويب إعدادات العرض.
+2. **Zoom In / Zoom Out / Zoom Factor:** تكبير نموذج المحاكاة وتصغيره.
+3. **Views / Project Bar / Status Bar / Animate Bar:** إظهار مناطق البرنامج وتنظيم طريقة العرض.
 
 ---
 
 <a id="arena-use-08"></a>
-## 8. Tools — التحليل والمساعدة
+## 8. Tools — الأدوات
 
-<div align="center"><img src="images/06_Tools_Arena17.jpg" alt="Tools: التحليل والإعدادات والأدوات المساعدة" width="96%"/></div>
+<div align="center"><img src="images/06_Tools_Arena17.jpg" width="96%" alt="Arena 17 Tools tab with three numbered highlights"/></div>
 
-**الصورة الأصلية:** Tools: التحليل والإعدادات والأدوات المساعدة.
+**الأرقام في الصورة:**
 
-توجد أدوات مثل **Input Analyzer** لملاءمة توزيعات البيانات، وأدوات مقارنة المخرجات و**OptQuest** بحسب الترخيص. لا تفترض أن كل إضافة موجودة لدى المستخدم.
+1. **Tools:** تبويب الأدوات المساعدة.
+2. **Object Transfer to Arena:** أداة ضمن مجموعة الربط والتكامل الموجودة يسار الشريط.
+3. **المساحة المحددة يمين الشريط:** لا يظهر بداخل المربع زر أو أمر في هذه اللقطة.
 
-للحصول على الدليل المثبت مع النسخة، راجع **Arena Product Manuals** من واجهة البرنامج أو **Arena Help**.
+من هذا التبويب يمكن الوصول إلى أدوات مثل Input Analyzer وModel Report حسب الأدوات الظاهرة في الشاشة.
 
 ---
 
 <a id="arena-use-10"></a>
-## 9. Project Bar → Discrete Processing
+## 9. Discrete Processing — وحدات بناء النموذج
 
-<div align="center"><img src="images/07_Discrete_Processing_Arena17.jpg" alt="Discrete Processing: Create, Process, Dispose modules used in the Call Center simulation" width="96%"/></div>
+<div align="center"><img src="images/07_Discrete_Processing_Arena17.jpg" width="96%" alt="Arena 17 Discrete Processing module panel numbered 1 to 4"/></div>
 
-**الصورة الأصلية:** **Discrete Processing = معالجة الأحداث المنفصلة**، وتشمل **Create = إنشاء المتصل**، **Process = تنفيذ الخدمة**، **Dispose = خروج المتصل** في **Call Center**.
+**الأرقام في الصورة:**
 
-| Module (الوحدة) | Function in Call Center (الوظيفة في النموذج) |
-|---|---|
-| **Create = إنشاء كيان** | توليد **Callers = المتصلين** |
-| **Assign = تعيين قيمة** | إضافة **Attribute = خاصية** للمتصل |
-| **Process = تنفيذ الخدمة** | معالجة **Service Time = وقت الخدمة** وإدارة **Resource = المورد** و**Queue = طابور الانتظار** عند ضبطها |
-| **Seize = حجز المورد** | حجز **Server = موظف الخدمة** المتاح |
-| **Delay = زمن العملية** | تمثيل وقت تنفيذ الخدمة |
-| **Release = تحرير المورد** | إتاحة الموظف لمتصل آخر |
-| **Dispose = خروج الكيان** | انتهاء المكالمة وخروجها من النموذج |
+1. **Discrete Processing:** اللوحة التي تضم وحدات مسار الكيانات.
+2. **Create:** إنشاء المكالمات أو الكيانات عند وصولها.
+3. **Process:** تنفيذ عملية الخدمة. يمكنها أن تحجز موردًا وتؤخر الكيان وتحرره حسب إعداد Action.
+4. **Dispose:** إنهاء مسار الكيان بعد اكتمال الخدمة.
 
-**الفرق:** `Process: Seize Delay Release` يجمع حجز الموظف ثم خدمته ثم تحريره. أما `Delay` وحدها فلا تمثل تلقائيًا انتظار الموظف المشغول.
+تحتوي اللوحة أيضًا على وحدات **Seize = حجز مورد**، **Delay = وقت الخدمة**، **Release = تحرير مورد**. سنستخدم هذه الوحدات في المثال لأن وقت خدمة Aly يختلف عن وقت خدمة Bander.
 
 ---
 
 <a id="arena-use-glossary"></a>
-## مصطلحات واجهة Arena
+## 10. مصطلحات واجهة Arena
 
-الجدول التالي يشرح أسماء **التبويبات والأدوات والأوامر الظاهرة في واجهة Arena 17**. أُبقيت الأسماء الإنجليزية كما تظهر في البرنامج.
-
-| المصطلح في واجهة Arena | المعنى بالعربية |
+| English | العربية |
 |---|---|
-| **File** | تبويب الملفات |
-| **New / Blank Model** | إنشاء نموذج جديد / نموذج فارغ |
-| **Open** | فتح نموذج |
-| **Save / Save As** | حفظ / حفظ باسم |
 | **Home** | التبويب الرئيسي |
-| **Animate** | تبويب الحركة |
-| **Draw** | تبويب الرسم |
-| **Run** | تبويب التشغيل |
-| **View** | تبويب العرض |
-| **Tools** | تبويب الأدوات |
-| **Project Bar** | لوحة المشروع الجانبية |
+| **Animate** | عرض الحركة |
+| **Draw** | الرسم |
+| **Run** | التشغيل |
+| **View** | العرض |
+| **Tools** | الأدوات |
+| **Project Bar** | لوحة المشروع |
 | **Model Window** | نافذة بناء النموذج |
-| **Spreadsheet View** | عرض البيانات والخصائص في جدول |
-| **Animate Bar** | لوحة عناصر الحركة |
-| **Status Bar** | شريط الحالة |
-| **Discrete Processing** | لوحة وحدات العمليات المنفصلة |
-| **Create** | وحدة إنشاء الكيانات |
-| **Assign** | وحدة تعيين القيم والخصائص |
-| **Process** | وحدة تنفيذ العملية |
+| **Spreadsheet View** | عرض البيانات والخصائص |
+| **Animate Bar** | لوحة الحركة |
+| **Discrete Processing** | لوحة وحدات العمليات |
+| **Create** | إنشاء كيان |
 | **Seize** | حجز مورد |
-| **Delay** | تأخير |
+| **Delay** | تنفيذ تأخير زمني |
 | **Release** | تحرير مورد |
-| **Dispose** | وحدة خروج الكيانات |
-| **Resource** | مورد في النموذج |
-| **Connect** | توصيل وحدتين |
-| **Auto-Connect** | التوصيل التلقائي |
-| **Zoom / Pan** | تكبير وتصغير / تحريك طريقة العرض |
+| **Process** | تنفيذ عملية |
+| **Dispose** | إخراج الكيان من النموذج |
+| **Resource** | مورد |
+| **Set** | مجموعة موارد |
+| **Save Attribute** | حفظ خاصية على الكيان |
+| **Connect** | توصيل الوحدات |
 | **Check Model** | فحص النموذج |
 | **Setup** | إعدادات التشغيل |
 | **Go** | بدء التشغيل |
 | **Reports** | تقارير النتائج |
-| **Help / Product Manuals** | المساعدة / أدلة البرنامج |
-
-> هذا الجدول مخصص **لمصطلحات واجهة البرنامج فقط**. أما المصطلحات المتعلقة بالقوانين والتوزيعات الاحتمالية فتُشرح ضمن مثال **Call Center** في القسم التالي.
 
 ---
 
 <a id="arena-use-12"></a>
-## 10. مثال من المادة — Chapter 2: Simulation Examples, Slide 1.2 — Call Center Problem
+## 11. مثال من المادة — Chapter 2: Simulation Examples, Slide 1.2
 
-**مصدر المثال:** **Chapter 2 — Simulation Examples, Slide 1.2**، بعنوان **Example 2: Call Center Problem = مسألة مركز الاتصالات**. وتوجد توزيعات **Interarrival Time = الزمن بين الوصولات** و**Service Time = وقت الخدمة** في **Slide 1.3**، وقوانين المحاكاة في **Slide 1.4**. **Aly** هو **Server = موظف خدمة** الأكثر خبرة، ويقدم الخدمة أسرع من **Bander** وفق المثال.
+### Example 2: Call Center Problem
 
-| الفصل | الشريحة المطبوعة | ما الذي نأخذه؟ |
+يستقبل **Call Center = مركز الاتصالات** المكالمات ويقدم الخدمة موظفان: **Aly** و**Bander**. الموظف Aly أسرع من Bander وفق بيانات المثال.
+
+**المطلوب:** محاكاة وصول **100 Callers = 100 متصل**، وتوزيع المكالمات على الموظفين، ثم قياس **Waiting Time = وقت الانتظار** و**Time in System = الوقت داخل النظام** ونسبة انشغال الموظفين.
+
+**مصدر البيانات:** **Chapter 2 — Slide 1.3**.
+
+| البيانات | الوقت بالدقائق | الاحتمالات |
 |---|---|---|
-| **Chapter 2** | **1.2** | شرح الموظفين وثلاث سياسات للتوجيه |
-| Chapter 2 | **1.3** | جدول احتمالات الوصول والخدمة |
-| Chapter 2 | **1.4** | طريقة حساب الوصول والانتظار والخدمة |
-| Chapter 2 | **1.5** | نتائج مثال المحاضرة لعدد 100 مكالمة |
-| Chapter 2 | **1.6** | بعض إحصاءات الانتظار |
-| Chapter 2 | **1.7** | سياسات بديلة: Bander أولًا، أو اختيار عشوائي |
-| Chapter 2 | **1.8** | خوارزمية **Bander أولًا**، وليس التوزيع العشوائي |
-| **Chapter 6 — Random-Number Generation** | **6.7** | الانتظام والاستقلال، `R ~ U(0,1)` |
-| Chapter 6 | **6.16–6.18** | **Linear Congruential Method** |
-| **Chapter 7 — Random-Variate Generation** | **7.7** | **Inverse-Transform Technique** |
-| Chapter 7 | **7.8–7.10** | أمثلة توليد زمن أُسي للتوضيح النظري، **وليست** توزيعات الكول سنتر |
+| **Interarrival Time = الزمن بين الوصولات** | 1، 2، 3، 4 | 0.25، 0.40، 0.20، 0.15 |
+| **Aly Service Time = وقت خدمة Aly** | 2، 3، 4، 5 | 0.30، 0.28، 0.25، 0.17 |
+| **Bander Service Time = وقت خدمة Bander** | 3، 4، 5، 6 | 0.35، 0.25، 0.20، 0.20 |
 
-### مثال من المادة — Chapter 2, Slide 1.3: Probability Distributions = التوزيعات الاحتمالية
-
-| Variable (المتغير) | Time in Minutes (الوقت بالدقائق) | Probability (الاحتمال) | Cumulative Probability (الاحتمال التراكمي) |
-|---|---|---|---|
-| **Interarrival Time = الزمن بين وصول المكالمات** | 1، 2، 3، 4 | .25، .40، .20، .15 | .25، .65، .85، 1.00 |
-| **Aly Service Time = وقت خدمة Aly** | 2، 3، 4، 5 | .30، .28، .25، .17 | .30، .58، .83، 1.00 |
-| **Bander Service Time = وقت خدمة Bander** | 3، 4، 5، 6 | .35، .25، .20، .20 | .35، .60، .80، 1.00 |
-
-**Arena DISC Expressions = تعبيرات التوزيع الاحتمالي المتقطع**، والمشتقة من جدول الاحتمالات في الشريحة 1.3:
-
-**Interarrival Time**
-```text
-DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4)
-```
-**Aly Service Time**
-```text
-DISC(0.30,2, 0.58,3, 0.83,4, 1.00,5)
-```
-**Bander Service Time**
-```text
-DISC(0.35,3, 0.60,4, 0.80,5, 1.00,6)
-```
-
-لا تستبدل هذه التوزيعات بـ `EXPO(6)` أو `TRIA(2,4,6)` إذا كان الهدف تنفيذ مثال المحاضرة نفسه؛ كانت تلك قيمًا افتراضية لمثال مختلف.
-
-### قوانين المثال من المادة — Chapter 2, Slide 1.4; Chapter 6, Slides 6.16–6.17; Chapter 7, Slide 7.7
-
-**Chapter 6, Slides 6.16–6.17: Pseudo-Random Number Generation = توليد الأرقام شبه العشوائية**
-
-```text
-X(i+1) = (a × X(i) + c) mod m
-R(i) = X(i) / m
-```
-
-حيث `a` معامل الضرب، `c` الزيادة، `m` المقياس، و`X(0)` البذرة. المعادلة للتفسير العلمي؛ **لا تُعد إعدادًا يثبت أن Arena يستخدم المعاملات الموضحة في المحاضرة**.
-
-**Chapter 7, Slide 7.7: Inverse-Transform Technique = طريقة التحويل العكسي**
-
-```text
-X = F⁻¹(R)
-For discrete X: choose the smallest x with F(x) ≥ R
-```
-
-**مثال:** إذا كان `R = 0.69` فإن زمن ما بين الوصولات **3 دقائق**، وزمن خدمة Aly **4 دقائق**، وخدمة Bander **5 دقائق**، لأن القيمة تقع داخل المجالات التراكمية المقابلة.
-
-**Chapter 2, Slide 1.4: Call Center Equations = معادلات نموذج الاتصالات**
-
-```text
-Arrival(k) = Arrival(k−1) + Interarrival(k)
-Waiting(k) = ServiceStart(k) − Arrival(k)
-Finish(k) = ServiceStart(k) + ServiceTime(k)
-TimeInSystem(k) = Finish(k) − Arrival(k)
-AverageWaiting = Sum(Waiting(k)) / N
-```
-
-### Call Center Scenarios = سيناريوهات توزيع المكالمات
-
-| Scenario (السيناريو) | Routing Rule (قاعدة توزيع المكالمات) |
-|---|---|
-| **Scenario 1: Aly First = أولوية Aly** | عند توافر الاثنين، تكون الأولوية لـ Aly |
-| **Scenario 2: Bander First = أولوية Bander** | عند توافر الاثنين، تكون الأولوية لـ Bander |
-| **Scenario 3: Random = التوزيع العشوائي** | اختيار متاح عشوائيًا؛ في التطبيق المتساوي **50% Aly / 50% Bander** عند توافر الاثنين |
-
-**تنبيه:** طلبت الشريحة 1.7 قاعدة الاختيار العشوائي. أما افتراض تساوي الاحتمال **50/50** فهو تحديد تنفيذي للسيناريو الثالث؛ لا تُنسب له نتائج رقمية من الشريحة 1.5 لأن نتائجها تخص تجربة أخرى. وإذا كان أحد الموظفين فقط متاحًا تُعطى المكالمة له، وإذا كان الاثنان مشغولين تدخل في الطابور.
+في **Slide 1.2** تبدأ الخدمة مع Aly إذا كان كلا الموظفين متاحًا، ثم تُدرس سياسات أخرى في **Slide 1.7**، منها **Bander First** و**Random Assignment**.
 
 ---
 
 <a id="arena-use-13"></a>
-## 11. Call Center Model in Arena = تطبيق نموذج Call Center
+## 12. التطبيق العملي: بناء Call Center في Arena
 
-### Step 1 — Create = إنشاء المكالمات
-- **File → New → Blank Model**.
-- **Project Bar → Discrete Processing → Create**.
-- الاسم: `Caller Arrivals`، ونوع الكيان: `Caller`.
-- **Time Between Arrivals → Type: Expression**، ثم أدخل:
-```text
-DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4)
-```
-- **Units: Minutes**؛ **Entities per Arrival: 1**.
+<text dir="ltr"></text>
 
-### Step 2 — Resource Definition = تعريف الموارد
-- من بيانات الموارد **Resource** أنشئ `Aly` و`Bander`، مع **Capacity = 1** لكل موظف.
-- من **Set** أنشئ `SupportTeam` يضم `Aly` و`Bander`، إذا كانت هذه الوحدة في قالب البيانات الملحق.
+### الخطوة 1 — New Model
 
-### Step 3 — Process = تنفيذ الخدمة
-- أضف `Process` باسم `Handle Call`.
-- **Action = Seize Delay Release**.
-- اختر موردًا من المجموعة `SupportTeam`، مع **Selection Rule = Random** بين الموارد المتاحة عند توافر الخيار في إصدارك.
-- احفظ هوية الموظف المختار في **Attribute** لتطبيق توزيع زمن الخدمة الخاص به؛ راجع **Expression Builder** لاختبار التعبير الشرطي وربطه بفهرس المورد الذي تُرجعه نسختك.
+1. افتح **Arena Simulation 17**.
+2. اختر **File → New** لإنشاء نموذج فارغ.
+3. افتح **File → Save As** واحفظه باسم **Call_Center_Aly_Bander.doe**.
+4. من **Project Bar** افتح **Discrete Processing**.
 
-> **حد التحقق:** لم يُنفذ النموذج فعليًا داخل نسخة Arena على جهاز الطالب في هذه المحادثة؛ لذلك اختيار العضو العشوائي وحفظ فهرسه وتخصيص توزيعين مختلفين هما **خطوات إعداد تحتاج اختبارًا**، ولا أدعي أنها ملف نموذج `.doe` جاهز أو مخرجات فعلية. لا تنشئ طابورين مستقلين للمكالمات دون التصريح بتغيير سياسة الانتظار الأصلية.
+### الخطوة 2 — Create: إنشاء المكالمات
 
-### Step 4 — Dispose & Connect = إخراج الكيان وربط الوحدات
-أضف `Dispose` باسم `Call Completed`، ثم صِل:
+اسحب **Create** إلى Model Window وانقر عليه مرتين.
 
-```text
-Create: Caller Arrivals  →  Process: Handle Call  →  Dispose: Call Completed
-```
+| الحقل في Arena | القيمة |
+|---|---|
+| Name | Caller Arrivals |
+| Entity Type | Caller |
+| Time Between Arrivals — Type | Expression |
+| Expression | DISC(0.25,1, 0.65,2, 0.85,3, 1.00,4) |
+| Units | Minutes |
+| Entities per Arrival | 1 |
+| Max Arrivals | 100 |
+| First Creation | 0 |
 
-### Step 5 — Run = تشغيل المحاكاة
-- **Run → Check Model** للتحقق من التعابير والوصلات والموارد.
-- **Run → Setup** لضبط الزمن والتكرارات.
-- **Go** للتشغيل، ثم قراءة تقارير الأداء.
-- لتكرار **100 مكالمة** كما في الشريحة 1.5 يجب التحكم في عدد الواصلين ومصير المكالمات الموجودة في النظام عند التوقف، وليس الاكتفاء بفترة ثابتة عشوائية.
+**Interarrival Time = الزمن بين وصول مكالمتين متتاليتين**. يستخدم تعبير DISC الاحتمالات التراكمية من **Chapter 2, Slide 1.3**.
+
+### الخطوة 3 — Seize: حجز موظف متاح
+
+اسحب **Seize** من لوحة Discrete Processing وضعه بعد Create.
+
+أثناء إعداد وحدة Seize:
+
+1. افتح بيانات **Resource** من لوحة **Data Definition**، وأدخل **Aly — Capacity = 1** ثم **Bander — Capacity = 1**.
+2. من بيانات **Set** أنشئ مجموعة موارد باسم **SupportTeam**، وأضف إليها **Aly** أولًا ثم **Bander** ثانيًا.
+3. انقر مرتين على **Seize** وسمِّها **Assign Available Agent**.
+4. افتح قائمة **Resources → Add**، وحدد **Type = Set** و**Set Name = SupportTeam** و**Quantity = 1**.
+5. اختر **Selection Rule = Preferred Order**، ثم أدخل **Save Attribute = aAgentIndex**.
+
+هذا يطبّق سيناريو **Aly First = أولوية Aly**: إذا كان Aly متاحًا يختاره النظام، وإلا يختار Bander؛ وإذا كان الاثنان مشغولين تنتظر المكالمة في **Queue = طابور الانتظار** المتعلق بوحدة Seize. تستخدم **Save Attribute** لحفظ رقم الموظف الذي اختاره Arena من المجموعة. <https://www.manualsdir.com/manuals/580146/rockwell-automation-arena-basic-edition-users-guide.html?page=39>
+
+### الخطوة 4 — Decide: تحديد من يقدم الخدمة
+
+من **Project Bar → Decisions** اسحب **Decide** وضعه بعد Seize.
+
+- **Name:** Which Agent?
+- **Type:** 2-way by Condition
+- **Condition:** aAgentIndex == 1
+
+**True** يعني أن الموظف المختار هو **Aly**، و**False** يعني **Bander**. تأكد أن ترتيب أعضاء مجموعة SupportTeam هو Aly ثم Bander.
+
+### الخطوة 5 — Delay: إدخال Service Time
+
+ضع وحدتين من **Delay** بعد Decide، ثم اضبط:
+
+**Delay الأولى — Aly Service**
+
+| الحقل | القيمة |
+|---|---|
+| Name | Aly Service |
+| Delay Type | Expression |
+| Expression | DISC(0.30,2, 0.58,3, 0.83,4, 1.00,5) |
+| Units | Minutes |
+
+**Delay الثانية — Bander Service**
+
+| الحقل | القيمة |
+|---|---|
+| Name | Bander Service |
+| Delay Type | Expression |
+| Expression | DISC(0.35,3, 0.60,4, 0.80,5, 1.00,6) |
+| Units | Minutes |
+
+**Service Time = وقت الخدمة.** تعبيرا DISC مأخوذان من توزيعي الخدمة في **Chapter 2, Slide 1.3**.
+
+### الخطوة 6 — Release ثم Dispose
+
+1. ضع وحدة **Release** بعد مساري Delay، وسمّها **Free Agent**.
+2. في **Resources → Add** اختر **Type = Set**، ثم **Set Name = SupportTeam**.
+3. اختر **Release Rule = Specific Member** و**Set Index = aAgentIndex** و**Quantity = 1**، حتى تحرر وحدة Release الموظف نفسه الذي حجزته وحدة Seize.
+4. أضف **Dispose** باسم **Call Completed**.
+
+### الخطوة 7 — Connect: توصيل النموذج
+
+صِل الوحدات بالترتيب:
+
+~~~text
+Create: Caller Arrivals
+          |
+          v
+Seize: Assign Available Agent
+          |
+          v
+Decide: Which Agent?
+      /           \
+  True / Aly    False / Bander
+     |              |
+     v              v
+Delay: Aly      Delay: Bander
+ Service          Service
+     \              /
+      \            /
+       v          v
+       Release: Free Agent
+                |
+                v
+       Dispose: Call Completed
+~~~
+
+تنتظر المكالمة داخل Seize إلى أن يتوافر موظف. بعد ذلك تنتقل إلى **Delay** الخاصة به، ثم يُحرّر الموظف وتغادر المكالمة.
+
+### الخطوة 8 — مقارنة السيناريوهات
+
+بعد حفظ النموذج وتشغيل **Aly First**:
+
+- **Scenario 2 — Bander First:** غيّر ترتيب أعضاء SupportTeam إلى **Bander ثم Aly** مع إبقاء **Preferred Order**. حدّث شرط Decide حتى يتوافق كل مسار Delay مع الموظف الصحيح.
+- **Scenario 3 — Random:** أبقِ ترتيب **Aly ثم Bander**، وغيّر **Selection Rule = Random** في Seize. إذا كان الموظفان متاحين يُختار أحدهما باحتمال متساوٍ، أما إذا كان أحدهما فقط متاحًا فتُسند المكالمة إليه.
+
+احفظ كل سيناريو باسم مختلف للمقارنة.
 
 ---
 
 <a id="arena-use-14"></a>
-## 12. Simulation Results = نتائج المحاكاة
+## 13. تشغيل المحاكاة وقراءة النتائج
 
-| Performance Measure (مقياس الأداء) | Definition (المعنى) |
+### الخطوة 9 — Run: التشغيل
+
+1. افتح **Run → Check Model** للتحقق من النموذج.
+2. افتح **Run → Setup**.
+3. اجعل **Base Time Units = Minutes**.
+4. اختر **Replication Length = 1000 Minutes** و**Number of Replications = 1** للتجربة الأولى.
+5. اضغط **Go** لبدء المحاكاة.
+6. افتح **Reports** بعد الانتهاء.
+
+**Max Arrivals = 100** يمنع إنشاء أكثر من 100 مكالمة؛ ومدة 1000 دقيقة تسمح في هذا المثال بزمن كافٍ لانتهاء المكالمات التي بدأت، في ضوء الحدود القصوى لأزمنة الوصول والخدمة الموجودة في الشريحة 1.3. عند المقارنة، استخدم مدة التشغيل نفسها لجميع السيناريوهات.
+
+### الخطوة 10 — نتائج Arena
+
+راجع في التقارير:
+
+| Performance Measure = مقياس الأداء | القراءة المطلوبة |
 |---|---|
-| **Average Waiting Time = متوسط وقت الانتظار** | متوسط انتظار المتصل |
-| **Number Waiting = عدد المنتظرين** | عدد المكالمات في الطابور |
-| **Time in System** | الزمن من الوصول حتى الانتهاء |
-| **Utilization — Aly = نسبة انشغال Aly** | نسبة انشغال Aly |
-| **Utilization — Bander = نسبة انشغال Bander** | نسبة انشغال Bander |
-| **Number Out = عدد المغادرين** | عدد المكالمات التي غادرت النظام |
+| **Number In = عدد الداخلين** | يجب أن يكون 100 متصل |
+| **Number Out = عدد الخارجين** | تحقق من اكتمال خدمة المتصلين المئة |
+| **Average Waiting Time = متوسط وقت الانتظار** | معدل الانتظار قبل حجز الموظف |
+| **Number Waiting = عدد المنتظرين** | عدد المكالمات في Queue |
+| **Aly Utilization = نسبة انشغال Aly** | نسبة الوقت الذي كان فيه Aly مشغولًا |
+| **Bander Utilization = نسبة انشغال Bander** | نسبة الوقت الذي كان فيه Bander مشغولًا |
+| **Time in System = الوقت داخل النظام** | من وقت وصول المكالمة إلى مغادرتها |
 
-للمقارنة العلمية بين السيناريوهات الثلاثة ثبّت توزيعات الوصول والخدمة ووحدات الزمن وشروط انتهاء التشغيل وعدد التكرارات، ثم قارن المتوسطات وعدم اليقين، لا التشغيل المنفرد فقط.
+**للمقارنة مع المحاضرة:** في جدول تجربة **Chapter 2, Slide 1.5**، بلغ مجموع **Caller Delay = وقت انتظار المتصلين** مقدار **211 دقيقة**، ومجموع **Time in System = الوقت داخل النظام** مقدار **564 دقيقة** لـ100 مكالمة؛ أي متوسطين **2.11 دقيقة** و**5.64 دقيقة** على التوالي. **هذه أرقام المثال الوارد في الشريحة، وليست نتائج تشغيل فعلي لهذا النموذج في Arena**. تختلف المخرجات عند اختلاف تسلسل الأرقام العشوائية أو سياسة توزيع المكالمات.
+
+**معادلات الفصل الثاني — Slide 1.4:**
+
+~~~text
+Arrival Time(k) = Arrival Time(k−1) + Interarrival Time(k)
+Waiting Time(k) = Service Start Time(k) − Arrival Time(k)
+Service Completion Time(k) = Service Start Time(k) + Service Time(k)
+Time in System(k) = Service Completion Time(k) − Arrival Time(k)
+~~~
+
+**صلة الفصلين السادس والسابع:** يوضح **Chapter 6 — Random-Number Generation** توليد الأرقام العشوائية، ويعرض **Chapter 7 — Random-Variate Generation** توليد القيم وفق توزيعاتها. في Arena ينفّذ **DISC** اختيار الوقت طبقًا للاحتمالات التراكمية في شريحة المثال.
 
 ---
 
 <a id="arena-use-shortcuts"></a>
-## 13. اختصارات ومسارات سريعة
+## 14. الأوامر السريعة
 
-| الأمر | استخدامه |
+| الأمر | الوظيفة |
 |---|---|
-| **Ctrl + S** | حفظ النموذج |
-| **File → New** | إنشاء نموذج |
-| **Home → Connect** | ربط الوحدات |
-| **Run → Check Model** | التحقق قبل التشغيل |
-| **Run → Setup** | إعداد التشغيل |
-| **Run → Go** | بدء المحاكاة |
-| **Arena Product Manuals / Help** | أدلة البرنامج المثبتة |
-
-> يختلف موضع بعض الأوامر والاختصارات بين إعدادات الإصدارات. اعتمد اسم الأمر الظاهر عندك إذا اختلف مكانه.
+| File → New | نموذج جديد |
+| Ctrl + S | حفظ النموذج |
+| Home → Connect | توصيل الوحدات |
+| Run → Check Model | فحص النموذج |
+| Run → Setup | إعداد تشغيل المحاكاة |
+| Run → Go | بدء المحاكاة |
+| Reports | قراءة نتائج التشغيل |
 
 ---
 
 <a id="arena-use-15"></a>
-## 14. المراجع والصور
+## 15. مصادر البرنامج
 
-**مواد المقرر المقدمة من الطالب:**
-- محمود الشربيني، *Chapter 2 — Simulation Examples*, Example 2: Call Center Problem، الشرائح المطبوعة **1.2–1.8**. ملف: `Ch02_Call_Center_Scenarios_Highlighted.pptx`، مواد مقرر غير منشورة.
-- *Chapter 6 — Random-Number Generation*، خاصة الشرائح **6.7** و**6.16–6.18**. ملف: `06 Random-Number Generation simulation Mah Final(4).pptx`.
-- *Chapter 7 — Random-Variate Generation*، خاصة الشرائح **7.7–7.10**. ملف: `07 Random-Variate Generation Mah Final [Autosaved](2).pptx`.
-
-**مصادر البرنامج والصورة الحديثة:**
-- [Rockwell Automation — صفحة تنزيل Arena Professional Edition](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html).
-- [Rockwell Automation — خيارات Arena Professional Edition وDemo/Academic](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options.html).
-- صور واجهة Arena 17 الأصلية التي أرسلها الطالب، محفوظة في مجلد `guides/Arena/images` بالمستودع.
-
-**ملاحظة الصور:** جميع اللقطات السبع أصلية من جهاز الطالب، وقد رُفعت كملفات صور فعلية داخل المستودع، ووُضعت كل لقطة في القسم الذي يشرحها.
+- [Rockwell Automation — تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)
+- [Rockwell Automation — Arena Basic Edition User's Guide، إعداد Resource Set](https://www.manualsdir.com/manuals/580146/rockwell-automation-arena-basic-edition-users-guide.html?page=39)
+- [Getting Started with Arena — وصف Seize وRelease وSelection Rule](https://studylib.net/doc/28102816/getting-started-with-arena)
 
 </div>
