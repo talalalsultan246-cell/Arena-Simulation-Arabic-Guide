@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="190" viewBox="0 0 1160 190" role="img" aria-labelledby="title desc">
+<title id="title">Call Center — Aly and Bander</title>
+<desc id="desc">Blue-toned title banner with a headset icon, introducing the Call Center simulation example.</desc>
+<defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#112E4F"/><stop offset="100%" stop-color="#087E91"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="1160" height="190" rx="20" fill="url(#bg)"/>
+<rect x="0" y="0" width="12" height="190" rx="6" fill="#50DCC6"/>
+<circle cx="92" cy="92" r="58" fill="#ffffff" opacity=".1"/>
+<g transform="translate(61 57)" fill="none" stroke="#F7FFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 43V36C0 16 14 2 32 2s32 14 32 34v7"/>
+<rect x="-6" y="36" width="17" height="29" rx="8" fill="#50DCC6" stroke="none"/>
+<rect x="53" y="36" width="17" height="29" rx="8" fill="#50DCC6" stroke="none"/>
+<path d="M62 64c0 17-13 24-28 24h-7"/>
+<path d="M22 89h12"/>
+</g>
+<text x="190" y="66" fill="#9DEBDC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3">CHAPTER 02  |  SIMULATION EXAMPLE</text>
+<text x="190" y="127" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Call Center</text>
+<text x="508" y="126" fill="#DDF8F5" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="400">Aly &amp; Bander</text>
+<path d="M190 149h870" stroke="#8CE4D8" stroke-width="2" stroke-opacity=".42"/>
+<text x="190" y="173" fill="#E3F8F7" font-family="Arial, Helvetica, sans-serif" font-size="17">Arrival   •   Service   •   Queue   •   Results</text>
+</svg>
