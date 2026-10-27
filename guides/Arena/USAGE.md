@@ -2,7 +2,6 @@
 
 # دليل استخدام Arena Simulation
 
-**إعداد:** Talal bin Ibrahim Alsultan  
 **آخر تحديث:** 27 أكتوبر 2026  
 **الإصدار المستهدف:** Arena Simulation 17.
 
@@ -368,5 +367,15 @@ Calls Arrive → Technical Support → Calls Completed
 - [Rockwell Automation — تنزيل Arena](https://www.rockwellautomation.com/en-us/products/software/arena-simulation/buying-options/download.html)
 - [Rockwell Automation — Arena Basic Edition User's Guide، إعداد Resource Set](https://www.manualsdir.com/manuals/580146/rockwell-automation-arena-basic-edition-users-guide.html?page=39)
 - [Getting Started with Arena — وصف Seize وRelease وSelection Rule](https://studylib.net/doc/28102816/getting-started-with-arena)
+
+---
+
+### إعداد الدليل
+
+**Talal bin Ibrahim Alsultan**  
+*Applied Information System • Data Science • Decision Sciences*  
+King Saud University
+
+[GitHub Profile](https://github.com/talalalsultan246-cell)
 
 </div>
